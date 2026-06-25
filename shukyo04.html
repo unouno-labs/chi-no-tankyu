@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<!--
+  ===========================================================
+  知の探究ラボ ─ 記事ページ（宗教研究 第四回：世界の死後観）
+  ・【事実】= callout--fact ／【考察】= callout--think
+  ・問い/応答 = dialogue--q / dialogue--a
+  ・死後の有無は断定しない。科学が説明するのは「なぜ信じるか」まで。
+  ===========================================================
+-->
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>死の向こうに、何があるのか｜知の探究ラボ</title>
+  <meta name="description" content="天国と地獄、生まれ変わり、祖先の国——人類は死の向こうに何を見てきたのか。世界の死後観の共通点と違いを比べ、なぜ人は死後を信じるのかを脳と心から探る。宗教研究 第四回。">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="死の向こうに、何があるのか ─ 世界の死後観">
+  <meta property="og:description" content="天国と地獄、生まれ変わり、祖先の国。人類は死の向こうに何を見てきたのか。なぜ人は死後を信じるのか。">
+
+  <!-- Google Analytics 4（測定IDを取得して G-XXXXXXXXXX を置き換えてください） -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;700;800&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="article.css">
+</head>
+<body>
+
+  <div class="loader" id="loader">
+    <div class="loader__ring"></div>
+    <p class="loader__text">知の探究ラボ</p>
+  </div>
+
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <canvas id="starfield"></canvas>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html#top" class="logo">
+        <span class="logo__mark">✦</span>
+        <span class="logo__text">知の探究ラボ</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="nav">
+        <a href="index.html#worldview">世界観</a>
+        <a href="index.html#about">この探究について</a>
+        <a href="index.html#category">探究の領域</a>
+        <a href="index.html#articles">探究の記録</a>
+        <a href="index.html#contact">参加する</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="reading">
+
+    <header class="masthead">
+      <p class="masthead__badge">宗教研究 ─ 第四回</p>
+      <h1 class="masthead__title">死の向こうに、何があるのか</h1>
+      <p class="masthead__subtitle">世界の死後観をめぐる旅</p>
+      <p class="masthead__meta">
+        <span>ナビゲーター</span>
+        <span class="dot">・</span>
+        <span>2026.06.25</span>
+        <span class="dot">・</span>
+        <span>AIとの対話から</span>
+      </p>
+    </header>
+
+    <article class="article-body">
+
+      <div class="note">
+        <strong>【事実】</strong>＝確認できる研究・知見、<strong>【考察】</strong>＝そこから導く解釈を分けて記します。<br>
+        前回（<a href="shukyo03.html" style="color:var(--gold-soft)">一神教と軸の時代</a>）の続き。どの道も最後に立つ壁――死へ。
+      </div>
+
+      <p class="lead">
+        一神教も、多神教も、神を立てない道も、最後はみな同じ問いの前に立つ。
+        <strong>死んだら、どうなるのか。</strong>人類はこの問いに、天国を、生まれ変わりを、祖先の国を、
+        さまざまに答えてきた。今回はその答えを並べ、なぜ人はそろって「死で終わりではない」と感じるのかを探る。
+      </p>
+
+      <!-- 1. 出発点 -->
+      <h2>なぜ、人は死後を思い描くのか</h2>
+
+      <div class="dialogue dialogue--q">
+        <p class="dialogue__role">ナビゲーターの問い</p>
+        <p class="dialogue__text">
+          文化がまるで違っても、ほとんどの宗教が「死後」を語る。
+          見たことも確かめたこともないのに、なぜ人類は、これほど一致して死の先を思い描くんだろう。
+        </p>
+      </div>
+
+      <div class="dialogue dialogue--a">
+        <p class="dialogue__role">AIの知性</p>
+        <p class="dialogue__text">
+          まず事実から。死後に何かが続くという信念は、世界の大多数の宗教に共通している。
+          そして近年の国際調査でも、多くの国で<strong>半数以上が「死後の生はありそうだ」</strong>と答える。
+          これは偶然ではなく、人間の心の作りに根がある。まず世界の死後観を並べ、それから「なぜ」へおりよう。
+        </p>
+      </div>
+
+      <!-- 2. 4つの型 -->
+      <h2>人類が描いた、死の向こう</h2>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          <strong>① 審判と天国・地獄。</strong>キリスト教やイスラームでは、死後に裁きがあり、
+          信仰や行いに応じて楽園（ジャンナ）か業火（ジャハンナム）へ向かう。
+          一直線の時間（<a href="shukyo02.html" style="color:var(--gold-soft)">第二回</a>）の先に、最終の決算がある。
+        </p>
+      </div>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          <strong>② 生まれ変わり。</strong>ヒンドゥー教や仏教では、魂や生命が何度も生を繰り返す。
+          その巡り（輪廻）は、目覚め・解脱に至るまで続く。円環の時間の中で、死は「終わり」ではなく「次への門」だ。
+        </p>
+      </div>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          <strong>③ 祖先の国。</strong>多くの先住の信仰や東アジアの祖先観では、死者は遠くへ去るのではなく、
+          <strong>生者の世界に関わり続ける</strong>。盆に帰り、子孫を見守り、ときに導く。死は、関係の断絶ではなく、形を変えた継続だ。
+        </p>
+      </div>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          <strong>④ 薄明の世界。</strong>古い時代のヘブライ語聖書の「シェオル」のように、
+          天国でも地獄でもない、影のような死者の領域を描く伝統もある。
+          死後観は最初から天国地獄だったわけではなく、時代とともに形を変えてきた。
+        </p>
+      </div>
+
+      <!-- 3. なぜ信じるか -->
+      <h2>なぜ「死で終わり」と思えないのか</h2>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          人間の心は、<strong>「自分が存在しない」状態を、うまく思い描けない</strong>。
+          想像しようとする「自分」が、すでにそこにいてしまうからだ。
+          また私たちは、心と体を直感的に別物のように感じる（素朴な心身二元論）。
+          だから「体は滅びても、心は残る」という考えが、努力なしに立ち上がってくる。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          <a href="shukyo01.html" style="color:var(--gold-soft)">第一回</a>の二つの理論が、ここで効いてくる。
+          死を知る心は深い不安を生み（存在脅威管理）、その不安を、死後の物語がやわらげる。
+          さらに脳のクセが「心は続く」と感じさせる。<strong>恐怖が「続いてほしい」と願い、認知が「続く」と囁く</strong>――
+          この二つが合わさって、死後観はどの文化にも芽生えた。
+        </p>
+      </div>
+
+      <!-- 4. 臨死体験 -->
+      <h2>臨死体験という、境界の報告</h2>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          死の淵から戻った人々が語る「臨死体験」には、文化を超えてよく似た要素がある――
+          トンネル、まばゆい光、人生の回想、深い安らぎ。
+          脳科学は、酸素不足や脳内の化学変化など、いくつかの説明を示してきた。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          ここは、<a href="densetsu01.html" style="color:var(--gold-soft)">都市伝説の回</a>と同じ姿勢でいきたい。
+          臨死体験には脳で説明できる部分があり、同時に、すべてが説明し尽くされてはいない。
+          「ただの脳の幻」と切り捨てるのも、「あの世の証明」と飛びつくのも、どちらも急ぎすぎだ。
+          <strong>確かなのは、人は死の間際にも、光と安らぎを見る、ということ。</strong>その意味は、開いたまま置いておく。
+        </p>
+      </div>
+
+      <!-- 5. 形は世界観を映す -->
+      <h2>死後の形は、その宗教の「世界の地図」を映す</h2>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          面白いのは、死後の姿が、その宗教の世界観の鏡になっていることだ。
+          時間が一直線なら、死後は<strong>最終の審判</strong>になる。時間が円なら、死後は<strong>次の生</strong>になる。
+          つながりを重んじる文化なら、死者は<strong>関係の中に残る</strong>。
+          死後観は、空想の産物というより、<strong>その文化が世界をどう見ているかの、いちばん深い表明</strong>なのだ。
+        </p>
+      </div>
+
+      <!-- 結び -->
+      <h2>科学の地図が、途切れる場所</h2>
+      <p>
+        ここで正直にならなければならない。科学は、<strong>「なぜ人は死後を信じるのか」までは説明できる</strong>。
+        死の不安、心身を分ける直感、文化の物語。だが、<strong>「実際に死の向こうに何かがあるのか」には、答えられない</strong>。
+        そこは、観察も実験も届かない領域だ。
+      </p>
+      <p>
+        <a href="ichinen.html" style="color:var(--gold-soft)">仏法シリーズ</a>の最後で見た「科学の地図が途切れる場所」が、ここにもある。
+        人類が描いた無数の死後の風景は、その縁の向こうへ向けた、真剣な手紙だった。
+        ――では、その手紙を書く人が減っていく現代では、宗教はどこへ向かうのか。
+        次回、シリーズ最終回。<strong>神なき時代の信仰</strong>へ。
+      </p>
+
+      <p class="sources">
+        ［ことわり］各宗教の死後観、死後信念の国際的な広がり（Pew Research Centerの調査など）、
+        自己の非存在を想像しにくい心の傾向、素朴な心身二元論、臨死体験の特徴と神経科学的説明は、
+        宗教学・心理学・脳科学で知られた知見にもとづきます。死後の有無そのものは、科学で判定できる問いではありません。
+      </p>
+
+    </article>
+
+    <nav class="article-nav">
+      <a href="shukyo03.html" class="article-nav__item">
+        <span class="article-nav__dir">← 前の探究</span>
+        <span class="article-nav__title">神は一人か、大勢か</span>
+      </a>
+      <a href="shukyo05.html" class="article-nav__item article-nav__item--next">
+        <span class="article-nav__dir">次の探究 →</span>
+        <span class="article-nav__title">神なき時代の信仰（最終回）</span>
+      </a>
+    </nav>
+
+    <section class="next-cta">
+      <p class="next-cta__label">JOIN</p>
+      <h2 class="next-cta__title">あなたの問いが、次の探究になる</h2>
+      <p class="next-cta__text">
+        「これを探究してほしい」というテーマを送ってください。<br>
+        投げられたキーワードを、AIの知性が深く掘り下げ、次の対話録になります。
+      </p>
+      <a href="mailto:uno0908@gmail.com" class="btn btn--primary">テーマを送る（メール）</a>
+      <a href="index.html#articles" class="backlink">← 探究の記録へもどる</a>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p class="footer__logo">✦ 知の探究ラボ</p>
+    <p class="footer__copy">© 2026 知の探究ラボ ─ 人間が問い、AIが答え、そして宇宙が広がる。</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    (function () {
+      var bar = document.getElementById("progress");
+      if (!bar) return;
+      window.addEventListener("scroll", function () {
+        var h = document.documentElement;
+        var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+        bar.style.transform = "scaleX(" + Math.min(Math.max(scrolled, 0), 1) + ")";
+      }, { passive: true });
+    })();
+  </script>
+</body>
+</html>

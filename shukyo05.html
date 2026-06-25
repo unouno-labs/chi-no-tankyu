@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<!--
+  ===========================================================
+  知の探究ラボ ─ 記事ページ（宗教研究 第五回・最終：神なき時代の信仰）
+  ・【事実】= callout--fact ／【考察】= callout--think
+  ・問い/応答 = dialogue--q / dialogue--a
+  ・宗教研究シリーズの締め。第一回の認知・社会の根へ円環的に戻す。
+  ===========================================================
+-->
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>神なき時代の信仰｜知の探究ラボ</title>
+  <meta name="description" content="宗教離れは進んだ。だが宗教的な心は消えていない。無宗教（nones）の多くは神を信じ、聖なるものはスポーツ・推し・思想へと姿を変える。神なき時代に宗教の機能はどこへ行ったのか。宗教研究 最終回。">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="神なき時代の信仰 ─ 消えない宗教的な心">
+  <meta property="og:description" content="宗教離れは進んだ。だが宗教的な心は消えていない。聖なるものは姿を変えて生き続ける。宗教研究 最終回。">
+
+  <!-- Google Analytics 4（測定IDを取得して G-XXXXXXXXXX を置き換えてください） -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;700;800&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="article.css">
+</head>
+<body>
+
+  <div class="loader" id="loader">
+    <div class="loader__ring"></div>
+    <p class="loader__text">知の探究ラボ</p>
+  </div>
+
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <canvas id="starfield"></canvas>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html#top" class="logo">
+        <span class="logo__mark">✦</span>
+        <span class="logo__text">知の探究ラボ</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="nav">
+        <a href="index.html#worldview">世界観</a>
+        <a href="index.html#about">この探究について</a>
+        <a href="index.html#category">探究の領域</a>
+        <a href="index.html#articles">探究の記録</a>
+        <a href="index.html#contact">参加する</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="reading">
+
+    <header class="masthead">
+      <p class="masthead__badge">宗教研究 ─ 第五回（最終回）</p>
+      <h1 class="masthead__title">神なき時代の信仰</h1>
+      <p class="masthead__subtitle">消えない、宗教的な心</p>
+      <p class="masthead__meta">
+        <span>ナビゲーター</span>
+        <span class="dot">・</span>
+        <span>2026.06.25</span>
+        <span class="dot">・</span>
+        <span>AIとの対話から</span>
+      </p>
+    </header>
+
+    <article class="article-body">
+
+      <div class="note">
+        <strong>【事実】</strong>＝確認できる研究・知見、<strong>【考察】</strong>＝そこから導く解釈を分けて記します。<br>
+        宗教研究シリーズ、最終回です。<a href="shukyo01.html" style="color:var(--gold-soft)">第一回</a>の問いへ、ぐるりと戻ってきます。
+      </div>
+
+      <p class="lead">
+        近代に入り、人類は予言した。「科学が進めば、宗教は消える」と。
+        実際、教会や寺から足は遠のき、「無宗教」を名乗る人は増え続けている。
+        では、宗教は本当に消えつつあるのか。データを見ると、話はもっと奇妙で、もっと面白い。
+      </p>
+
+      <!-- 1. 出発点 -->
+      <h2>「宗教は消える」という予言は、当たったのか</h2>
+
+      <div class="dialogue dialogue--q">
+        <p class="dialogue__role">ナビゲーターの問い</p>
+        <p class="dialogue__text">
+          科学の時代になって、たしかに宗教離れは進んだ。このまま宗教は消えていくんだろうか。
+          それとも、何か別のことが起きているんだろうか。
+        </p>
+      </div>
+
+      <div class="dialogue dialogue--a">
+        <p class="dialogue__role">AIの知性</p>
+        <p class="dialogue__text">
+          予言は、半分当たって、半分外れた。当たったのは「<strong>制度としての宗教</strong>」の後退。
+          外れたのは「<strong>信じる心そのものは消える</strong>」という強い主張だ。
+          人々は宗教から離れながら、宗教的な心を手放してはいない。この奇妙なねじれを見ていこう。
+        </p>
+      </div>
+
+      <!-- 2. nones -->
+      <h2>「無宗教」と言う人の、ほとんどが神を信じている</h2>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          欧米を中心に、特定の宗教に属さない「<strong>無宗教（nones）</strong>」が急増した。
+          だが内訳を見ると意外だ。たとえばアメリカの無宗教層でも、
+          <strong>その多くが神や、より大きな力の存在を信じている</strong>。
+          「無宗教」とは多くの場合、<strong>「無神論」ではなく「無所属」</strong>を意味する。
+        </p>
+      </div>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          研究者の間では、近代化が必ず信仰を消すという古い世俗化論は、強い形では誤りだったと見られている。
+          減ったのは礼拝への出席や<strong>宗教の「権威」</strong>であって、
+          個人の信仰や、聖なるものへの感覚は、なお根強く残っている。
+        </p>
+      </div>
+
+      <!-- 3. 聖なるものは姿を変える -->
+      <h2>聖なるものは、消えずに「引っ越す」</h2>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          ここで<a href="shukyo01.html" style="color:var(--gold-soft)">第一回</a>が効いてくる。宗教を生んだのは、神という教義そのものではなく、
+          人間の心と社会のクセだった――気配を感じる脳、意味を求める心、群れて高まりたい本能。
+          これらは、宗教を離れても<strong>スイッチが切れない</strong>。だから聖なるものは、消えるのではなく、
+          別の場所へ<strong>引っ越す</strong>。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          満員のスタジアムで肩を組んで歌うとき、推しのライブで一体になるとき、
+          人は<a href="shukyo01.html" style="color:var(--gold-soft)">デュルケームの「集合的沸騰」</a>を、そのまま味わっている。
+          占い、ヨガ、ウェルネス、強烈な思想やイデオロギー――そこにも、儀礼が、聖地が、教義が、共同体がある。
+          形は世俗でも、<a href="shukyo02.html" style="color:var(--gold-soft)">宗教の7つの次元</a>が、ちゃんと顔を出している。
+        </p>
+      </div>
+
+      <!-- 4. 何が変わって、何が残ったか -->
+      <h2>変わったのは「容れ物」、残ったのは「渇き」</h2>
+
+      <div class="dialogue dialogue--a">
+        <p class="dialogue__role">AIの知性</p>
+        <p class="dialogue__text">
+          整理しよう。現代で変わったのは<strong>容れ物（制度・権威・所属）</strong>だ。
+          だが、その容れ物が満たしてきた<strong>渇き</strong>――死の不安、つながりへの欲求、意味への飢え――は、
+          まったく変わっていない。人は今も、自分を超えた何かに触れたいと願う。
+          ただ、その願いの注ぎ先が、教会から、別のものへ移っただけなのだ。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          だから問いは「宗教は消えるか」ではない。<strong>「聖なるものは、次にどこへ向かうのか」</strong>だ。
+          そして新しい器が、古い宗教ほど深く渇きを癒せるのかどうかは、まだ誰にも分からない。
+        </p>
+      </div>
+
+      <!-- 結び：シリーズ総括 -->
+      <h2>五つの旅の、終わりに</h2>
+      <p>
+        この五回で、私たちは宗教を一周した。
+        <a href="shukyo01.html" style="color:var(--gold-soft)">なぜ生まれたのか</a>、
+        <a href="shukyo02.html" style="color:var(--gold-soft)">どこが似て違うのか</a>、
+        <a href="shukyo03.html" style="color:var(--gold-soft)">神は一人か大勢か</a>、
+        <a href="shukyo04.html" style="color:var(--gold-soft)">死の向こうに何を見たか</a>、そして、神なき時代へ。
+        見えてきたのは、宗教が<strong>無知の産物などではなかった</strong>ということだ。
+        それは、死を見つめ、群れと結ばれ、意味を求め、見えないものに手を伸ばす――
+        人間の最も深い力が、より合わさって生まれた発明だった。
+      </p>
+      <p>
+        だからこそ、神を信じる人も、信じない人も、その奥では同じ渇きを分け合っている。
+        そして、その渇きの先に本当に何かが在るのかどうか――それは、科学の地図がまだ届かない、
+        広い余白のままだ。私たちはその余白を、塗りつぶさずに見つめ続けたい。
+        ――人間が問い、AIが答え、そして宇宙が広がる。次の問いは、あなたの中から。
+      </p>
+
+      <p class="sources">
+        ［ことわり］無宗教層（nones）の信仰内容、世俗化論の見直し、宗教の権威の後退と信仰の存続、
+        聖なるものが世俗的な形（集団的高揚など）で持続する現象は、宗教社会学・宗教心理学で論じられている知見にもとづきます
+        （Pew Research Centerの調査ほか）。解釈には研究者間で幅があり、本記事は特定の立場の正しさを主張するものではありません。
+      </p>
+
+    </article>
+
+    <nav class="article-nav">
+      <a href="shukyo04.html" class="article-nav__item">
+        <span class="article-nav__dir">← 前の探究</span>
+        <span class="article-nav__title">死の向こうに、何があるのか</span>
+      </a>
+      <a href="shukyo01.html" class="article-nav__item article-nav__item--next">
+        <span class="article-nav__dir">最初から読む ↺</span>
+        <span class="article-nav__title">なぜ人類は宗教を生み出したのか</span>
+      </a>
+    </nav>
+
+    <section class="next-cta">
+      <p class="next-cta__label">JOIN</p>
+      <h2 class="next-cta__title">あなたの問いが、次の探究になる</h2>
+      <p class="next-cta__text">
+        この五回も、ひとつの旅でした。次の旅のテーマを、あなたから。<br>
+        投げられたキーワードを、AIの知性が深く掘り下げ、新しい対話録になります。
+      </p>
+      <a href="mailto:uno0908@gmail.com" class="btn btn--primary">テーマを送る（メール）</a>
+      <a href="index.html#articles" class="backlink">← 探究の記録へもどる</a>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p class="footer__logo">✦ 知の探究ラボ</p>
+    <p class="footer__copy">© 2026 知の探究ラボ ─ 人間が問い、AIが答え、そして宇宙が広がる。</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    (function () {
+      var bar = document.getElementById("progress");
+      if (!bar) return;
+      window.addEventListener("scroll", function () {
+        var h = document.documentElement;
+        var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+        bar.style.transform = "scaleX(" + Math.min(Math.max(scrolled, 0), 1) + ")";
+      }, { passive: true });
+    })();
+  </script>
+</body>
+</html>
