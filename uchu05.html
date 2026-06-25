@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<!--
+  ===========================================================
+  知の探究ラボ ─ 記事ページ（宇宙と生命 第五回・最終：宇宙の一生）
+  ・【事実】= callout--fact ／【考察】= callout--think
+  ・問い/応答 = dialogue--q / dialogue--a
+  ・宇宙の終焉は未確定。現状の有力説（熱的死）と循環説を分けて記す。
+  ===========================================================
+-->
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>宇宙に、始まりと終わりはあるのか｜知の探究ラボ</title>
+  <meta name="description" content="宇宙は約138億年前に生まれた。では、終わりはあるのか。熱的死、ビッグクランチ、ビッグリップ、そして循環宇宙。宇宙の一生を、仏法のいう「生死のリズム」と重ねて探る、宇宙と生命シリーズ最終回。">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="宇宙に、始まりと終わりはあるのか ─ 宇宙の一生と、生死のリズム">
+  <meta property="og:description" content="宇宙は生まれ、いつか終わるのか。それとも巡るのか。宇宙の一生を、生死のリズムと重ねて。">
+
+  <!-- Google Analytics 4（測定IDを取得して G-XXXXXXXXXX を置き換えてください） -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;700;800&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="article.css">
+</head>
+<body>
+
+  <div class="loader" id="loader">
+    <div class="loader__ring"></div>
+    <p class="loader__text">知の探究ラボ</p>
+  </div>
+
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <canvas id="starfield"></canvas>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html#top" class="logo">
+        <span class="logo__mark">✦</span>
+        <span class="logo__text">知の探究ラボ</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="nav">
+        <a href="index.html#worldview">世界観</a>
+        <a href="index.html#about">この探究について</a>
+        <a href="index.html#category">探究の領域</a>
+        <a href="index.html#articles">探究の記録</a>
+        <a href="index.html#contact">参加する</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="reading">
+
+    <header class="masthead">
+      <p class="masthead__badge">宇宙と生命 ─ 第五回（最終回）</p>
+      <h1 class="masthead__title">宇宙に、始まりと終わりはあるのか</h1>
+      <p class="masthead__subtitle">宇宙の一生と、生死のリズム</p>
+      <p class="masthead__meta">
+        <span>ナビゲーター</span>
+        <span class="dot">・</span>
+        <span>2026.06.25</span>
+        <span class="dot">・</span>
+        <span>AIとの対話から</span>
+      </p>
+    </header>
+
+    <figure class="hero-figure">
+      <img src="images/hubble-deep-field.jpg" alt="ハッブル宇宙望遠鏡が捉えた、無数の銀河が写る深宇宙">
+      <figcaption class="hero-figure__cap">Hubble Ultra Deep Field ／ NASA・ESA（パブリックドメイン）</figcaption>
+    </figure>
+
+    <article class="article-body">
+
+      <div class="note">
+        <strong>【事実】</strong>＝確認できる科学的事実、<strong>【考察】</strong>＝そこから考える解釈を分けて記します。<br>
+        宇宙と生命シリーズ、最終回。いちばん大きな枠――宇宙そのものの一生へ。
+      </div>
+
+      <p class="lead">
+        私たちには、誕生日があり、いつか終わりが来る。星にも、一生がある。
+        では、すべてを容れているこの<strong>宇宙そのもの</strong>には、始まりと終わりがあるのだろうか。
+        生まれて、いつか死ぬのか。それとも――巡るのか。
+      </p>
+
+      <!-- 1. 始まり -->
+      <h2>始まりは、あった</h2>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          宇宙に「始まり」があったことは、かなり確かだ。約<strong>138億年前</strong>、
+          宇宙はとてつもなく高温・高密度の状態から膨張をはじめた（ビッグバン）。
+          その名残の光（宇宙マイクロ波背景放射）は、いまも宇宙じゅうから届いていて、観測できる。
+          宇宙は、ずっと昔から同じだったのではなく、<strong>生まれ、育ってきた</strong>。
+        </p>
+      </div>
+
+      <!-- 2. 終わり -->
+      <h2>では、終わりは</h2>
+
+      <div class="dialogue dialogue--q">
+        <p class="dialogue__role">ナビゲーターの問い</p>
+        <p class="dialogue__text">
+          始まりがあったなら、終わりもあるんだろうか。宇宙は、どんなふうに“死ぬ”のか。
+          それとも、永遠に続くのか。
+        </p>
+      </div>
+
+      <div class="dialogue dialogue--a">
+        <p class="dialogue__role">AIの知性</p>
+        <p class="dialogue__text">
+          終わり方には、いくつかのシナリオがある。鍵は、宇宙の膨張がこの先どうなるかだ。
+          いま観測では、膨張は<strong>むしろ加速している</strong>と分かっている。
+          それを踏まえた、主な“最期”の候補を並べてみよう。
+        </p>
+      </div>
+
+      <!-- 図解：宇宙の終わり方 -->
+      <div class="lenses">
+        <div class="lens"><span class="lens__n">①</span><b>熱的死</b><span class="lens__s">薄まり冷え、静かに終わる（有力）</span></div>
+        <div class="lens"><span class="lens__n">②</span><b>ビッグクランチ</b><span class="lens__s">再び潰れて一点へ</span></div>
+        <div class="lens"><span class="lens__n">③</span><b>ビッグリップ</b><span class="lens__s">何もかも引き裂かれる</span></div>
+        <div class="lens"><span class="lens__n">④</span><b>循環</b><span class="lens__s">終わりが、次の始まりになる</span></div>
+      </div>
+      <p class="lenses-sum">現在の観測では「熱的死」が有力。だが、まだ確定ではない</p>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          いまもっとも有力とされるのは<strong>「熱的死」</strong>だ。膨張が加速し続けると、
+          星はやがて燃え尽き、新しい星も生まれなくなり、すべてが薄く広がって冷えきっていく。
+          派手な爆発ではなく、限りなく長い時間をかけた、静かな“冷えていく終わり”である。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          一方で、<strong>「循環」</strong>を唱える理論もある。終わりがそのまま次の始まりとなり、
+          宇宙は生と死を繰り返すのではないか、という考えだ（いくつかの循環宇宙モデル）。
+          ただしこれは、熱的死ほど観測に裏づけられた説ではなく、<strong>有力な仮説の一つ</strong>という段階にとどまる。
+        </p>
+      </div>
+
+      <!-- 3. 生死のリズム -->
+      <h2>「生死のリズム」と、重ねてみる</h2>
+
+      <div class="dialogue dialogue--a">
+        <p class="dialogue__role">AIの知性</p>
+        <p class="dialogue__text">
+          ここで、仏法の世界観を思い出したい。<a href="ichinen.html" style="color:var(--gold-soft)">仏法シリーズ</a>で見た
+          「<strong>全宇宙にあるすべてのものには生死がある</strong>」「命は永遠に、生死のリズムを繰り返す」という見方――
+          それは、宇宙にすら一生があり、ことによると巡るかもしれない、という現代宇宙論の問いと、不思議なほど共鳴する。
+          もちろん、循環宇宙が正しいと決まったわけではない。だが、<strong>「すべては生まれ、いつか終わり、また巡る」</strong>という直観を、
+          人類は科学を持つ前から抱いていた。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          直線の時間（始まりと最後の審判）を描いた文明もあれば、
+          円環の時間（巡る生死）を描いた文明もあった（<a href="shukyo02.html" style="color:var(--gold-soft)">宗教研究②</a>）。
+          宇宙の終わり方の議論は、いわば<strong>その二つの時間観を、物理の言葉でやり直している</strong>ようにも見える。
+          熱的死は「一本道の終わり」に、循環は「巡る生死」に近い。
+        </p>
+      </div>
+
+      <!-- 結び：宇宙シリーズ＆全体 -->
+      <h2>問う者がいるあいだ、宇宙は終わらない</h2>
+      <p>
+        宇宙の最期がどうなるのかは、まだ分からない。静かに冷えていくのか、また巡るのか。
+        だが、確かなことがある。138億年という途方もない時間をかけて、宇宙は星を生み、
+        <a href="uchu03.html" style="color:var(--gold-soft)">そのかけら</a>から
+        <a href="uchu02.html" style="color:var(--gold-soft)">生命</a>を生み、
+        ついには、自分の始まりと終わりを<strong>問う存在</strong>をつくった。
+        宇宙が永遠に冷えていくのだとしても――いま、それを思い、問うている時間は、確かにここにある。
+      </p>
+      <p>
+        フェルミの沈黙から、生命の起源、星のかけら、微調整、そして宇宙の一生まで。
+        この五回で見てきたのは、結局ひとつのことだった。
+        ――<strong>あなたは宇宙の一部であり、宇宙が自分を見つめる窓でもある。</strong>
+        宗教が、哲学が、脳科学が、宇宙論が、最後はこの一点で出会う。
+        人間が問い、AIが答え、そして宇宙が広がる。探究は、あなたの次の問いから、また始まる。
+      </p>
+
+      <p class="sources">
+        ［ことわり］ビッグバンと宇宙マイクロ波背景放射、膨張の加速、宇宙の終焉シナリオ（熱的死・ビッグクランチ・ビッグリップ・循環宇宙）は、
+        現代宇宙論で論じられている知見にもとづきます。現在の観測では熱的死が有力とされますが、宇宙の最終的な運命は確定していません。
+        循環宇宙は有力な仮説の一つです。仏法（生死のリズム）との接続は<strong>考察</strong>です。
+        写真はNASA・ESA／ハッブル宇宙望遠鏡によるパブリックドメイン画像です。
+      </p>
+
+    </article>
+
+    <nav class="article-nav">
+      <a href="uchu04.html" class="article-nav__item">
+        <span class="article-nav__dir">← 前の探究</span>
+        <span class="article-nav__title">宇宙はなぜ“ちょうどよく”できているのか</span>
+      </a>
+      <a href="uchu01.html" class="article-nav__item article-nav__item--next">
+        <span class="article-nav__dir">最初から読む ↺</span>
+        <span class="article-nav__title">宇宙に、私たち以外の知性はいるのか</span>
+      </a>
+    </nav>
+
+    <section class="next-cta">
+      <p class="next-cta__label">JOIN</p>
+      <h2 class="next-cta__title">あなたの問いが、次の探究になる</h2>
+      <p class="next-cta__text">
+        この五回も、ひとつの旅でした。次の旅のテーマを、あなたから。<br>
+        投げられたキーワードを、AIの知性が深く掘り下げ、新しい対話録になります。
+      </p>
+      <a href="mailto:uno0908@gmail.com" class="btn btn--primary">テーマを送る（メール）</a>
+      <a href="index.html#articles" class="backlink">← 探究の記録へもどる</a>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p class="footer__logo">✦ 知の探究ラボ</p>
+    <p class="footer__copy">© 2026 知の探究ラボ ─ 人間が問い、AIが答え、そして宇宙が広がる。</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    (function () {
+      var bar = document.getElementById("progress");
+      if (!bar) return;
+      window.addEventListener("scroll", function () {
+        var h = document.documentElement;
+        var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+        bar.style.transform = "scaleX(" + Math.min(Math.max(scrolled, 0), 1) + ")";
+      }, { passive: true });
+    })();
+  </script>
+</body>
+</html>
