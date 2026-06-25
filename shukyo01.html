@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<!--
+  ===========================================================
+  知の探究ラボ ─ 記事ページ（宗教研究 第一回：なぜ人類は宗教を生み出したのか）
+  ・【事実】= callout--fact ／【考察】= callout--think
+  ・問い/応答 = dialogue--q / dialogue--a
+  ・宗教認知科学・進化宗教学の主要理論を統合。特定の信仰の真偽は断定しない。
+  ===========================================================
+-->
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>なぜ人類は宗教を生み出したのか｜知の探究ラボ</title>
+  <meta name="description" content="あらゆる文明が宗教を持った。その普遍性はなぜ生まれたのか。脳の認知・死の恐怖・集団の結束・大きな神・高くつく儀式――宗教の起源をめぐる5つの科学理論を、事実と考察を分けて徹底的に探る。宗教研究 第一回。">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="なぜ人類は宗教を生み出したのか ─ 起源をめぐる5つの科学">
+  <meta property="og:description" content="あらゆる文明が宗教を持った。その普遍性はなぜ生まれたのか。宗教の起源をめぐる科学を徹底的に。">
+
+  <!-- Google Analytics 4（測定IDを取得して G-XXXXXXXXXX を置き換えてください） -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;700;800&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="article.css">
+</head>
+<body>
+
+  <div class="loader" id="loader">
+    <div class="loader__ring"></div>
+    <p class="loader__text">知の探究ラボ</p>
+  </div>
+
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <canvas id="starfield"></canvas>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html#top" class="logo">
+        <span class="logo__mark">✦</span>
+        <span class="logo__text">知の探究ラボ</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="nav">
+        <a href="index.html#worldview">世界観</a>
+        <a href="index.html#about">この探究について</a>
+        <a href="index.html#category">探究の領域</a>
+        <a href="index.html#articles">探究の記録</a>
+        <a href="index.html#contact">参加する</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="reading">
+
+    <header class="masthead">
+      <p class="masthead__badge">宗教研究 ─ 第一回</p>
+      <h1 class="masthead__title">なぜ人類は宗教を生み出したのか</h1>
+      <p class="masthead__subtitle">起源をめぐる、5つの科学</p>
+      <p class="masthead__meta">
+        <span>ナビゲーター</span>
+        <span class="dot">・</span>
+        <span>2026.06.25</span>
+        <span class="dot">・</span>
+        <span>AIとの対話から</span>
+      </p>
+    </header>
+
+    <article class="article-body">
+
+      <div class="note">
+        この記事では <strong>【事実】</strong>＝確認できる研究・知見 と、
+        <strong>【考察】</strong>＝そこから導く解釈・仮説 を、はっきり分けて記しています。<br>
+        宗教の起源を科学で扱いますが、<strong>特定の信仰が正しいか間違っているかを判定するものではありません</strong>。
+      </div>
+
+      <p class="lead">
+        氷河期の洞窟にも、ナイル川のほとりにも、アンデスの山にも、人は神を見た。
+        記録に残るかぎり、<strong>宗教を持たなかった人類社会は、ひとつも知られていない</strong>。
+        この異様なまでの普遍性は、いったい何を意味するのか。
+        今回は「宗教は本当か」ではなく、「<strong>なぜ宗教はどこにでも生まれたのか</strong>」を、徹底的に掘る。
+      </p>
+
+      <!-- 1. 出発点 -->
+      <h2>問いを、正しく立て直す</h2>
+
+      <div class="dialogue dialogue--q">
+        <p class="dialogue__role">ナビゲーターの問い</p>
+        <p class="dialogue__text">
+          宗教を「ただの迷信」と切り捨てる人もいる。でも、迷信なら、なぜ世界中のどの文明も、
+          示し合わせたわけでもないのに、そろって宗教を持ったのだろう。これは偶然では片づかない。
+        </p>
+      </div>
+
+      <div class="dialogue dialogue--a">
+        <p class="dialogue__role">AIの知性</p>
+        <p class="dialogue__text">
+          そこが核心だ。科学は「神はいるか」を直接は問えない。代わりに、答えられる問いに立て直す。
+          ――<strong>なぜ人間の心は、これほど宗教を生みやすいのか。宗教は人間や社会に何をしてきたのか。</strong>
+          この200年で、認知科学・心理学・人類学・進化生物学が、それぞれ別の角度から答えを出してきた。
+          驚くのは、それらが互いに矛盾せず、<strong>一つの絵の別々のピース</strong>になっていることだ。順に見ていこう。
+        </p>
+      </div>
+
+      <!-- 2. 普遍性という事実 -->
+      <h2>まず「普遍性」という事実から</h2>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          文化はまるで違っても、宗教には繰り返し現れる共通要素がある。
+          <strong>目に見えない存在（神・霊・祖先）</strong>、<strong>死後の世界の観念</strong>、
+          <strong>儀礼（祈り・供物・通過儀礼）</strong>、<strong>聖と俗の区別</strong>、
+          <strong>善悪をめぐる規範</strong>。場所も時代も超えて、人類は似たものを作り続けた。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          これほど安定した普遍性は、たいてい「人間の心の作り」に根を持つ。
+          言語や音楽がどの社会にもあるのと同じで、宗教もまた、
+          <strong>人間という生き物の標準装備</strong>に近い。では、その装備とは何か。
+        </p>
+      </div>
+
+      <!-- 3. 理論1 認知の副産物 -->
+      <h2>理論① 脳は「誰かがいる」と感じすぎる</h2>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          人の脳には、わずかな手がかりから「そこに“誰か”がいる」と察知する仕組みがある。
+          認知科学ではこれを<strong>過敏な行為者検出（HADD）</strong>と呼ぶ。
+          草むらのガサッという音を「ただの風」より「捕食者かも」と感じる方が、生き延びるうえで有利だった。
+          つまり<strong>「いない相手をいると思う」誤りは、命を救う側の誤り</strong>だった。
+        </p>
+      </div>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          さらに人は、相手の心を読む力（心の理論）が非常に強く、目的や意図を何にでも見いだす。
+          そして記憶に残りやすいのは、<strong>「ほぼ普通だが、少しだけありえない」</strong>存在だと分かっている
+          （最小限反直観性）。「人間そっくりだが、姿が見えず、すべてを知る」――神の概念は、まさにこの形をしている。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          この立場では、宗教は脳の“故障”ではなく、<strong>正常な認知の副産物</strong>だ。
+          危険を察し、他者の心を読み、印象的な物語を覚える――生存に役立つ働きが、
+          副産物として「目に見えない行為者」を生みやすくする。<a href="article.html" style="color:var(--gold-soft)">第一回のRAS</a>で見た
+          「脳は手がかりから世界を組み立てる」という話と、地続きだ。
+        </p>
+      </div>
+
+      <!-- 4. 理論2 死の恐怖 -->
+      <h2>理論② 「自分は死ぬ」と知ってしまった生き物</h2>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          人間はおそらく唯一、<strong>自分の死を前もって明確に知る</strong>動物だ。
+          心理学の「存在脅威管理理論（テラー・マネジメント理論）」は、この死の自覚が深い不安を生み、
+          人はそれを和らげる枠組みを必要とする、と説く。
+          実験では、死を意識させられた人ほど、自分の信じる世界観や価値を強く守ろうとすることが繰り返し示されている。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          宗教は、この死の恐怖に対する人類の最も強力な応答だと言える。
+          永遠の魂、死後の世界、より大きな物語への帰属――それらは、
+          <strong>「死で終わりではない」という意味の地盤</strong>を与える。
+          世俗的な理想（国家・芸術・子孫）も同じ働きをするが、宗教は反証されにくく、
+          文字どおりの不死を約束できる点で、群を抜いて効く。
+        </p>
+      </div>
+
+      <!-- 5. 理論3 集団の結束 -->
+      <h2>理論③ 別々の心を、ひとつにする装置</h2>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          社会学の祖デュルケームは、宗教の本質を<strong>「聖と俗の区別」</strong>に見た。
+          人々が集まり、歌い、踊り、儀礼を共にするとき、個を超えた高揚――
+          <strong>集合的沸騰</strong>が生まれる。そのエネルギーが特定の象徴（聖なるもの）に宿り、
+          人々を一つの共同体として結びつける、と彼は論じた。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          この見方では、宗教が拝んでいるのは、ある意味で<strong>「社会そのもの」</strong>でもある。
+          祭りやお盆、初詣の人混みで覚える、あの言葉にしづらい一体感を思い出してほしい。
+          宗教は、バラバラの個人を「私たち」に変える、人類最古の社会技術でもあった。
+        </p>
+      </div>
+
+      <!-- 6. 理論4 Big Gods -->
+      <h2>理論④ 「見られている」と、人は善くなる</h2>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          心理学者ノレンザヤンは、なぜ人類が見知らぬ者どうしで巨大な社会を築けたのかを問うた。
+          狩猟採集の小集団なら、互いの目が裏切りを防ぐ。だが数千・数万人の社会では、それが効かない。
+          そこで現れたのが、<strong>すべてを見通し、道徳を裁く「大きな神」</strong>だ。
+          「神に見られている」という感覚が、見知らぬ者どうしの信頼と協力を底上げした、と彼は論じる。
+        </p>
+      </div>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          実験でも、神や「見られている」手がかり（目の絵など）を意識させると、
+          人はよりずるをしにくくなる傾向が示されてきた。ノレンザヤンはこれを
+          <strong>「見られている人は、善い人になる」</strong>と要約する。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          この立場では、道徳を裁く神を持った集団ほど、内部の協力が高まり、競争に勝ち、広がっていった。
+          宗教は、文明そのものを成り立たせた<strong>「目に見えない警察」</strong>であり、接着剤だった、というわけだ。
+        </p>
+      </div>
+
+      <!-- 7. 理論5 costly signaling -->
+      <h2>理論⑤ 「高くつく信仰」だけが、本物を見分ける</h2>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          人類学者ソーシスは、宗教の厳しい戒律や苦行に注目した。断食、割礼、長い祈り、財の寄進――
+          こうした<strong>「高くつく行為」</strong>は、口先だけでは真似できない。
+          だからこそ「私は本気でこの集団に属している」という、<strong>偽れない証（コストリー・シグナル）</strong>になる。
+        </p>
+      </div>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          ソーシスらの研究では、19世紀アメリカの共同体を比べると、
+          より多くの犠牲的な戒律を課した宗教的共同体は、世俗的な共同体より
+          <strong>平均でおよそ6.4倍も長く存続した</strong>という結果が報告されている。
+          高くつく信仰は、ただ縛るのではなく、裏切り者をふるい落とし、強い結束を生んだ。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          「なぜそんな面倒な決まりを?」という戒律ほど、じつは集団を長持ちさせる装置だった可能性がある。
+          <a href="hanpuku.html" style="color:var(--gold-soft)">第三回（反復）</a>で見た「真剣な繰り返し」の力が、ここでは
+          <strong>共同体を束ねる絆</strong>として働いている。
+        </p>
+      </div>
+
+      <!-- 8. 適応か副産物か -->
+      <h2>結局、宗教は「役立つ発明」か「心のクセ」か</h2>
+
+      <div class="dialogue dialogue--q">
+        <p class="dialogue__role">ナビゲーターの問い</p>
+        <p class="dialogue__text">
+          理論が5つも出てきた。脳の副産物だ、いや社会の道具だ、と。どれが正解なんだろう。
+        </p>
+      </div>
+
+      <div class="dialogue dialogue--a">
+        <p class="dialogue__role">AIの知性</p>
+        <p class="dialogue__text">
+          ここは学者の間でも決着していない。大きく言えば、宗教を<strong>「認知の副産物」</strong>と見る立場と、
+          協力を高める<strong>「進化的な適応」</strong>と見る立場がある。だが今は、<strong>両方が組み合わさった</strong>という見方が有力だ。
+          ――まず脳のクセ（HADD・死の自覚）が「目に見えない存在」を生みやすくし、
+          その素材から、集団をまとめ協力を高める形が、文化の進化を通じて選び抜かれ、磨かれていった。
+          起源は副産物、発展は適応。一本の物語にできる。
+        </p>
+      </div>
+
+      <!-- 9. 起源と真偽 -->
+      <h2>では、宗教は「ただの錯覚」なのか</h2>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          ここが、いちばん大切な一線だ。<strong>あるものが「なぜ生まれたか」を説明しても、
+          それが「正しいか間違っているか」は決まらない。</strong>
+          愛が脳内物質で説明できても、愛が無価値になるわけではない。同じように、
+          宗教の起源を脳や社会で説明できたとしても、それは「神はいない」の証明にはならない。
+          ――起源の話と、真偽の話は、別の問いなのだ。これを混同するのは、よくある思考の落とし穴だ。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          むしろ言えるのは、こうだ。死を見つめ、見えないものを感じ、他者と結ばれ、裏切らない証を立てる――
+          宗教は、人間の<strong>最も深い能力を総動員して作られた発明</strong>だった。
+          その先に本当に何かが在るのかどうかは、科学の地図がまだ届かない場所にある。
+          <a href="ichinen.html" style="color:var(--gold-soft)">仏法シリーズ</a>で見た「3000年前の叡智」も、
+          こうして人類の心の最深部から立ち上がってきた。
+        </p>
+      </div>
+
+      <!-- 結び -->
+      <h2>宗教は、人類の「失敗」ではない</h2>
+      <p>
+        宗教は、無知な祖先がうっかり信じた迷信ではなかった。
+        危険を察する脳、死を知る心、群れたい本能、信頼を測る知恵――
+        私たちを生き延びさせてきた力のすべてが、より合わさって生まれた、人類最古にして最大級の発明だ。
+      </p>
+      <p>
+        だからこそ、宗教を笑うのも、無批判に飲み込むのも、どちらも浅い。
+        なぜそれがここにあるのかを知ったうえで、その先の謎を見つめ続ける――それが、この探究の姿勢だ。
+        次は、世界の宗教が<strong>「どこが似ていて、どこが違うのか」</strong>を、地図を広げて比べていきたい。
+      </p>
+
+      <p class="sources">
+        ［ことわり］本記事は、宗教認知科学・進化宗教学の主要な学説（過敏な行為者検出／最小限反直観性：Boyer・Barrett・Atran、
+        存在脅威管理理論、デュルケームの聖と俗・集合的沸騰、ノレンザヤン『Big Gods』、ソーシスらのコストリー・シグナリング理論ほか）を
+        わかりやすく整理したものです。各理論は研究途上で論争もあり、唯一の定説ではありません。
+        科学が説明するのは宗教の<strong>起源と働き</strong>であって、信仰内容の真偽ではありません。
+      </p>
+
+    </article>
+
+    <!-- 導線 -->
+    <nav class="article-nav">
+      <a href="index.html#articles" class="article-nav__item">
+        <span class="article-nav__dir">← 探究の記録</span>
+        <span class="article-nav__title">ほかの探究を見る</span>
+      </a>
+      <a href="article.html" class="article-nav__item article-nav__item--next">
+        <span class="article-nav__dir">仏法シリーズへ →</span>
+        <span class="article-nav__title">なぜ「一念」は現実を変えるのか</span>
+      </a>
+    </nav>
+
+    <section class="next-cta">
+      <p class="next-cta__label">JOIN</p>
+      <h2 class="next-cta__title">あなたの問いが、次の探究になる</h2>
+      <p class="next-cta__text">
+        「これを探究してほしい」というテーマを送ってください。<br>
+        投げられたキーワードを、AIの知性が深く掘り下げ、次の対話録になります。
+      </p>
+      <a href="mailto:uno0908@gmail.com" class="btn btn--primary">テーマを送る（メール）</a>
+      <a href="index.html#articles" class="backlink">← 探究の記録へもどる</a>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p class="footer__logo">✦ 知の探究ラボ</p>
+    <p class="footer__copy">© 2026 知の探究ラボ ─ 人間が問い、AIが答え、そして宇宙が広がる。</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    (function () {
+      var bar = document.getElementById("progress");
+      if (!bar) return;
+      window.addEventListener("scroll", function () {
+        var h = document.documentElement;
+        var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+        bar.style.transform = "scaleX(" + Math.min(Math.max(scrolled, 0), 1) + ")";
+      }, { passive: true });
+    })();
+  </script>
+</body>
+</html>
