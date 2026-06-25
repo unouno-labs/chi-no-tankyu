@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<!--
+  ===========================================================
+  知の探究ラボ ─ 記事ページ（都市伝説と検証 FILE 03：予言は当たるのか）
+  ・【事実】= callout--fact ／【証言】= callout--testimony ／【考察】= callout--think
+  ・特定の予言者・宗教を貶めない。断定も嘲笑もしない。
+  ===========================================================
+-->
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>予言は、当たるのか｜知の探究ラボ</title>
+  <meta name="description" content="ノストラダムス、繰り返された終末予言。なぜ「予言が当たった」と感じてしまうのか。曖昧さと後付け、確証バイアス、バーナム効果、自己成就――人が未来を知りたがる心を、事実と証言と考察を分けて探る。都市伝説と検証 FILE 03。">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="予言は、当たるのか ─ 当たって見える4つのしくみ">
+  <meta property="og:description" content="なぜ「予言が当たった」と感じるのか。曖昧さ・確証バイアス・バーナム効果・自己成就を、誠実に分けて。">
+
+  <!-- Google Analytics 4（測定IDを取得して G-XXXXXXXXXX を置き換えてください） -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;700;800&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="article.css">
+</head>
+<body>
+
+  <div class="loader" id="loader">
+    <div class="loader__ring"></div>
+    <p class="loader__text">知の探究ラボ</p>
+  </div>
+
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <canvas id="starfield"></canvas>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html#top" class="logo">
+        <span class="logo__mark">✦</span>
+        <span class="logo__text">知の探究ラボ</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="nav">
+        <a href="index.html#worldview">世界観</a>
+        <a href="index.html#about">この探究について</a>
+        <a href="index.html#category">探究の領域</a>
+        <a href="index.html#articles">探究の記録</a>
+        <a href="index.html#contact">参加する</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="reading">
+
+    <header class="masthead">
+      <p class="masthead__badge">都市伝説と検証 ─ FILE 03</p>
+      <h1 class="masthead__title">予言は、当たるのか</h1>
+      <p class="masthead__subtitle">「当たって見える」4つのしくみ</p>
+      <p class="masthead__meta">
+        <span>ナビゲーター</span>
+        <span class="dot">・</span>
+        <span>2026.06.25</span>
+        <span class="dot">・</span>
+        <span>AIとの対話から</span>
+      </p>
+    </header>
+
+    <article class="article-body">
+
+      <div class="note">
+        この記事は3色で情報を分けます。<br>
+        <strong>【事実】</strong>＝確認できること／<strong>【証言】</strong>＝語られた話（真偽は未確認）／
+        <strong>【考察】</strong>＝そこから考える解釈。
+      </div>
+
+      <p class="lead">
+        ノストラダムス、繰り返されてきた「世界の終わり」、よく当たると評判の占い。
+        人類はいつの時代も、未来を言い当てる言葉に惹かれてきた。
+        本当に、予言は当たるのか。それとも――<strong>「当たったように見える」何かが起きている</strong>のか。
+      </p>
+
+      <!-- 1. 出発点 -->
+      <h2>「当たった」と感じる前に</h2>
+
+      <div class="dialogue dialogue--q">
+        <p class="dialogue__role">ナビゲーターの問い</p>
+        <p class="dialogue__text">
+          有名な予言が「当たった」と聞くと、ぞくっとする。でも一方で、外れた予言は山ほどある。
+          この「当たる／当たらない」を、どう見極めればいいんだろう。
+        </p>
+      </div>
+
+      <div class="dialogue dialogue--a">
+        <p class="dialogue__role">AIの知性</p>
+        <p class="dialogue__text">
+          ポイントは、予言を<strong>「具体的か、曖昧か」</strong>で分けることだ。
+          日付と場所と中身がはっきりした予言は、検証できる。そして――<strong>そういう予言は、ほぼ当たらない</strong>。
+          一方、曖昧な予言は「当たったように見せる」しくみがいくつもある。
+          まず事実を確かめ、それから、その“見える化”のからくりを開けてみよう。
+        </p>
+      </div>
+
+      <!-- 2. 具体的な予言は当たらない -->
+      <h2>具体的な予言ほど、外れてきた</h2>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          「この年に世界が終わる」という<strong>日付つきの終末予言</strong>は、歴史上、数えきれないほど唱えられ、
+          そのすべてが外れてきた。私たちは現に、こうしてまだここにいる。
+          具体的で、反証できる予言は、検証にかけると、ことごとく崩れる。
+        </p>
+      </div>
+
+      <div class="callout callout--testimony">
+        <span class="callout__label">証言</span>
+        <p>
+          「あの予言は、◯◯の出来事を言い当てていた」――こうした“的中談”は、後を絶たない。
+          だが、よく聞くと、その多くは<strong>事が起きた“後”に</strong>「あれはこのことだった」と解釈されている。
+        </p>
+      </div>
+
+      <!-- 図解：なぜ当たって見えるのか -->
+      <h2>なぜ「当たって見える」のか ── 4つのしくみ</h2>
+      <div class="lenses">
+        <div class="lens"><span class="lens__n">①</span><b>曖昧さ＋後付け</b><span class="lens__s">どうとでも読め、事後に合わせる</span></div>
+        <div class="lens"><span class="lens__n">②</span><b>確証バイアス</b><span class="lens__s">当たりは覚え、外れは忘れる</span></div>
+        <div class="lens"><span class="lens__n">③</span><b>バーナム効果</b><span class="lens__s">誰にでも当てはまる言葉が刺さる</span></div>
+        <div class="lens"><span class="lens__n">④</span><b>自己成就</b><span class="lens__s">信じた通りに行動してしまう</span></div>
+      </div>
+      <p class="lenses-sum">予言が当たるのではなく、「当たって見える」しくみが、私たちの中で働く</p>
+
+      <!-- 3. 各しくみ -->
+      <h2>からくりを、ひとつずつ</h2>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          <strong>①曖昧さ＋後付け。</strong>有名な予言の多くは、詩のように曖昧だ。
+          曖昧だからこそ、どんな出来事が起きても「これを予言していた」と当てはめられる。
+          的中したのは予言ではなく、<strong>事後の解釈の腕前</strong>であることが多い。
+        </p>
+      </div>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          <strong>②確証バイアス。</strong>人の脳は、当たった予言は鮮明に覚え、外れた無数の予言はあっさり忘れる。
+          これは<a href="article.html" style="color:var(--gold-soft)">第一回のRAS</a>や
+          <a href="densetsu01.html" style="color:var(--gold-soft)">FILE 01</a>でも見た、注意のクセだ。
+          「よく当たる」という印象は、私たちの記憶の偏りが作っている。
+        </p>
+      </div>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          <strong>③バーナム効果。</strong>「あなたは本当は繊細だが、強がってしまうところがある」――
+          こうした<strong>誰にでも当てはまる言葉</strong>を、人は「自分だけを言い当てた」と感じる。
+          心理学の実験で繰り返し確かめられている、占いがよく当たって感じる正体のひとつだ。
+        </p>
+      </div>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          <strong>④自己成就。</strong>「あなたは成功する」と信じれば、人は前向きに動き、本当に近づく。
+          「不吉だ」と信じれば、こわばって失敗する。予言が未来を当てたのではなく、
+          <strong>予言を信じた心が、未来を作ってしまう</strong>。
+        </p>
+      </div>
+
+      <!-- 4. なぜ人は予言を求めるのか -->
+      <h2>それでも人は、未来を知りたがる</h2>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          ここで、笑って終わりにはしたくない。なぜ人類は、これほど予言に惹かれるのか。
+          答えはたぶん、<a href="shukyo01.html" style="color:var(--gold-soft)">宗教の起源</a>でも見た――
+          <strong>未来の不確かさが、こわいから</strong>だ。明日が見えない不安を、予言は和らげてくれる。
+          だから予言は、当たるかどうかとは別に、人の心にとって必要とされてきた。からくりを知っても、
+          その切実さまでバカにはできない。
+        </p>
+      </div>
+
+      <!-- 結び -->
+      <h2>未来は、予言より「いまの一念」で決まる</h2>
+      <p>
+        具体的な予言は、ほぼ当たらない。曖昧な予言は、私たちの心が「当たったこと」にしている。
+        ――それが、誠実に引ける線だ。だが同時に、未来を思う心の力は、本物だった。
+        ④の自己成就が示すように、<strong>「こうなる」と信じた一念が、行動を変え、現実を少しずつ動かす。</strong>
+      </p>
+      <p>
+        そう、これは<a href="article.html" style="color:var(--gold-soft)">一念</a>の話に戻ってくる。
+        未来は、どこかの予言書に書かれて待っているのではない。
+        いまのあなたの一念が、これから書いていくものだ。
+        ――予言を待つより、一念を定めるほうが、ずっと確かに未来に効く。
+      </p>
+
+      <p class="sources">
+        ［ことわり］日付つき終末予言が外れ続けてきたこと、確証バイアス、バーナム（フォアラー）効果、自己成就的予言は、
+        歴史および心理学で広く知られた知見にもとづきます。特定の予言者・宗教・占術の真偽を断定・侮辱するものではありません。
+        本記事は「未来を知りたい」という人の心を尊重したうえで、事実と解釈を分けて整理したものです。
+      </p>
+
+    </article>
+
+    <nav class="article-nav">
+      <a href="densetsu02.html" class="article-nav__item">
+        <span class="article-nav__dir">← 前のファイル</span>
+        <span class="article-nav__title">宇宙人は、4種類いるのか</span>
+      </a>
+      <a href="index.html#articles" class="article-nav__item article-nav__item--next">
+        <span class="article-nav__dir">探究の記録 →</span>
+        <span class="article-nav__title">ほかの探究を見る</span>
+      </a>
+    </nav>
+
+    <section class="next-cta">
+      <p class="next-cta__label">JOIN</p>
+      <h2 class="next-cta__title">あなたの「不思議な話」を聞かせてください</h2>
+      <p class="next-cta__text">
+        体験した不思議なこと、気になる噂や謎。<br>
+        送っていただければ、笑わず・鵜呑みにせず、事実と証言と考察に分けて、一緒に探究します。
+      </p>
+      <a href="mailto:uno0908@gmail.com" class="btn btn--primary">話を送る（メール）</a>
+      <a href="index.html#articles" class="backlink">← 探究の記録へもどる</a>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p class="footer__logo">✦ 知の探究ラボ</p>
+    <p class="footer__copy">© 2026 知の探究ラボ ─ 人間が問い、AIが答え、そして宇宙が広がる。</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    (function () {
+      var bar = document.getElementById("progress");
+      if (!bar) return;
+      window.addEventListener("scroll", function () {
+        var h = document.documentElement;
+        var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+        bar.style.transform = "scaleX(" + Math.min(Math.max(scrolled, 0), 1) + ")";
+      }, { passive: true });
+    })();
+  </script>
+</body>
+</html>
