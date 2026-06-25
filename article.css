@@ -416,6 +416,47 @@
 .tl__body { color: var(--text-dim); font-size: 0.92rem; margin-top: 4px; line-height: 1.7; }
 
 /* ============================================================
+   要点を一望する図解（◯つの観点／力 を並べて見せる）
+   ============================================================ */
+.lenses {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin: 26px 0 14px;
+}
+.lens {
+  padding: 16px 10px 14px;
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--gold);
+  border-radius: 12px;
+  background: var(--panel);
+  backdrop-filter: blur(8px);
+  text-align: center;
+  transition: transform 0.3s, border-color 0.3s;
+}
+.lens:hover { transform: translateY(-4px); }
+.lens__n { font-family: "Cinzel", serif; color: var(--gold-soft); font-size: 1.15rem; }
+.lens b { display: block; margin: 8px 0 6px; color: var(--text); font-size: 0.9rem; line-height: 1.45; }
+.lens__s { display: block; color: var(--text-dim); font-size: 0.76rem; line-height: 1.5; }
+.lenses-sum {
+  text-align: center;
+  color: var(--gold-soft);
+  font-size: 1.02rem;
+  letter-spacing: 0.03em;
+  margin: 8px 0 30px;
+}
+.lenses-sum::before {
+  content: "↓";
+  display: block;
+  color: var(--gold);
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
+@media (max-width: 768px) {
+  .lenses { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ============================================================
    出典・ことわり
    ============================================================ */
 .sources {
