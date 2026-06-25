@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<!--
+  ===========================================================
+  知の探究ラボ ─ 記事ページ（都市伝説と検証 FILE 01）
+  ・【事実】= callout--fact ／【証言】= callout--testimony ／【考察】= callout--think
+  ・問い/応答 = dialogue--q / dialogue--a
+  ・実在の人物は匿名化する。断定も嘲笑もしない。
+  ===========================================================
+-->
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>動かないはずの腕が、動いた｜知の探究ラボ</title>
+  <meta name="description" content="エリア51に入り宇宙人を描いたという証言、そして切断と言われた腕が動き出した話。信じる前に、笑う前に──事実・証言・考察を分けて、説明できることの境界線を探る。都市伝説と検証 第一弾。">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="動かないはずの腕が、動いた ─ ある証言と、説明できることの境界線">
+  <meta property="og:description" content="信じる前に、笑う前に。事実・証言・考察を分けて、不思議な話との誠実な付き合い方を探る。">
+
+  <!-- Google Analytics 4（測定IDを取得して G-XXXXXXXXXX を置き換えてください） -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;700;800&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="article.css">
+</head>
+<body>
+
+  <div class="loader" id="loader">
+    <div class="loader__ring"></div>
+    <p class="loader__text">知の探究ラボ</p>
+  </div>
+
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <canvas id="starfield"></canvas>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html#top" class="logo">
+        <span class="logo__mark">✦</span>
+        <span class="logo__text">知の探究ラボ</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="nav">
+        <a href="index.html#worldview">世界観</a>
+        <a href="index.html#about">この探究について</a>
+        <a href="index.html#category">探究の領域</a>
+        <a href="index.html#articles">探究の記録</a>
+        <a href="index.html#contact">参加する</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="reading">
+
+    <header class="masthead">
+      <p class="masthead__badge">都市伝説と検証 ─ FILE 01</p>
+      <h1 class="masthead__title">動かないはずの腕が、動いた</h1>
+      <p class="masthead__subtitle">ある証言と、説明できることの境界線</p>
+      <p class="masthead__meta">
+        <span>ナビゲーター</span>
+        <span class="dot">・</span>
+        <span>2026.06.25</span>
+        <span class="dot">・</span>
+        <span>AIとの対話から</span>
+      </p>
+    </header>
+
+    <article class="article-body">
+
+      <div class="note">
+        この記事では、3つの色で情報を分けています。<br>
+        <strong>【事実】</strong>＝科学・公的記録で確認できること／
+        <strong>【証言】</strong>＝語られた内容そのもの（真偽は未確認）／
+        <strong>【考察】</strong>＝そこから考える解釈・仮説。<br>
+        ※登場する方は実在しますが、ここでは敬意をこめて匿名で扱います。
+      </div>
+
+      <p class="lead">
+        ある動画で、一人の元美容師の男性が、静かに語っていた。エリア51に入り、宇宙人を自分の目で見て、
+        その姿をデッサンした、と。そして――事故で神経が切れ、医者から切断と言われた右腕が、
+        不思議なことに、また動くようになった、と。さて、私たちはこの話を、どう受け取ればいいのだろう。
+      </p>
+
+      <!-- 1. 出発点 -->
+      <h2>信じる前に、笑う前に</h2>
+
+      <div class="dialogue dialogue--q">
+        <p class="dialogue__role">ナビゲーターの問い</p>
+        <p class="dialogue__text">
+          こういう「すごい話」を聞くと、人は二手に分かれる。鵜呑みにする人と、鼻で笑う人。
+          でも、そのどちらにもなりたくない。誠実に向き合うには、どうすればいい。
+        </p>
+      </div>
+
+      <div class="dialogue dialogue--a">
+        <p class="dialogue__role">AIの知性</p>
+        <p class="dialogue__text">
+          鍵は「分ける」ことだ。確かめられる事実、語られた証言、そこからの考察――
+          これを混ぜるから、話は「全部本当」か「全部ウソ」かの二択になってしまう。
+          分けて並べれば、<strong>「ここまでは言える／ここからは分からない」</strong>という、正直な地図が描ける。
+          否定も肯定も急がず、その地図を一緒に作ろう。
+        </p>
+      </div>
+
+      <!-- 2. エリア51 -->
+      <h2>エリア51という場所</h2>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          エリア51は、実在するアメリカの軍事施設だ（ネバダ州、通称グルームレイク）。
+          長く存在自体が伏せられていたが、2013年に公的文書で存在が認められた。
+          周囲は厳重に警備され、民間人の立ち入りは禁じられている。
+        </p>
+      </div>
+
+      <div class="callout callout--testimony">
+        <span class="callout__label">証言</span>
+        <p>
+          「私はそこに入り、宇宙人を見た。その姿を、自分の手でデッサンした」――男性は、そう語る。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          ここは正直に言おう。施設の性質上、この証言は<strong>確かめることも、否定することもできない</strong>。
+          だから私たちは「ウソだ」とも「本当だ」とも言えない。
+          一つ添えるなら――人の記憶は録画ではなく、思い出すたびに作り直される性質がある（記憶の再構成）。
+          だが、これは「だから間違い」という意味ではない。確かめようがない、という事実をそのまま受け取るだけだ。
+        </p>
+      </div>
+
+      <!-- 3. 腕の話 -->
+      <h2>そして、腕の話</h2>
+
+      <div class="callout callout--testimony">
+        <span class="callout__label">証言</span>
+        <p>
+          「事故で神経がつながらなくなった。医者からは、当初は切断だと言われた。
+          でも――不思議なことに、いまは動くようになっているんです」
+        </p>
+      </div>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          ここには、科学が窓を開けられる部分がある。脳や脊髄の神経はほとんど再生しないが、
+          手足の<strong>末梢神経は、時間をかけて再生・再接続することがある</strong>（月〜年の単位で、少しずつ）。
+          「つながっていない」と言われた腕が、のちに動く――これは、医学的に絶対あり得ない話ではない。
+        </p>
+      </div>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          そして、医者の見立て（予後）が外れることも、現実にある。
+          「切断するしかない」という当初の判断が、回復によって結果的に覆る例は、ゼロではない。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          だから腕の回復は、「あり得ない奇跡」と決めつける必要はない。説明できる道筋がある。
+          ただし――どこまでが神経の再生で、どこからが説明しきれないのかは、本人の検査記録なしには分からない。
+          ここで「強い思いが治した」と断定すれば、<a href="shikishin.html" style="color:var(--gold-soft)">第六回（色心不二）</a>で
+          慎重にしたプラセボの落とし穴に、そのまま落ちる。<strong>説明できる範囲は説明し、残りは“分からないまま”大切に置く。</strong>
+        </p>
+      </div>
+
+      <!-- 4. なぜ信じる/疑う -->
+      <h2>なぜ人は、信じすぎ・疑いすぎてしまうのか</h2>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          人の脳には、自分が「こうだ」と思った情報を集めやすいクセがある（確認バイアス）。
+          信じたい人は信じる材料を、疑いたい人は疑う材料を、自然と拾い集めてしまう。
+          これは<a href="article.html" style="color:var(--gold-soft)">第一回（RAS）</a>で見た「注意のフィルター」の、もう一つの顔だ。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          だとすれば、いちばん難しいのは「保留」だ。白とも黒とも決めず、灰色のまま持ち続ける。
+          人は灰色が苦手で、つい白か黒に塗りたがる。けれど、この保留に耐える力こそ、
+          不思議な話と上手に付き合うための、いちばんの技術なのだと思う。
+        </p>
+      </div>
+
+      <!-- 5. 科学の地図の縁 -->
+      <h2>「まだ証明できない」と「あり得ない」は、別物だ</h2>
+
+      <div class="dialogue dialogue--q">
+        <p class="dialogue__role">ナビゲーターの問い</p>
+        <p class="dialogue__text">
+          科学で説明できないことは、たくさんある。それは、信じてはいけないということなのだろうか。
+        </p>
+      </div>
+
+      <div class="dialogue dialogue--a">
+        <p class="dialogue__role">AIの知性</p>
+        <p class="dialogue__text">
+          いや、まったく逆だ。科学は「いま確かめられる範囲」を扱う営みで、その地図には必ず<strong>縁</strong>がある。
+          縁の外側は「存在しない」のではなく、「まだ地図に描けていない」だけだ。
+          かつて隕石は「空から石は降らない」と笑われ、手洗いで病が防げるという話も最初は退けられた。
+          <strong>未証明は、未来の余白</strong>であって、否定の証拠ではない。
+        </p>
+      </div>
+
+      <!-- 結び -->
+      <h2>謎は、解かずに持っていていい</h2>
+      <p>
+        私たちは、この話に判決を下さない。エリア51の宇宙人は確かめようがなく、腕の回復には
+        科学が届く部分と届かない部分がある。それでいい。大切なのは、白黒をつけることではなく、
+        <strong>「ここまでは言える、ここからは分からない」と、自分の手で線を引けること</strong>だ。
+      </p>
+      <p>
+        その線を引けるようになると、不思議な話は、怖いものでも、バカにするものでもなくなる。
+        世界には、まだ地図にない場所がたくさんある――そう思える人の毎日は、きっと少しだけ広い。
+        謎は、急いで解かなくていい。手のひらにのせて、眺めていればいい。
+      </p>
+
+      <p class="sources">
+        ［ことわり］エリア51の実在と2013年の公的な存在認定、末梢神経が再生しうること、予後が外れる場合があること、
+        確認バイアスや記憶の再構成は、一般に知られた知見にもとづきます。本記事は特定の証言の真偽を
+        断定・否定するものではなく、語り手を尊重して匿名で扱いました。健康に関する判断は、必ず専門家にご相談ください。
+      </p>
+
+    </article>
+
+    <nav class="article-nav">
+      <a href="index.html#articles" class="article-nav__item">
+        <span class="article-nav__dir">← 探究の記録</span>
+        <span class="article-nav__title">ほかの探究を見る</span>
+      </a>
+      <a href="article.html" class="article-nav__item article-nav__item--next">
+        <span class="article-nav__dir">仏法シリーズへ →</span>
+        <span class="article-nav__title">なぜ「一念」は現実を変えるのか</span>
+      </a>
+    </nav>
+
+    <section class="next-cta">
+      <p class="next-cta__label">JOIN</p>
+      <h2 class="next-cta__title">あなたの「不思議な話」を聞かせてください</h2>
+      <p class="next-cta__text">
+        体験した不思議なこと、気になる噂や謎。<br>
+        送っていただければ、笑わず・鵜呑みにせず、事実と証言と考察に分けて、一緒に探究します。
+      </p>
+      <a href="mailto:uno0908@gmail.com" class="btn btn--primary">話を送る（メール）</a>
+      <a href="index.html#articles" class="backlink">← 探究の記録へもどる</a>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p class="footer__logo">✦ 知の探究ラボ</p>
+    <p class="footer__copy">© 2026 知の探究ラボ ─ 人間が問い、AIが答え、そして宇宙が広がる。</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    (function () {
+      var bar = document.getElementById("progress");
+      if (!bar) return;
+      window.addEventListener("scroll", function () {
+        var h = document.documentElement;
+        var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+        bar.style.transform = "scaleX(" + Math.min(Math.max(scrolled, 0), 1) + ")";
+      }, { passive: true });
+    })();
+  </script>
+</body>
+</html>

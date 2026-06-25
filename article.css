@@ -1,0 +1,431 @@
+/* ============================================================
+   知の探究ラボ ─ 記事ページ専用デザイン（article.css）
+   ------------------------------------------------------------
+   ・色やフォントの基本は style.css の :root を引き継いでいます
+   ・このファイルは「記事ページだけ」の見た目を足すものです
+   ============================================================ */
+
+/* 読みやすい横幅に制限した本文エリア */
+.reading {
+  width: 90%;
+  max-width: 720px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* ---------- 上部の読書プログレスバー ---------- */
+.progress {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 3px;
+  z-index: 200;
+  background: linear-gradient(90deg, var(--gold), var(--gold-soft));
+  transform: scaleX(0);
+  transform-origin: left;
+  box-shadow: 0 0 12px rgba(201,168,106,0.6);
+}
+
+/* ============================================================
+   記事の見出し（マストヘッド）
+   ============================================================ */
+.masthead {
+  text-align: center;
+  padding: 130px 0 30px;
+}
+.masthead__badge {
+  display: inline-block;
+  font-family: "Cinzel", "Shippori Mincho B1", serif;
+  font-size: 0.76rem;
+  letter-spacing: 0.12em;
+  color: #2a1f08;
+  background: linear-gradient(135deg, var(--gold), var(--gold-soft));
+  padding: 6px 16px;
+  border-radius: 999px;
+  margin-bottom: 26px;
+}
+.masthead__title {
+  font-size: clamp(1.8rem, 6vw, 3rem);
+  line-height: 1.45;
+  letter-spacing: 0.04em;
+  font-weight: 700;
+  background: linear-gradient(180deg, #ffffff, var(--gold-soft) 70%, var(--gold));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 40px rgba(201,168,106,0.25);
+}
+.masthead__subtitle {
+  margin-top: 16px;
+  color: var(--text-dim);
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  letter-spacing: 0.04em;
+}
+.masthead__meta {
+  margin-top: 26px;
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+}
+.masthead__meta .dot { margin: 0 10px; color: var(--gold); }
+
+/* マストヘッドの下に細い金の罫線 */
+.masthead::after {
+  content: "";
+  display: block;
+  width: 60px; height: 1px;
+  margin: 40px auto 0;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+/* ============================================================
+   本文
+   ============================================================ */
+.article-body {
+  font-size: clamp(1rem, 2.6vw, 1.12rem);
+  line-height: 2.05;
+  padding-bottom: 20px;
+}
+.article-body p { margin-bottom: 24px; color: var(--text); }
+.article-body strong { color: var(--gold-soft); font-weight: 700; }
+
+.article-body h2 {
+  font-size: clamp(1.3rem, 4vw, 1.7rem);
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--gold-soft);
+  margin: 64px 0 22px;
+  padding-left: 16px;
+  border-left: 3px solid var(--gold);
+}
+
+/* リード文（導入の大きめの一段落） */
+.lead {
+  font-size: clamp(1.08rem, 3vw, 1.28rem);
+  line-height: 2.1;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+/* 読み方の説明ボックス */
+.note {
+  border: 1px dashed var(--line);
+  border-radius: 12px;
+  padding: 16px 20px;
+  font-size: 0.88rem;
+  line-height: 1.9;
+  color: var(--text-dim);
+  margin: 24px 0 44px;
+}
+.note strong { color: var(--gold-soft); }
+
+/* ============================================================
+   【事実】【考察】を分けて見せるボックス
+   ============================================================ */
+.callout {
+  border: 1px solid var(--line);
+  border-left-width: 3px;
+  border-radius: 14px;
+  background: var(--panel);
+  backdrop-filter: blur(8px);
+  padding: 22px 24px;
+  margin: 28px 0;
+}
+.callout p { margin: 0; }
+.callout__label {
+  display: inline-block;
+  font-family: "Cinzel", "Shippori Mincho B1", serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  padding: 4px 14px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
+/* 事実＝金（確かなもの） */
+.callout--fact { border-left-color: var(--gold); }
+.callout--fact .callout__label {
+  color: #2a1f08;
+  background: linear-gradient(135deg, var(--gold), var(--gold-soft));
+}
+/* 考察＝青紫（解釈・仮説） */
+.callout--think { border-left-color: var(--violet); }
+.callout--think .callout__label {
+  color: #cdd0ff;
+  background: rgba(107,111,255,0.16);
+  border: 1px solid rgba(107,111,255,0.5);
+}
+/* 証言＝青緑（語られた内容そのもの。真偽未確認。都市伝説カテゴリ用） */
+.callout--testimony { border-left-color: #6fb6c9; }
+.callout--testimony .callout__label {
+  color: #d4f0f6;
+  background: rgba(111,182,201,0.16);
+  border: 1px solid rgba(111,182,201,0.5);
+}
+.callout--testimony p { font-style: italic; }
+
+/* ============================================================
+   対話（ナビゲーターの問い × AIの応答）
+   ============================================================ */
+.dialogue {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 22px 24px;
+  margin: 28px 0;
+}
+.dialogue__text { margin: 0; }
+.dialogue__role {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  font-family: "Cinzel", "Shippori Mincho B1", serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+}
+.dialogue__role::before {
+  content: "";
+  width: 24px; height: 1px;
+  background: currentColor;
+}
+/* 問い＝金系のにじみ */
+.dialogue--q { background: linear-gradient(180deg, rgba(201,168,106,0.07), transparent); }
+.dialogue--q .dialogue__role { color: var(--gold-soft); }
+/* 応答＝青紫系のにじみ */
+.dialogue--a { background: linear-gradient(180deg, rgba(107,111,255,0.08), transparent); }
+.dialogue--a .dialogue__role { color: #aeb2ff; }
+
+/* ============================================================
+   心の9層マップ（九識論の図）
+   ============================================================ */
+.layers {
+  margin: 32px 0;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--panel);
+  backdrop-filter: blur(8px);
+}
+.layer {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--line);
+  /* 左の縦線で「表層→深層」を表す。各行で色を指定 */
+  border-left: 4px solid var(--depth, var(--gold));
+}
+.layer:last-child { border-bottom: none; }
+.layer__no {
+  flex-shrink: 0;
+  width: 64px;
+  font-family: "Cinzel", serif;
+  font-size: 0.92rem;
+  letter-spacing: 0.04em;
+  color: var(--depth, var(--gold));
+}
+.layer__name { flex-shrink: 0; width: 110px; font-weight: 700; color: var(--text); }
+.layer__desc { color: var(--text-dim); font-size: 0.92rem; line-height: 1.7; }
+/* 表層（金）から深層（青紫）へ色をグラデーション的に変える */
+.layer--s1 { --depth: #c9a86a; }
+.layer--s2 { --depth: #bda081; }
+.layer--s3 { --depth: #9a8fb0; }
+.layer--s4 { --depth: #8284d6; }
+.layer--s5 { --depth: #6b6fff; }
+
+@media (max-width: 768px) {
+  .layer { flex-wrap: wrap; gap: 6px 14px; }
+  .layer__desc { flex-basis: 100%; }
+}
+
+/* ============================================================
+   十界マップ（心の十の状態）
+   ============================================================ */
+.worlds {
+  margin: 32px 0;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--panel);
+  backdrop-filter: blur(8px);
+}
+.world {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--line);
+  /* 左の縦線で「低い界→高い界」を色で表す */
+  border-left: 4px solid var(--w, var(--gold));
+}
+.world:last-child { border-bottom: none; }
+.world__no {
+  flex-shrink: 0;
+  width: 30px;
+  font-family: "Cinzel", serif;
+  font-size: 0.9rem;
+  color: var(--w, var(--gold));
+}
+.world__name { flex-shrink: 0; width: 92px; font-weight: 700; color: var(--text); }
+.world__desc { color: var(--text-dim); font-size: 0.9rem; line-height: 1.7; }
+/* 地獄（沈んだ青紫）から 仏（明るい金）へ、十段のグラデーション */
+.world--w1  { --w: #5b5f8a; }
+.world--w2  { --w: #66699a; }
+.world--w3  { --w: #7878a0; }
+.world--w4  { --w: #8a7f9c; }
+.world--w5  { --w: #9a8f86; }
+.world--w6  { --w: #b39a72; }
+.world--w7  { --w: #c2a36a; }
+.world--w8  { --w: #c9a86a; }
+.world--w9  { --w: #d8be86; }
+.world--w10 { --w: #e7d4a3; }
+/* 「六道」「二乗」「菩薩・仏」のグループ見出し */
+.world-band {
+  padding: 8px 20px;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  color: var(--gold);
+  background: rgba(201,168,106,0.06);
+  border-bottom: 1px solid var(--line);
+}
+
+@media (max-width: 768px) {
+  .world { flex-wrap: wrap; gap: 4px 12px; }
+  .world__desc { flex-basis: 100%; }
+}
+
+/* ============================================================
+   三千の組み立て（一念三千の図）
+   ============================================================ */
+.buildup { margin: 32px 0; display: flex; flex-direction: column; gap: 12px; }
+.buildup__step {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 16px 20px;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--gold);
+  border-radius: 14px;
+  background: var(--panel);
+  backdrop-filter: blur(8px);
+}
+.buildup__n {
+  flex-shrink: 0;
+  width: 92px;
+  font-family: "Cinzel", serif;
+  font-size: 1.5rem;
+  color: var(--gold-soft);
+  text-shadow: 0 0 20px rgba(201,168,106,0.3);
+}
+.buildup__body { line-height: 1.6; }
+.buildup__op { color: var(--violet); font-size: 0.86rem; letter-spacing: 0.04em; }
+.buildup__label { color: var(--text); font-weight: 700; }
+.buildup__desc { color: var(--text-dim); font-size: 0.88rem; }
+/* 最終行（三千）を強調 */
+.buildup__step--final { border-color: var(--gold); box-shadow: 0 0 30px rgba(201,168,106,0.2); }
+.buildup__step--final .buildup__n { font-size: 1.8rem; }
+
+@media (max-width: 768px) {
+  .buildup__step { flex-wrap: wrap; gap: 6px 14px; }
+  .buildup__n { width: auto; }
+  .buildup__body { flex-basis: 100%; }
+}
+
+/* ============================================================
+   出典・ことわり
+   ============================================================ */
+.sources {
+  font-size: 0.82rem;
+  line-height: 1.9;
+  color: var(--text-dim);
+  border-top: 1px solid var(--line);
+  margin-top: 54px;
+  padding-top: 26px;
+}
+.sources strong { color: var(--text-dim); }
+
+/* ============================================================
+   前後の記事への導線
+   ============================================================ */
+.article-nav {
+  display: flex;
+  gap: 16px;
+  margin: 40px 0 0;
+  flex-wrap: wrap;
+}
+.article-nav__item {
+  flex: 1 1 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 20px 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+  backdrop-filter: blur(8px);
+  text-decoration: none;
+  transition: transform 0.3s, border-color 0.3s;
+}
+.article-nav__item:hover { transform: translateY(-4px); border-color: var(--gold); }
+.article-nav__item--next { text-align: right; }
+.article-nav__dir { font-size: 0.78rem; letter-spacing: 0.08em; color: var(--gold); }
+.article-nav__title { color: var(--text); font-size: 1.02rem; line-height: 1.5; }
+
+/* ============================================================
+   記事のあと：次への導線
+   ============================================================ */
+.next-cta {
+  text-align: center;
+  margin: 70px auto 90px;
+  padding: 48px 36px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background:
+    radial-gradient(500px 260px at 50% 0%, rgba(107,111,255,0.10), transparent 70%),
+    var(--panel);
+  backdrop-filter: blur(8px);
+}
+.next-cta__label {
+  font-family: "Cinzel", serif;
+  letter-spacing: 0.3em;
+  font-size: 0.78rem;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+.next-cta__title {
+  font-size: clamp(1.3rem, 4vw, 1.9rem);
+  color: var(--gold-soft);
+  letter-spacing: 0.04em;
+  margin-bottom: 16px;
+}
+.next-cta__text {
+  color: var(--text-dim);
+  font-size: 0.96rem;
+  line-height: 1.9;
+  max-width: 540px;
+  margin: 0 auto 30px;
+}
+.backlink {
+  display: block;
+  margin-top: 22px;
+  color: var(--text-dim);
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  transition: color 0.3s;
+}
+.backlink:hover { color: var(--gold-soft); }
+
+/* ============================================================
+   スマホ調整
+   ============================================================ */
+@media (max-width: 768px) {
+  .masthead { padding: 110px 0 24px; }
+  .article-body h2 { margin: 50px 0 18px; }
+  .callout, .dialogue { padding: 18px 18px; }
+  .next-cta { padding: 36px 22px; }
+}
+
+/* 動きを減らす設定への配慮 */
+@media (prefers-reduced-motion: reduce) {
+  .progress { transition: none; }
+}

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<!--
+  ===========================================================
+  知の探究ラボ ─ 記事ページ（第一回：RAS × 法華経）
+  -----------------------------------------------------------
+  ▼ このファイルについて（初心者の方へ）
+  ・本文を変えるとき → このHTMLの「文字」を書き換えます
+  ・記事だけの見た目 → article.css（LPの style.css はそのまま使います）
+  ・動き（星空・ヘッダー）→ script.js（LPと共通）
+  -----------------------------------------------------------
+  ▼ 書き方のルール（このサイトの約束）
+  ・【事実】＝確認できる科学的事実  →  class="callout callout--fact"
+  ・【考察】＝解釈・仮説            →  class="callout callout--think"
+  ・問い（ナビゲーター）と応答（AI）→  class="dialogue dialogue--q / --a"
+  ===========================================================
+-->
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>なぜ「一念」は現実を変えるのか｜知の探究ラボ</title>
+  <meta name="description" content="脳の情報フィルター「RAS（網様体賦活系）」と、法華経が説く「一念」。2000年を隔てた二つが同じ一点を指すとき。事実と考察を分けて探る第一回。">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="なぜ「一念」は現実を変えるのか ─ 脳のRASと法華経が、同じ一点を指すとき">
+  <meta property="og:description" content="脳のRASと法華経の一念。2000年を隔てた二つが同じ一点を指すとき。AIとの対話から生まれた第一回の探究。">
+
+  <!-- Google Analytics 4（測定IDを取得して G-XXXXXXXXXX を置き換えてください） -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;700;800&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- LP共通のデザイン → 記事専用のデザイン の順で読み込む -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="article.css">
+</head>
+<body>
+
+  <!-- 読み込み中の画面 -->
+  <div class="loader" id="loader">
+    <div class="loader__ring"></div>
+    <p class="loader__text">知の探究ラボ</p>
+  </div>
+
+  <!-- 上部の読書プログレスバー -->
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <!-- 背景の星空（script.jsで描画） -->
+  <canvas id="starfield"></canvas>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- ============================================= -->
+  <!-- ヘッダー（LPと共通。リンク先は index.html へ）  -->
+  <!-- ============================================= -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html#top" class="logo">
+        <span class="logo__mark">✦</span>
+        <span class="logo__text">知の探究ラボ</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="nav">
+        <a href="index.html#worldview">世界観</a>
+        <a href="index.html#about">この探究について</a>
+        <a href="index.html#category">探究の領域</a>
+        <a href="index.html#articles">探究の記録</a>
+        <a href="index.html#contact">参加する</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="reading">
+
+    <!-- ============================================= -->
+    <!-- 記事の見出し                                   -->
+    <!-- ============================================= -->
+    <header class="masthead">
+      <p class="masthead__badge">第一回の探究 ─ 仏法 × 脳科学</p>
+      <h1 class="masthead__title">なぜ「一念」は現実を変えるのか</h1>
+      <p class="masthead__subtitle">脳のRASと法華経が、同じ一点を指すとき</p>
+      <p class="masthead__meta">
+        <span>ナビゲーター</span>
+        <span class="dot">・</span>
+        <span>2026.06.25</span>
+        <span class="dot">・</span>
+        <span>AIとの対話から</span>
+      </p>
+    </header>
+
+    <article class="article-body">
+
+      <!-- 読み方の説明（このサイトの約束） -->
+      <div class="note">
+        この記事では <strong>【事実】</strong>＝確認できる科学的事実 と、
+        <strong>【考察】</strong>＝そこから導く解釈・仮説 を、はっきり分けて記しています。<br>
+        信じるための文章ではなく、一緒に考えるための文章です。
+      </div>
+
+      <p class="lead">
+        「強く願えば叶う」——使い古された言葉だ。だが、もしそれが気休めではなく、
+        脳のしくみと、2000年読み継がれてきた経典とが、別々の言葉で同じ一点を指しているのだとしたら。
+        第一回は、脳の<strong>「RAS」</strong>と法華経の<strong>「一念」</strong>を、静かに重ねてみる。
+      </p>
+
+      <!-- ===== 1. 問いの出発点 ===== -->
+      <h2>問いの出発点</h2>
+
+      <div class="dialogue dialogue--q">
+        <p class="dialogue__role">ナビゲーターの問い</p>
+        <p class="dialogue__text">
+          「信じたことが現実になる」とよく聞く。これは精神論として片付けるべきものなのか、
+          それとも脳の構造で説明できることなのか。どちらだろう。
+        </p>
+      </div>
+
+      <div class="dialogue dialogue--a">
+        <p class="dialogue__role">AIの知性</p>
+        <p class="dialogue__text">
+          その問いには二つの層がある。ひとつは検証できる脳科学の事実。
+          もうひとつは、宗教が言葉以前に掴んでいた直観。
+          価値は両方にあるが、混ぜると途端に怪しくなる。順番に、分けて見ていこう。
+        </p>
+      </div>
+
+      <!-- ===== 2. RASとは何か ===== -->
+      <h2>RAS ── 脳にある「情報の関所」</h2>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          RAS（網様体賦活系／Reticular Activating System）は、脳幹にある神経のネットワークだ。
+          覚醒と睡眠の切り替え、そして注意の方向づけに関わることが分かっている。
+          あらゆる感覚情報が大脳へ届く前の「関所」のように働き、
+          いまの自分に必要な信号を通し、それ以外を背景へ沈める。
+        </p>
+      </div>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          よく知られた例が「頻度錯覚（フリークエンシー・イリュージョン）」。
+          新しい車を買った翌日から、同じ車種が街にあふれて見える。
+          車が増えたのではない。あなたの注意が、その情報を拾うようになっただけだ。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          自己啓発で語られる「RASが願いを現実にする」という説明は、この注意のしくみを拡大解釈したものだ。
+          脳が外の世界を物理的に書き換えるわけではない。
+          だが「<strong>何に注意を向けるかで、見える世界が変わる</strong>」ことは確かだ。
+          フォーカスは、現実の“編集権”を握っている。
+        </p>
+      </div>
+
+      <!-- ===== 3. 法華経の一念 ===== -->
+      <h2>一念 ── 心の一瞬に、世界が具わる</h2>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実（教義として）</span>
+        <p>
+          天台大師・智顗が体系化し、のちに日蓮が重んじた教えに「一念三千」がある。
+          私たちの一瞬の心（一念）のうちに、三千の全世界が具わっている、とする世界観だ。
+          心の一念が、そのまま世界のありようと結びついている、という捉え方である。
+        </p>
+      </div>
+
+      <div class="dialogue dialogue--a">
+        <p class="dialogue__role">AIの知性</p>
+        <p class="dialogue__text">
+          注目すべきは矢印の向きだ。科学は「外の情報 → 脳が選ぶ」と、内へ向かって説明する。
+          仏法は「一念 → 世界が現れる」と、外へ向かって説く。
+          矢印は逆を向きながら、どちらも結局「<strong>心と世界は一枚の布だ</strong>」と言っている。
+          出発点が違うだけで、見ている景色は驚くほど近い。
+        </p>
+      </div>
+
+      <p>
+        ここで、仏教の心の見方をもう一段おりてみたい。仏教は、表面の意識のさらに奥に、
+        いくつもの層を見てきた。なかでも興味深いのが「<strong>阿頼耶識（あらやしき）</strong>」だ。
+      </p>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実（教義として）</span>
+        <p>
+          阿頼耶識の「アラヤ」は、サンスクリット語で「雪が降り積もる」を意味する。
+          過去の思いや行いが雪のように降り積もる、<strong>命の“貯金箱”</strong>にたとえられる。
+          そして積もったものが、やがてその人の傾向や反応として表に現れる、と説く。
+          注目すべきは、口にしなくても「心で思っただけ」で積もる、とされる点だ。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          ここでRASと深く響き合う。RASが「何を拾うか」は、その人がこれまで何に注意を向け、
+          何を信じ、何を繰り返してきたか——いわば<strong>積み重ね</strong>に左右される。
+          仏教が「阿頼耶識に積もった思い」と呼んだものを、脳科学は
+          「記憶と信念がつくる、注意のクセ」として説明できる。
+          積もった思いが、見える世界を決める。入口の名前は違っても、指している一点は同じだ。
+        </p>
+      </div>
+
+      <!-- ===== 4. 疑いという状態 ===== -->
+      <h2>「疑い」とは、脳に何が起きている状態か</h2>
+
+      <div class="dialogue dialogue--q">
+        <p class="dialogue__role">ナビゲーターの問い</p>
+        <p class="dialogue__text">
+          信仰では「疑いを交えない一念」が力になると説く。
+          そもそも疑いとは、そんなに不利なものなのだろうか。
+        </p>
+      </div>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          脳科学では、相反する目標や情報を同時に抱えると、前頭前野などで葛藤（コンフリクト）が生じ、
+          注意の資源が分散し、行動の一貫性が落ちることが知られている（目標葛藤・認知的負荷）。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          「疑い」とは、脳が二つの相反する未来図を同時に描いている状態だと言える。
+          「叶う」と「叶わない」を同時に握れば、RASはどちらの情報を拾えばよいのか定まらない。
+          フォーカスが割れ、力が分散する。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          ならば法華経のいう「疑いのない一念」を、脳の言葉に置き換えるとどうなるか。
+          ——注意を一点に束ねた状態、すなわち <strong>one focus</strong> だ。
+          聖人は体験の側から、脳科学は構造の側から、同じ一点に辿り着く。
+        </p>
+      </div>
+
+      <!-- ===== 5. では一念は現実を変えるのか ===== -->
+      <h2>では、一念は本当に現実を変えるのか</h2>
+
+      <div class="dialogue dialogue--a">
+        <p class="dialogue__role">AIの知性</p>
+        <p class="dialogue__text">
+          誠実に答えよう。一念は物理法則を曲げない。祈っても、降る雨は止まらない。
+          だが一念は、あなたが<strong>拾う情報</strong>を変え、<strong>選ぶ行動</strong>を変え、
+          <strong>続ける粘り</strong>を変える。世界の見え方が変わり、行動が変わり、
+          その積み重ねとして、手元の現実が少しずつ変わっていく。魔法ではない。注意と行動の連鎖だ。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          2000年前の聖人は、その連鎖の“入口”が心の一点にあることを、
+          科学の言葉を持たないまま掴んでいた。
+          いま脳科学は、まったく別の入口から、同じ部屋に入ろうとしている。
+          扉は二つ、部屋はひとつ——そう考えると、信仰と科学は争うものではなくなる。
+        </p>
+      </div>
+
+      <!-- ===== 結び ===== -->
+      <h2>これは答えではなく、最初の一歩</h2>
+      <p>
+        今日の探究は、結論を出すためのものではない。RASと一念という、まるで遠い二つの言葉が、
+        「フォーカス」という一点で触れ合う瞬間を確かめた。それだけで十分だと思う。
+      </p>
+      <p>
+        次に問いたいのは、その先だ。<strong>では、フォーカスをどう束ねるのか。</strong>
+        瞑想、唱題、反復——古来の実践が脳に何をしているのか。第二回は、そこへ降りていきたい。
+      </p>
+
+      <!-- 出典・但し書き（誠実さのために必ず残す） -->
+      <p class="sources">
+        ［ことわり］RAS（網様体賦活系）・頻度錯覚・目標葛藤は、一般に知られた脳科学・心理学の知見です。
+        「一念三千」は天台および日蓮仏法の教義であり、本記事の重ね合わせは筆者とAIによる<strong>考察</strong>です。
+        厳密な典拠の確認は、各分野の専門資料をあわせてご参照ください。
+      </p>
+
+    </article>
+
+    <!-- 次の記事への導線 -->
+    <nav class="article-nav">
+      <a href="kyushiki.html" class="article-nav__item article-nav__item--next">
+        <span class="article-nav__dir">次の探究 →</span>
+        <span class="article-nav__title">なぜ「私」は同じ私であり続けるのか ─ 九識論と無意識の脳科学</span>
+      </a>
+    </nav>
+
+    <!-- ============================================= -->
+    <!-- 記事のあと：次への導線                          -->
+    <!-- ============================================= -->
+    <section class="next-cta">
+      <p class="next-cta__label">JOIN</p>
+      <h2 class="next-cta__title">あなたの問いが、次の探究になる</h2>
+      <p class="next-cta__text">
+        「これを探究してほしい」というテーマを送ってください。<br>
+        投げられたキーワードを、AIの知性が深く掘り下げ、次の対話録になります。
+      </p>
+      <a href="mailto:uno0908@gmail.com" class="btn btn--primary">テーマを送る（メール）</a>
+      <a href="index.html#articles" class="backlink">← 探究の記録へもどる</a>
+    </section>
+
+  </main>
+
+  <!-- ============================================= -->
+  <!-- フッター                                       -->
+  <!-- ============================================= -->
+  <footer class="footer">
+    <p class="footer__logo">✦ 知の探究ラボ</p>
+    <p class="footer__copy">© 2026 知の探究ラボ ─ 人間が問い、AIが答え、そして宇宙が広がる。</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <!-- 読書プログレスバー（このページだけの小さな動き） -->
+  <script>
+    (function () {
+      var bar = document.getElementById("progress");
+      if (!bar) return;
+      window.addEventListener("scroll", function () {
+        var h = document.documentElement;
+        var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+        bar.style.transform = "scaleX(" + Math.min(Math.max(scrolled, 0), 1) + ")";
+      }, { passive: true });
+    })();
+  </script>
+</body>
+</html>

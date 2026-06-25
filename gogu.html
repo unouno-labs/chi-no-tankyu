@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<!--
+  ===========================================================
+  知の探究ラボ ─ 記事ページ（第五回：十界互具 × 潜在性・脳の可塑性）
+  ・【事実】= callout--fact ／【考察】= callout--think
+  ・問い/応答 = dialogue--q / dialogue--a
+  ===========================================================
+-->
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>地獄のどん底にも、仏はいる｜知の探究ラボ</title>
+  <meta name="description" content="十界のそれぞれが、また十界を具える「十界互具」。どんな心の状態にも、すべての状態が眠っている。脳の可塑性と潜在性から、その不思議を読み解く第五回。">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="地獄のどん底にも、仏はいる ─ 十界互具と、脳の潜在性">
+  <meta property="og:description" content="どんな状態にも、すべての状態が眠っている。十界互具を、脳の可塑性と潜在性から読み解く。">
+
+  <!-- Google Analytics 4（測定IDを取得して G-XXXXXXXXXX を置き換えてください） -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;700;800&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="article.css">
+</head>
+<body>
+
+  <div class="loader" id="loader">
+    <div class="loader__ring"></div>
+    <p class="loader__text">知の探究ラボ</p>
+  </div>
+
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <canvas id="starfield"></canvas>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html#top" class="logo">
+        <span class="logo__mark">✦</span>
+        <span class="logo__text">知の探究ラボ</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="nav">
+        <a href="index.html#worldview">世界観</a>
+        <a href="index.html#about">この探究について</a>
+        <a href="index.html#category">探究の領域</a>
+        <a href="index.html#articles">探究の記録</a>
+        <a href="index.html#contact">参加する</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="reading">
+
+    <header class="masthead">
+      <p class="masthead__badge">第五回の探究 ─ 仏法 × 脳科学</p>
+      <h1 class="masthead__title">地獄のどん底にも、仏はいる</h1>
+      <p class="masthead__subtitle">十界互具 ── すべての状態は、すべてを抱えている</p>
+      <p class="masthead__meta">
+        <span>ナビゲーター</span>
+        <span class="dot">・</span>
+        <span>2026.06.25</span>
+        <span class="dot">・</span>
+        <span>AIとの対話から</span>
+      </p>
+    </header>
+
+    <article class="article-body">
+
+      <div class="note">
+        この記事では <strong>【事実】</strong>＝確認できる科学的事実 と、
+        <strong>【考察】</strong>＝そこから導く解釈・仮説 を、はっきり分けて記しています。<br>
+        前回（<a href="juukai.html" style="color:var(--gold-soft)">十界論</a>）の続き。心の見方が、もう一段深くなります。
+      </div>
+
+      <p class="lead">
+        前回、心は地獄から仏まで十の世界を移ろうと見た。では、問いはここからだ。
+        絶望のどん底にいる人の心に、仏の世界はあるのか。逆に、仏の心の中に、地獄はあるのか。
+        仏教の答えは、静かに、しかし大胆だ。――<strong>ある</strong>。これが「十界互具」だ。
+      </p>
+
+      <!-- 1. 出発点 -->
+      <h2>十の世界は、互いを抱えている</h2>
+
+      <div class="dialogue dialogue--q">
+        <p class="dialogue__role">ナビゲーターの問い</p>
+        <p class="dialogue__text">
+          十界が移ろう状態だとして、地獄にいる間は、仏の心は消えてしまっているのか。
+          それとも、見えないだけで、どこかに残っているのか。
+        </p>
+      </div>
+
+      <div class="dialogue dialogue--a">
+        <p class="dialogue__role">AIの知性</p>
+        <p class="dialogue__text">
+          消えてはいない。眠っているだけだ。仏教は、十界のそれぞれが、その中にまた十界を具えていると説く。
+          地獄界の中にも仏界があり、仏界の中にも地獄界がある。これが<strong>十界互具</strong>。
+          十の世界が、互いを抱え合っている。
+        </p>
+      </div>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実（教義として）</span>
+        <p>
+          十界互具とは、十の世界のひとつひとつが、内側にまた十界すべてを具えているという見方だ。
+          十 × 十 で「百界」。だから、どんな状態にいても、残りの九つの世界は消えておらず、
+          つねに内側に潜んでいる、とする。
+        </p>
+      </div>
+
+      <!-- 2. 脳科学：潜在性 -->
+      <h2>どんな状態にも、すべての回路が残っている</h2>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          深い悲しみの最中にあっても、喜びを感じる脳の回路そのものが壊れるわけではない。
+          ただ、いまは働いていないだけだ。怒りに飲まれている人の中にも、
+          穏やかさや思いやりを生む仕組みは、そのまま備わっている。
+        </p>
+      </div>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          脳は、生涯にわたって新しいつながりをつくり替える力（可塑性）をもつ。
+          同じ脳が、状況やきっかけ次第で、まるで違う状態へ移ることができる。
+          私たちは、ひとつの状態に固定された存在ではない。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          十界互具を脳の言葉に置けば、「どの状態にいても、すべての状態になりうる力が、つねに内に在る」となる。
+          いまの心がどれほど暗くても、明るい世界の“回路”は消えていない。眠っているだけだ。
+          だから、ひとつのきっかけで、人は驚くほど別の世界へ移れる。
+        </p>
+      </div>
+
+      <!-- 3. 仏界は外から足すものではない -->
+      <h2>仏界は、どこかから「足す」ものではない</h2>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          ここに、十界互具のいちばん大切な含意がある。仏界は、はるか彼方にあって、
+          長い階段を上りつめた先で初めて手に入るもの――ではない。
+          いま、この地獄のような瞬間の<strong>内側にも、すでに具わっている</strong>。
+          だとすれば、必要なのは「別人になること」ではなく、内に眠るその世界を「呼び起こすこと」だ。
+        </p>
+      </div>
+
+      <div class="dialogue dialogue--a">
+        <p class="dialogue__role">AIの知性</p>
+        <p class="dialogue__text">
+          これは、とても開かれた思想だ。どんな立場の人も、どんなに落ちた状態の人も、
+          内側に最高の世界を具えている。誰かが特別で、誰かが見込みなし――ということがない。
+          仏界は遠い資格ではなく、いま誰の中にも眠っている可能性だ、と十界互具は告げている。
+        </p>
+      </div>
+
+      <!-- 4. ただし -->
+      <h2>ただし、眠ったままでは現れない</h2>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          可塑性は「可能性」であって、「自動的にそうなる」という保証ではない。
+          使われない回路は働きにくいまま沈み、繰り返し使われる回路が強まっていく
+          ――これは<a href="hanpuku.html" style="color:var(--gold-soft)">第三回（反復）</a>で見たとおりだ。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          だから十界互具は、「どうせ全部あるのだから何もしなくていい」という話ではない。
+          むしろ逆だ。どの世界も内に在るからこそ、どれを呼び起こし、どれを育てるかが効いてくる。
+          潜在することと、現れること。その間をつなぐのが、前回までに見てきた<strong>反復と注意</strong>だ。
+        </p>
+      </div>
+
+      <!-- 結び -->
+      <h2>心は、固定された身分ではない</h2>
+      <p>
+        十界互具がほどいてくれるのは、「自分はこういう人間だ」という思い込みの鎖だ。
+        いまどんな世界にいても、そこにすべての世界が眠っている。落ちた状態は、最終的な姿ではない。
+        この一点を知っているかどうかで、絶望のとらえ方そのものが変わる。
+      </p>
+      <p>
+        さて、ここまでは「心」の話をしてきた。だが、その心は、体とは別物なのだろうか。
+        「気の持ちよう」は、本当に体に届くのか。次回は、心と物質の境界へ――
+        <strong>「色心不二（しきしんふに）」</strong>へ進む。
+      </p>
+
+      <p class="sources">
+        ［ことわり］十界互具は天台・日蓮仏法の教義です。脳の可塑性、情動や感情に関わる回路が
+        状態によって働いたり沈んだりすることは、一般に知られた脳科学の知見にもとづきます。
+        十界互具と脳科学の重ね合わせは、筆者とAIによる<strong>考察</strong>です。
+      </p>
+
+    </article>
+
+    <nav class="article-nav">
+      <a href="juukai.html" class="article-nav__item">
+        <span class="article-nav__dir">← 前の探究</span>
+        <span class="article-nav__title">あなたの心には、十の世界が同居している</span>
+      </a>
+      <a href="shikishin.html" class="article-nav__item article-nav__item--next">
+        <span class="article-nav__dir">次の探究 →</span>
+        <span class="article-nav__title">「気の持ちよう」は、どこまで体に届くのか</span>
+      </a>
+    </nav>
+
+    <section class="next-cta">
+      <p class="next-cta__label">JOIN</p>
+      <h2 class="next-cta__title">あなたの問いが、次の探究になる</h2>
+      <p class="next-cta__text">
+        「これを探究してほしい」というテーマを送ってください。<br>
+        投げられたキーワードを、AIの知性が深く掘り下げ、次の対話録になります。
+      </p>
+      <a href="mailto:uno0908@gmail.com" class="btn btn--primary">テーマを送る（メール）</a>
+      <a href="index.html#articles" class="backlink">← 探究の記録へもどる</a>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p class="footer__logo">✦ 知の探究ラボ</p>
+    <p class="footer__copy">© 2026 知の探究ラボ ─ 人間が問い、AIが答え、そして宇宙が広がる。</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    (function () {
+      var bar = document.getElementById("progress");
+      if (!bar) return;
+      window.addEventListener("scroll", function () {
+        var h = document.documentElement;
+        var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+        bar.style.transform = "scaleX(" + Math.min(Math.max(scrolled, 0), 1) + ")";
+      }, { passive: true });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<!--
+  ===========================================================
+  知の探究ラボ ─ 記事ページ（第四回：十界論 × 感情の脳科学）
+  -----------------------------------------------------------
+  ・本文を変える → このHTMLの「文字」
+  ・記事だけの見た目 → article.css
+  ・動き（星空・ヘッダー）→ script.js（LP共通）
+  ・【事実】= callout--fact ／【考察】= callout--think
+  ・問い/応答 = dialogue--q / dialogue--a
+  ・心の十の状態の図 = <div class="worlds"> … </div>
+  ===========================================================
+-->
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>あなたの心には、十の世界が同居している｜知の探究ラボ</title>
+  <meta name="description" content="地獄から仏まで、心に同時に具わる「十界」。固定された身分ではなく、瞬間ごとに移ろう心の状態の地図を、感情の脳科学と重ねて読み解く。第四回の探究。">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="あなたの心には、十の世界が同居している ─ 十界論と感情の脳科学">
+  <meta property="og:description" content="地獄から仏まで、心に同時に具わる十界。移ろう心の地図を、感情の脳科学と重ねて読み解く。">
+
+  <!-- Google Analytics 4（測定IDを取得して G-XXXXXXXXXX を置き換えてください） -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;700;800&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="article.css">
+</head>
+<body>
+
+  <div class="loader" id="loader">
+    <div class="loader__ring"></div>
+    <p class="loader__text">知の探究ラボ</p>
+  </div>
+
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <canvas id="starfield"></canvas>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html#top" class="logo">
+        <span class="logo__mark">✦</span>
+        <span class="logo__text">知の探究ラボ</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="nav">
+        <a href="index.html#worldview">世界観</a>
+        <a href="index.html#about">この探究について</a>
+        <a href="index.html#category">探究の領域</a>
+        <a href="index.html#articles">探究の記録</a>
+        <a href="index.html#contact">参加する</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="reading">
+
+    <header class="masthead">
+      <p class="masthead__badge">第四回の探究 ─ 仏法 × 脳科学</p>
+      <h1 class="masthead__title">あなたの心には、十の世界が同居している</h1>
+      <p class="masthead__subtitle">十界論 ── 移ろう心の地図</p>
+      <p class="masthead__meta">
+        <span>ナビゲーター</span>
+        <span class="dot">・</span>
+        <span>2026.06.25</span>
+        <span class="dot">・</span>
+        <span>AIとの対話から</span>
+      </p>
+    </header>
+
+    <article class="article-body">
+
+      <div class="note">
+        この記事では <strong>【事実】</strong>＝確認できる科学的事実 と、
+        <strong>【考察】</strong>＝そこから導く解釈・仮説 を、はっきり分けて記しています。<br>
+        これまでの探究（<a href="article.html" style="color:var(--gold-soft)">RASと一念</a>／<a href="kyushiki.html" style="color:var(--gold-soft)">九識論</a>／<a href="hanpuku.html" style="color:var(--gold-soft)">反復</a>）の、四つめです。
+      </div>
+
+      <p class="lead">
+        朝は穏やかだった人が、昼には怒りに飲まれ、夜には誰かのために動いている。
+        私たちの心は、一つの色でできてはいない。仏教はこの移ろいを、
+        <strong>地獄から仏まで「十の世界（十界）」</strong>という地図にした。
+        これは、知っているかどうかで、自分の感情との付き合い方がまるで変わる地図だ。
+      </p>
+
+      <!-- 1. 出発点 -->
+      <h2>「いつもの自分」など、どこにもいない</h2>
+
+      <div class="dialogue dialogue--q">
+        <p class="dialogue__role">ナビゲーターの問い</p>
+        <p class="dialogue__text">
+          同じ一日のなかでも、自分はまるで別人のように変わる。落ち込み、苛立ち、安らぎ、喜び……。
+          仏教は、この心の移ろいを、どう捉えていたのだろう。
+        </p>
+      </div>
+
+      <div class="dialogue dialogue--a">
+        <p class="dialogue__role">AIの知性</p>
+        <p class="dialogue__text">
+          固定した「いつもの自分」を疑うところから始める。仏教は、心の状態を十の段階に分けた。
+          これが<strong>十界</strong>だ。大事なのは、これらが生まれつきの“身分”ではなく、
+          瞬間ごとに移り変わる“状態”だという点。まず、その地図を広げてみよう。
+        </p>
+      </div>
+
+      <!-- 2. 十界マップ -->
+      <h2>心の十の世界 ── 十界の地図</h2>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実（教義として）</span>
+        <p>
+          十界は、低い（環境に振り回される）状態から、高い（自分を超えて開かれる）状態まで、
+          心のあり方を十段に見たものだ。下の六つを「六道」、次の二つを「二乗」、
+          上の二つを「菩薩・仏」とまとめる。
+        </p>
+      </div>
+
+      <div class="worlds">
+        <div class="world-band">六道 ── 外の環境に「反応して」現れる状態</div>
+        <div class="world world--w1"><span class="world__no">1</span><span class="world__name">地獄界</span><span class="world__desc">苦しみにとらわれ、出口が見えない状態。</span></div>
+        <div class="world world--w2"><span class="world__no">2</span><span class="world__name">餓鬼界</span><span class="world__desc">満たされない渇き。欲に突き動かされる状態。</span></div>
+        <div class="world world--w3"><span class="world__no">3</span><span class="world__name">畜生界</span><span class="world__desc">本能と恐れのまま、目先だけで動く状態。</span></div>
+        <div class="world world--w4"><span class="world__no">4</span><span class="world__name">修羅界</span><span class="world__desc">他と比べ、勝ち負けや優劣にこだわる状態。</span></div>
+        <div class="world world--w5"><span class="world__no">5</span><span class="world__name">人界</span><span class="world__desc">おだやかで、理性が働く平静な状態。</span></div>
+        <div class="world world--w6"><span class="world__no">6</span><span class="world__name">天界</span><span class="world__desc">喜びにあふれた状態。ただし、長くは続かない。</span></div>
+        <div class="world-band">二乗 ── 自分を高めようと「求める」状態</div>
+        <div class="world world--w7"><span class="world__no">7</span><span class="world__name">声聞界</span><span class="world__desc">学びによって、気づきを得ていく状態。</span></div>
+        <div class="world world--w8"><span class="world__no">8</span><span class="world__name">縁覚界</span><span class="world__desc">自分の観察や発見から、悟りに近づく状態。</span></div>
+        <div class="world-band">菩薩・仏 ── 自分を超えて「開かれた」状態</div>
+        <div class="world world--w9"><span class="world__no">9</span><span class="world__name">菩薩界</span><span class="world__desc">他者のために生きる、思いやりに満ちた状態。</span></div>
+        <div class="world world--w10"><span class="world__no">10</span><span class="world__name">仏界</span><span class="world__desc">とらわれを超え、満ちた生命力と慈悲が湧く状態。</span></div>
+      </div>
+
+      <!-- 3. 感情は状態 -->
+      <h2>感情は「身分」ではなく「状態」だ</h2>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          感情や気分は、固定したものではなく、脳の状態として刻々と移り変わる。
+          同じ人でも、空腹のとき、疲れたとき、安心しているときで、同じ出来事への反応がまるで変わる。
+          「いつも怒っている人」も、怒っていない瞬間が必ずある。
+        </p>
+      </div>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          とくに強い情動――恐れ、怒り、渇望――は、扁桃体など反応の速い回路に支えられ、
+          考えるより先に体を動かす。十界の下のほう（六道）が「環境に反応して現れる」とされるのは、
+          この速い反応システムの姿と、よく重なる。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          ここで視点が反転する。「自分は怒りっぽい人間だ」ではなく、
+          「いま自分は<strong>修羅界という状態</strong>にいる」。性格（身分）ではなく、通り過ぎる状態。
+          そう捉え直せた瞬間、人はその感情に飲み込まれず、少し離れて眺められるようになる。
+        </p>
+      </div>
+
+      <!-- 4. 名づけの力 -->
+      <h2>なぜ「知る」と人生が変わるのか ── 名づけの力</h2>
+
+      <div class="dialogue dialogue--q">
+        <p class="dialogue__role">ナビゲーターの問い</p>
+        <p class="dialogue__text">
+          十界をただ知るだけで、本当に何かが変わるのだろうか。
+          知識として覚えることと、生き方が変わることの間には、何があるのか。
+        </p>
+      </div>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          自分の感情を言葉にする（ラベリングする）と、扁桃体の反応がやわらぎ、
+          理性を担う前頭前野が働きやすくなる、という研究がある。
+          「もやもや」を「これは不安だ」と名づけるだけで、波が少し静まる。名づけには、静める力がある。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          十界は、まさにこの<strong>「名づけの地図」</strong>だ。漠然とした不快を、
+          「いま自分は餓鬼界にいる」「これは修羅だ」と名前のある場所に置けると、
+          人はその状態を扱えるようになる。十界を知ると人生の感じ方が変わる――その正体は、ここにある。
+          知識が、自分を見る解像度を上げるのだ。
+        </p>
+      </div>
+
+      <!-- 5. 高い界 -->
+      <h2>反応する自分から、選ぶ自分へ</h2>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          他者を思いやるとき、あるいは行いに意味を見いだすときには、
+          前頭前野や、人とつながることに関わる脳のはたらきが活発になることが知られている。
+          反応に流される状態とは、別の回路が立ち上がる。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          十界の上のほう――菩薩界や仏界は、外の刺激に「反応する自分」を超えて、
+          自分から「選ぶ自分」へ向かう状態だと言える。低い界が悪で高い界が善、という話ではない。
+          ただ、どの界にいるかに<strong>気づいていられる</strong>ほど、人は次の一歩を選べるようになる。
+        </p>
+      </div>
+
+      <!-- 結び -->
+      <h2>地図を持つと、旅の景色が変わる</h2>
+      <p>
+        十界は、生まれつきの身分ではない。誰の心にも、十全部がそろっている。
+        ただ、その時々でどの世界が表に出るかが、移り変わっているだけだ。
+        この地図を一枚持っているだけで、自分の感情を「天気」のように眺められるようになる。
+      </p>
+      <p>
+        だが、ここで大きな問いが残る。地獄界の最中にいる人の心に、仏界はあるのか。
+        逆に、仏の心の中に、地獄はあるのか。じつは仏教は「ある」と答える。
+        十の世界のそれぞれが、また十の世界を抱えている――次回は、その不思議
+        <strong>「十界互具（じっかいごぐ）」</strong>へ。ここから、心の見方がもう一段深くなる。
+      </p>
+
+      <p class="sources">
+        ［ことわり］十界・六道・二乗・菩薩・仏は、仏教（とくに天台・日蓮仏法）の心の見方です。
+        扁桃体や前頭前野のはたらき、感情を言葉にすることで反応がやわらぐという知見（感情のラベリング）は、
+        一般に知られた脳科学・心理学の研究にもとづきます。十界と脳科学の重ね合わせは、
+        筆者とAIによる<strong>考察</strong>であり、両者が同一だと主張するものではありません。
+      </p>
+
+    </article>
+
+    <!-- 前後の記事への導線 -->
+    <nav class="article-nav">
+      <a href="hanpuku.html" class="article-nav__item">
+        <span class="article-nav__dir">← 前の探究</span>
+        <span class="article-nav__title">なぜ「繰り返し」だけが人を変えるのか</span>
+      </a>
+      <a href="gogu.html" class="article-nav__item article-nav__item--next">
+        <span class="article-nav__dir">次の探究 →</span>
+        <span class="article-nav__title">地獄のどん底にも、仏はいる</span>
+      </a>
+    </nav>
+
+    <section class="next-cta">
+      <p class="next-cta__label">JOIN</p>
+      <h2 class="next-cta__title">あなたの問いが、次の探究になる</h2>
+      <p class="next-cta__text">
+        「これを探究してほしい」というテーマを送ってください。<br>
+        投げられたキーワードを、AIの知性が深く掘り下げ、次の対話録になります。
+      </p>
+      <a href="mailto:uno0908@gmail.com" class="btn btn--primary">テーマを送る（メール）</a>
+      <a href="index.html#articles" class="backlink">← 探究の記録へもどる</a>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p class="footer__logo">✦ 知の探究ラボ</p>
+    <p class="footer__copy">© 2026 知の探究ラボ ─ 人間が問い、AIが答え、そして宇宙が広がる。</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    (function () {
+      var bar = document.getElementById("progress");
+      if (!bar) return;
+      window.addEventListener("scroll", function () {
+        var h = document.documentElement;
+        var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+        bar.style.transform = "scaleX(" + Math.min(Math.max(scrolled, 0), 1) + ")";
+      }, { passive: true });
+    })();
+  </script>
+</body>
+</html>

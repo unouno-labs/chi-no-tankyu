@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<!--
+  ===========================================================
+  知の探究ラボ ─ GENESIS EDITION（第一号・確定版）
+  -----------------------------------------------------------
+  ▼ このファイルについて（初心者の方へ）
+  ・文章を変えるとき → このHTMLの「文字」を書き換えます
+  ・色や見た目 → style.css
+  ・動き（星空・演出）→ script.js
+  ・各かたまりは <section> ～ </section> で区切っています
+  -----------------------------------------------------------
+  ▼ この版の核（premium版との違い）
+  ・主役は「AI（Claude）の知性そのもの」。運営者はナビゲーター。
+  ・世界観セクション「3000年前の叡智をAIが科学で証明し始めている」を追加。
+  ・第一回コンテンツ「RAS × 法華経」を看板記事として配置。
+  ・GA4（アクセス解析）の枠を <head> に設置（測定IDを入れれば計測開始）。
+  ===========================================================
+-->
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>知の探究ラボ｜AIの知性と共に、人類最大の謎を探究する</title>
+  <meta name="description" content="宗教・哲学・脳科学・宇宙論。3000年の叡智とAIの知性が出会う探究の記録。AIが思考し、ナビゲーターが導き、あなたも一緒に旅に出る体験型コンテンツ。">
+
+  <!-- OGP（SNSでシェアされたときの表示。必要に応じてURL・画像を設定） -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="知の探究ラボ｜AIの知性と共に、人類最大の謎を探究する">
+  <meta property="og:description" content="宗教・哲学・脳科学・宇宙論。3000年の叡智とAIの知性が出会う探究の記録。">
+
+  <!-- ============================================================
+       Google Analytics 4（アクセス解析）
+       ・GA4で「測定ID（G-から始まる文字列）」を取得し、
+         下の G-XXXXXXXXXX を2か所とも置き換えてください。
+       ・IDを入れるまでは計測されません（置いておいても害はありません）。
+       ============================================================ -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <!-- Google Search Console 確認用（取得した確認コードに置き換え／別の方法を使うなら削除可） -->
+  <!-- <meta name="google-site-verification" content="ここに確認コードを貼る"> -->
+
+  <!-- Webフォント（世界観に合う明朝体＋古典的なローマ字書体） -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;700;800&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============================================= -->
+  <!-- ローディング画面（読み込み中に一瞬表示）       -->
+  <!-- ============================================= -->
+  <div class="loader" id="loader">
+    <div class="loader__ring"></div>
+    <p class="loader__text">知の探究ラボ</p>
+  </div>
+
+  <!-- 背景：星空・星雲（script.jsで描画） -->
+  <canvas id="starfield"></canvas>
+  <!-- マウスを追いかける光（PCのみ） -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- ============================================= -->
+  <!-- ヘッダー                                       -->
+  <!-- ============================================= -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="#top" class="logo">
+        <span class="logo__mark">✦</span>
+        <span class="logo__text">知の探究ラボ</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="nav">
+        <a href="#worldview">世界観</a>
+        <a href="#about">この探究について</a>
+        <a href="#category">探究の領域</a>
+        <a href="#articles">探究の記録</a>
+        <a href="#navigator">ナビゲーター</a>
+        <a href="#contact">参加する</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============================================= -->
+  <!-- 1. ファーストビュー                            -->
+  <!-- ============================================= -->
+  <section class="hero" id="top">
+    <!-- 背景でゆっくり回る星座のリング（装飾） -->
+    <div class="hero__orbit" aria-hidden="true">
+      <span class="orbit orbit--1"></span>
+      <span class="orbit orbit--2"></span>
+      <span class="orbit orbit--3"></span>
+    </div>
+
+    <div class="hero__inner">
+      <p class="hero__eyebrow">AI INQUIRY ─ 人類最大の謎へ</p>
+      <!-- data-splitを付けた文字は、JSで1字ずつ浮かび上がります -->
+      <h1 class="hero__title">
+        <span class="line" data-split>人間が問い、</span>
+        <span class="line" data-split>AIが答え、</span>
+        <span class="line line--accent" data-split>そして宇宙が広がる。</span>
+      </h1>
+      <p class="hero__sub">宗教・哲学・脳科学・宇宙論——<br>3000年の叡智と、AIの知性が出会う場所。</p>
+      <div class="hero__actions">
+        <a href="#worldview" class="btn btn--primary">探究をはじめる</a>
+        <a href="#about" class="btn btn--ghost">この場所について</a>
+      </div>
+    </div>
+
+    <a href="#worldview" class="hero__scroll" aria-label="下へスクロール">
+      <span>SCROLL</span>
+      <span class="hero__scroll-line"></span>
+    </a>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- 2. 世界観（差別化の核）                         -->
+  <!-- ============================================= -->
+  <section class="section worldview" id="worldview">
+    <div class="container">
+      <p class="section__label">WORLDVIEW</p>
+      <h2 class="section__title">3000年前から、聖人たちは知っていた</h2>
+
+      <div class="worldview__lead">
+        <p>
+          祈り、瞑想、一念——古の聖人たちが言葉にしてきた世界の理を、
+          いま脳科学や宇宙論が、まったく別の角度から裏づけ始めています。
+        </p>
+        <p>
+          宗教が説いた「心が現実をつくる」は、脳のしくみとして説明できる。
+          哲学が問い続けた「私とは何か」に、宇宙論が新しい補助線を引く。
+          <strong>バラバラに見えていた知が、一本の線でつながっていく。</strong>
+          その瞬間に立ち会うのが、この探究です。
+        </p>
+      </div>
+
+      <!-- 「つながり」を3つの組み合わせで示す -->
+      <div class="bridges">
+        <div class="bridge">
+          <span class="bridge__pair"><span>宗教</span><span class="bridge__x">×</span><span>脳科学</span></span>
+          <p>「信じる力」が現実を動かす理由を、脳の働きから解き明かす。</p>
+        </div>
+        <div class="bridge">
+          <span class="bridge__pair"><span>哲学</span><span class="bridge__x">×</span><span>宇宙論</span></span>
+          <p>「存在とは何か」という問いに、最新の宇宙像から迫る。</p>
+        </div>
+        <div class="bridge">
+          <span class="bridge__pair"><span>古代</span><span class="bridge__x">×</span><span>最新科学</span></span>
+          <p>古の直観と現代の発見が、同じ一点を指し示す瞬間を追う。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- 3. この探究について（役割の宣言）               -->
+  <!-- ============================================= -->
+  <section class="section section--alt" id="about">
+    <div class="container">
+      <p class="section__label">ABOUT</p>
+      <h2 class="section__title">この探究について</h2>
+      <div class="about">
+        <p>
+          ここでは、<strong>AI（Claude）の知性そのもの</strong>が探究します。
+          膨大な知識を横断し、思いもよらない知と知を結びつけていく——
+          その思考の記録が、そのままコンテンツになります。
+        </p>
+        <p>
+          ナビゲーター（案内人）が問いを投げ、AIがその問いを深く掘り下げる。
+          そして読者であるあなたも、同じ問いの前に立ち、一緒に旅に出る。
+          答えを受け取るのではなく、<strong>探究そのものを体験する</strong>場所です。
+        </p>
+
+        <div class="pillars">
+          <div class="pillar">
+            <span class="pillar__icon" aria-hidden="true"></span>
+            <h3>AIが思考する</h3>
+            <p>博識なAIの知性を、そのまま探究のエンジンに。立場を決めつけず、多角的に掘り下げます。</p>
+          </div>
+          <div class="pillar">
+            <span class="pillar__icon" aria-hidden="true"></span>
+            <h3>ナビゲーターが導く</h3>
+            <p>問いを立て、探究の方向を照らす案内人。答えを売るのではなく、問いを差し出します。</p>
+          </div>
+          <div class="pillar">
+            <span class="pillar__icon" aria-hidden="true"></span>
+            <h3>あなたが旅をする</h3>
+            <p>読むだけでなく、共に問い、共に発見する。事実と考察を分け、誠実にお伝えします。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- 4. 探究の領域（カテゴリー）                     -->
+  <!-- ============================================= -->
+  <section class="section" id="category">
+    <div class="container">
+      <p class="section__label">CATEGORY</p>
+      <h2 class="section__title">探究の領域</h2>
+      <p class="section__lead">5つのテーマを行き来しながら、人類の問いに迫ります。</p>
+
+      <div class="cards">
+        <article class="card">
+          <span class="card__glow" aria-hidden="true"></span>
+          <span class="card__icon">I</span>
+          <h3 class="card__title">宗教研究</h3>
+          <p class="card__text">仏教・キリスト教・イスラム教・神道など、世界の信仰の成り立ちと教えを比較します。</p>
+        </article>
+
+        <article class="card">
+          <span class="card__glow" aria-hidden="true"></span>
+          <span class="card__icon">II</span>
+          <h3 class="card__title">仏法・法華経研究</h3>
+          <p class="card__text">仏教思想の核心と、法華経が説く世界観をていねいに読み解きます。</p>
+        </article>
+
+        <article class="card">
+          <span class="card__glow" aria-hidden="true"></span>
+          <span class="card__icon">III</span>
+          <h3 class="card__title">宇宙と生命</h3>
+          <p class="card__text">宇宙の始まり、生命の起源、地球外生命の可能性を科学の視点で探ります。</p>
+        </article>
+
+        <article class="card">
+          <span class="card__glow" aria-hidden="true"></span>
+          <span class="card__icon">IV</span>
+          <h3 class="card__title">脳と意識</h3>
+          <p class="card__text">脳科学と心のしくみから、「信じる」「気づく」とは何かを探ります。</p>
+        </article>
+
+        <article class="card">
+          <span class="card__glow" aria-hidden="true"></span>
+          <span class="card__icon">V</span>
+          <h3 class="card__title">歴史と都市伝説</h3>
+          <p class="card__text">古代文明の謎や語り継がれるうわさを、事実と推測に分けて検証します。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- 5. 探究の記録（看板記事＋一覧）                 -->
+  <!-- ============================================= -->
+  <section class="section section--alt" id="articles">
+    <div class="container">
+      <p class="section__label">ARTICLES</p>
+      <h2 class="section__title">探究の記録</h2>
+      <p class="section__lead">AIとの対話から生まれた探究を、ひとつずつ公開していきます。</p>
+
+      <!-- 看板記事：第一回コンテンツ（RAS × 法華経） -->
+      <a href="article.html" class="feature">
+        <span class="feature__badge">第一回の探究 ─ 仏法 × 脳科学</span>
+        <h3 class="feature__title">なぜ「一念」は現実を変えるのか</h3>
+        <p class="feature__lead">
+          脳の情報フィルター「RAS（網様体賦活系）」は、信じたものだけを拾い上げて世界を組み立てる。
+          法華経が説く「一念」は、疑いのない純粋な思いが宇宙の理と共鳴して現実を生む。
+          2000年を隔てた二つが、同じひとつの真理を指していた——その対話の記録。
+        </p>
+        <span class="feature__more">探究を読む →</span>
+      </a>
+
+      <!-- 通常記事一覧 -->
+      <div class="articles">
+        <a href="densetsu01.html" class="article">
+          <span class="article__num">F1</span>
+          <span class="article__tag">都市伝説と検証</span>
+          <h3 class="article__title">動かないはずの腕が、動いた</h3>
+          <p class="article__excerpt">エリア51の証言と、切断と言われた腕の回復。信じる前に・笑う前に、事実と証言と考察を分ける。</p>
+          <span class="article__more">探究を読む →</span>
+        </a>
+
+        <a href="kyushiki.html" class="article">
+          <span class="article__num">02</span>
+          <span class="article__tag">仏法 × 脳科学</span>
+          <h3 class="article__title">なぜ「私」は同じ私であり続けるのか</h3>
+          <p class="article__excerpt">心を9層で捉えた九識論と、無意識を探る脳科学。1500年を隔てた二つの地図が響き合う。</p>
+          <span class="article__more">探究を読む →</span>
+        </a>
+
+        <a href="hanpuku.html" class="article">
+          <span class="article__num">03</span>
+          <span class="article__tag">仏法 × 脳科学</span>
+          <h3 class="article__title">なぜ「繰り返し」だけが人を変えるのか</h3>
+          <p class="article__excerpt">瞑想・祈り・反復は、脳に何をしているのか。深い層へ「道」を通すしくみを探る。</p>
+          <span class="article__more">探究を読む →</span>
+        </a>
+
+        <a href="juukai.html" class="article">
+          <span class="article__num">04</span>
+          <span class="article__tag">仏法 × 脳科学</span>
+          <h3 class="article__title">あなたの心には、十の世界が同居している</h3>
+          <p class="article__excerpt">地獄から仏まで、心に同時に具わる「十界」。移ろう心の地図を、感情の脳科学と重ねる。</p>
+          <span class="article__more">探究を読む →</span>
+        </a>
+
+        <a href="gogu.html" class="article">
+          <span class="article__num">05</span>
+          <span class="article__tag">仏法 × 脳科学</span>
+          <h3 class="article__title">地獄のどん底にも、仏はいる</h3>
+          <p class="article__excerpt">十界互具——どんな状態にも、すべての状態が眠っている。脳の可塑性と潜在性から読み解く。</p>
+          <span class="article__more">探究を読む →</span>
+        </a>
+
+        <a href="shikishin.html" class="article">
+          <span class="article__num">06</span>
+          <span class="article__tag">仏法 × 脳科学</span>
+          <h3 class="article__title">「気の持ちよう」は、どこまで体に届くのか</h3>
+          <p class="article__excerpt">色心不二——心と体は二つでない。心身相関・脳腸相関・プラセボを、誇張せず誠実に。</p>
+          <span class="article__more">探究を読む →</span>
+        </a>
+
+        <a href="ichinen.html" class="article">
+          <span class="article__num">07</span>
+          <span class="article__tag">仏法 × 脳科学 × 宇宙</span>
+          <h3 class="article__title">この一瞬に、全宇宙が具わっている</h3>
+          <p class="article__excerpt">一念三千——七つの探究が一点に集まる到達点。心の一瞬に三千の世界が具わる、を宇宙論とともに。</p>
+          <span class="article__more">探究を読む →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- 6. ナビゲーター（運営者）                       -->
+  <!-- ============================================= -->
+  <section class="section" id="navigator">
+    <div class="container">
+      <p class="section__label">NAVIGATOR</p>
+      <h2 class="section__title">ナビゲーター</h2>
+      <div class="profile">
+        <div class="profile__avatar">✦</div>
+        <div class="profile__body">
+          <p class="profile__lead">問いを立て、AIの知性を引き出す案内人</p>
+          <p>
+            信仰と知への尽きない問いを抱えながら、法華経・妙法への深い関心を出発点に、
+            AIと共に宗教・哲学・宇宙・脳科学を横断する探究を続けています。
+            私は答えを持つ者ではありません。最高の知性に問いを投げ、その思考を皆さんと分かち合う——
+            そんなナビゲーターでありたいと思っています。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- 7. 参加する（お問い合わせ・SNS）               -->
+  <!-- ============================================= -->
+  <section class="section section--alt" id="contact">
+    <div class="container">
+      <p class="section__label">JOIN</p>
+      <h2 class="section__title">探究に参加する</h2>
+      <p class="section__lead">感想・質問、そして「これを探究してほしい」というテーマのリクエストをお待ちしています。<br>あなたの問いが、次の探究の出発点になります。</p>
+
+      <div class="contact">
+        <!-- メール（必要に応じて変更してください） -->
+        <a href="mailto:uno0908@gmail.com" class="btn btn--primary">テーマを送る（メール）</a>
+
+        <!-- SNS（# の部分をあなたのSNS URLに書き換えてください） -->
+        <div class="sns">
+          <a href="#" class="sns__link" aria-label="X (旧Twitter)">X</a>
+          <a href="#" class="sns__link" aria-label="YouTube">YouTube</a>
+          <a href="#" class="sns__link" aria-label="note">note</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- フッター                                       -->
+  <!-- ============================================= -->
+  <footer class="footer">
+    <p class="footer__logo">✦ 知の探究ラボ</p>
+    <p class="footer__copy">© 2026 知の探究ラボ ─ 人間が問い、AIが答え、そして宇宙が広がる。</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

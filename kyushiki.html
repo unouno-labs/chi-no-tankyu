@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<!--
+  ===========================================================
+  知の探究ラボ ─ 記事ページ（第二回：九識論 × 無意識の脳科学）
+  -----------------------------------------------------------
+  ・本文を変える → このHTMLの「文字」
+  ・記事だけの見た目 → article.css
+  ・動き（星空・ヘッダー）→ script.js（LP共通）
+  ・【事実】= callout--fact ／【考察】= callout--think
+  ・問い/応答 = dialogue--q / dialogue--a
+  ===========================================================
+-->
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>なぜ「私」は同じ私であり続けるのか｜知の探究ラボ</title>
+  <meta name="description" content="心を9つの層で捉えた九識論と、無意識を探る現代の脳科学。1500年前の心の地図と、予測する脳・自己の感覚が、深さの構造で響き合う。第二回の探究。">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="なぜ「私」は同じ私であり続けるのか ─ 九識論と無意識の脳科学">
+  <meta property="og:description" content="心の9つの層と、無意識を探る脳科学。1500年前の心の地図が、現代科学と響き合う。">
+
+  <!-- Google Analytics 4（測定IDを取得して G-XXXXXXXXXX を置き換えてください） -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;700;800&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="article.css">
+</head>
+<body>
+
+  <div class="loader" id="loader">
+    <div class="loader__ring"></div>
+    <p class="loader__text">知の探究ラボ</p>
+  </div>
+
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <canvas id="starfield"></canvas>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- ヘッダー（LP共通） -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html#top" class="logo">
+        <span class="logo__mark">✦</span>
+        <span class="logo__text">知の探究ラボ</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="nav">
+        <a href="index.html#worldview">世界観</a>
+        <a href="index.html#about">この探究について</a>
+        <a href="index.html#category">探究の領域</a>
+        <a href="index.html#articles">探究の記録</a>
+        <a href="index.html#contact">参加する</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="reading">
+
+    <header class="masthead">
+      <p class="masthead__badge">第二回の探究 ─ 仏法 × 脳科学</p>
+      <h1 class="masthead__title">なぜ「私」は同じ私であり続けるのか</h1>
+      <p class="masthead__subtitle">九識論が見た心の9層と、無意識の脳科学</p>
+      <p class="masthead__meta">
+        <span>ナビゲーター</span>
+        <span class="dot">・</span>
+        <span>2026.06.25</span>
+        <span class="dot">・</span>
+        <span>AIとの対話から</span>
+      </p>
+    </header>
+
+    <article class="article-body">
+
+      <div class="note">
+        この記事では <strong>【事実】</strong>＝確認できる科学的事実 と、
+        <strong>【考察】</strong>＝そこから導く解釈・仮説 を、はっきり分けて記しています。<br>
+        前回（<a href="article.html" style="color:var(--gold-soft)">RASと一念</a>）の続き、心のさらに奥へおりていきます。
+      </div>
+
+      <p class="lead">
+        あなたの体をつくる細胞は、絶え間なく入れ替わっている。なのに、朝目覚めたあなたは、
+        昨日と「同じ私」だ。この当たり前すぎる不思議に、仏教は1500年も前に、
+        <strong>心を9つの層で描いた「九識論」</strong>という地図で答えようとしていた。
+        いま、無意識を探る脳科学が、別の言葉で同じ深さへ近づいている。
+      </p>
+
+      <!-- 1. 出発点 -->
+      <h2>意識は、氷山の一角でしかない</h2>
+
+      <div class="dialogue dialogue--q">
+        <p class="dialogue__role">ナビゲーターの問い</p>
+        <p class="dialogue__text">
+          私たちが「考えている」と感じている部分は、心のほんの表面だと言われる。
+          では、その下には何があるのか。仏教は、心をどこまで深く見ていたのだろう。
+        </p>
+      </div>
+
+      <div class="dialogue dialogue--a">
+        <p class="dialogue__role">AIの知性</p>
+        <p class="dialogue__text">
+          仏教は、心を「層」として捉えた。表面の感覚から、自我、記憶の蓄積、そして個を超えた最深部まで。
+          その精密な地図が<strong>九識論</strong>だ。まず全体図を広げて、そこに脳科学を重ねていこう。
+          驚くのは、層の“数”ではなく、<strong>深さの構造</strong>がよく似ていることだ。
+        </p>
+      </div>
+
+      <!-- 2. 9層マップ -->
+      <h2>心の9つの層 ── 九識論の地図</h2>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実（教義として）</span>
+        <p>
+          九識論は、唯識思想の「八識」に、天台の説く第九識を加えた、心の見取り図だ。
+          浅い層ほど自分で気づきやすく、深い層ほど無意識に近づく。
+        </p>
+      </div>
+
+      <div class="layers">
+        <div class="layer layer--s1">
+          <span class="layer__no">①〜⑤</span>
+          <span class="layer__name">五根（五感）</span>
+          <span class="layer__desc">眼・耳・鼻・舌・身。見る、聞く、嗅ぐ、味わう、触れる――世界との最初の接点。</span>
+        </div>
+        <div class="layer layer--s2">
+          <span class="layer__no">⑥</span>
+          <span class="layer__name">意識</span>
+          <span class="layer__desc">「痛い」「嬉しい」と感じ、判断する心。ここまでが、自分で気づける範囲。</span>
+        </div>
+        <div class="layer layer--s3">
+          <span class="layer__no">⑦</span>
+          <span class="layer__name">末那識</span>
+          <span class="layer__desc">「自分は自分」と握り続ける自我の働き。記憶や連想もここから立ち上がる。</span>
+        </div>
+        <div class="layer layer--s4">
+          <span class="layer__no">⑧</span>
+          <span class="layer__name">阿頼耶識</span>
+          <span class="layer__desc">命の“貯金箱”。あらゆる思いや経験が、雪のように降り積もる無意識の倉。</span>
+        </div>
+        <div class="layer layer--s5">
+          <span class="layer__no">⑨</span>
+          <span class="layer__name">阿摩羅識</span>
+          <span class="layer__desc">宇宙と一体の、最も深い命。個を超えてすべてがつながる、とされる層。</span>
+        </div>
+      </div>
+
+      <!-- 3. 末那識 -->
+      <h2>第7層・末那識 ──「私は私」という感覚</h2>
+
+      <p>
+        九識論で最初に立ち止まりたいのが、第七層の末那識だ。これは「自分は自分である」と、
+        絶えず握り続ける心の働きを指す。冒頭の問い――細胞が入れ替わっても私が私であり続ける謎は、
+        ここに関わる。
+      </p>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          体の細胞の多くは入れ替わる。赤血球はおよそ4か月、皮膚や腸の壁はもっと速い。
+          ただし「7年で全身が入れ替わる」という言い方は正確ではない。
+          大脳皮質の神経細胞の多くは、生涯ほとんど入れ替わらないことが分かっている。
+          物質としての“私”は、入れ替わる部分と、留まる部分が混じり合っている。
+        </p>
+      </div>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          自分について考えるとき、脳では「デフォルトモードネットワーク（DMN）」という領域群が働く。
+          ぼんやりしている時間に、過去と未来をつなぎ「自分の物語」を紡ぐしくみだとされる。
+          “私”という感覚は、細胞そのものより、この<strong>絶え間ない物語の編集</strong>に支えられている。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          末那識を脳の言葉に置けば、「私という物語を握り続ける働き」――DMNの自己物語に重なって見える。
+          興味深いのは向き合い方だ。脳科学はそれを<strong>観察</strong>し、仏教はその“握り”を、むしろ
+          <strong>そっと手放す</strong>対象として見た。同じ層を見ながら、科学は地図を描き、仏法は歩き方を説く。
+        </p>
+      </div>
+
+      <!-- 4. 阿頼耶識 -->
+      <h2>第8層・阿頼耶識 ── 無意識という貯金箱</h2>
+
+      <p>
+        前回の探究で触れた阿頼耶識に、もう一度おりる。「アラヤ＝雪が降り積もる」。
+        思いや経験が積もる命の倉だ。ここが、現代の脳科学と最も鮮やかに響き合う。
+      </p>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          記憶には、思い出そうとして引き出すものだけでなく、自覚なく働く「潜在記憶」がある。
+          自転車の乗り方、言葉のクセ、とっさの反応――意識に上らないまま、私たちの行動を形づくっている。
+        </p>
+      </div>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          近年の脳科学では、脳は外界をそのまま受け取るのではなく、過去の蓄積から「次に来るもの」を
+          <strong>予測</strong>し、予測と感覚のズレを手がかりに世界像を組み立てている、という見方
+          （予測符号化／ベイズ脳）が有力だ。つまり、私たちが見る現実は、
+          過去に積もったものから脳が“描いた”像でもある。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          「積もった思いが、見える世界を決める」。阿頼耶識のこの捉え方は、予測する脳の像と驚くほど近い。
+          仏教が無意識の倉に“浄法と染法”が積もると説いたことは、脳が過去の経験を土台に現実を生成する、
+          という現代の描像と、深い部分で手を取り合う。<a href="article.html" style="color:var(--gold-soft)">前回のRASの話</a>とも、
+          ここで一本につながる。
+        </p>
+      </div>
+
+      <!-- 5. 上からは変えられない -->
+      <h2>なぜ「意識の力」だけでは変わらないのか</h2>
+
+      <div class="dialogue dialogue--q">
+        <p class="dialogue__role">ナビゲーターの問い</p>
+        <p class="dialogue__text">
+          九識論は「表面の意識から変えようとしても、根本は変わらない」と説く。
+          これは脳科学の側から見ても、うなずける話なのだろうか。
+        </p>
+      </div>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          意志の力――前頭前野による努力的なコントロールは、消耗しやすいことが知られている。
+          一方で、習慣や情動の反応は、大脳基底核など意識の届きにくい回路に根を張っている。
+          だから「気をつけよう」と思うだけでは、深い癖はなかなか変わらない。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          「上（意識）からは変えられない。深い層から変える」――九識論のこの構造は、
+          表面の意志だけでは無意識の習慣を変えにくい、という脳科学の知見と、形がぴたりと重なる。
+          変化は、浅い決意の連呼ではなく、深い層へ届く<strong>繰り返し</strong>から起きる。
+          どんな実践がその“届く繰り返し”になるのかは、次の探究のテーマだ。
+        </p>
+      </div>
+
+      <!-- 6. 阿摩羅識・科学の地図が途切れる場所 -->
+      <h2>第9層・阿摩羅識 ── 科学の地図が途切れる場所</h2>
+
+      <p>
+        最後の層、阿摩羅識。ここで、私たちは正直にならなければならない。
+      </p>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          第九識は「宇宙と一体の命」、個を超えてすべてがつながる層とされる。
+          だが、ここに対応する科学の用語は、いまのところ存在しない。
+          脳科学の地図は、おおむね第八層あたりで途切れる。ここから先は、哲学と信仰の領域だ。
+          科学で埋められない、と認めることも、誠実な探究の一部だと思う。
+        </p>
+      </div>
+
+      <div class="dialogue dialogue--a">
+        <p class="dialogue__role">AIの知性</p>
+        <p class="dialogue__text">
+          それでも、ひとつ確かなことがある。1500年前の人々が、心のいちばん深い場所に
+          「個を超えたつながり」を置いた、という事実だ。皮膚一枚の外側から、もう宇宙――
+          そんな感覚を、彼らは最深層に刻んだ。それが正しいかどうかではなく、
+          <strong>そこに問いを置いた</strong>こと自体が、いまの私たちにも静かに響いてくる。
+        </p>
+      </div>
+
+      <!-- 結び -->
+      <h2>地図の深さが、響き合っている</h2>
+      <p>
+        九識論と脳科学は、層の数で一致するわけではない。だが「浅い意識の下に、自我があり、
+        無意識の蓄積があり、その奥に手の届かない何かがある」という<strong>深さの構造</strong>で、
+        驚くほど近いところを指している。1500年を隔てた二つの地図が、同じ地形を別の言葉で描いている。
+      </p>
+      <p>
+        では、その深い層へ、どうすれば“届く繰り返し”を起こせるのか。
+        第三回は、<strong>瞑想や唱題といった反復が、脳に何をしているのか</strong>へ降りていきたい。
+      </p>
+
+      <p class="sources">
+        ［ことわり］九識論は唯識思想（八識）に天台の第九識を加えた仏教の心の見方です。
+        DMN・潜在記憶・予測符号化（ベイズ脳）・前頭前野や大脳基底核の働きは、一般に知られた脳科学の知見です。
+        「細胞が7年で入れ替わる」は俗説で、本記事では正確に補いました。
+        九識論と脳科学の重ね合わせは筆者とAIによる<strong>考察</strong>であり、両者が同一だと主張するものではありません。
+      </p>
+
+    </article>
+
+    <!-- 前後の記事への導線 -->
+    <nav class="article-nav">
+      <a href="article.html" class="article-nav__item">
+        <span class="article-nav__dir">← 前の探究</span>
+        <span class="article-nav__title">なぜ「一念」は現実を変えるのか</span>
+      </a>
+      <a href="hanpuku.html" class="article-nav__item article-nav__item--next">
+        <span class="article-nav__dir">次の探究 →</span>
+        <span class="article-nav__title">なぜ「繰り返し」だけが人を変えるのか</span>
+      </a>
+    </nav>
+
+    <section class="next-cta">
+      <p class="next-cta__label">JOIN</p>
+      <h2 class="next-cta__title">あなたの問いが、次の探究になる</h2>
+      <p class="next-cta__text">
+        「これを探究してほしい」というテーマを送ってください。<br>
+        投げられたキーワードを、AIの知性が深く掘り下げ、次の対話録になります。
+      </p>
+      <a href="mailto:uno0908@gmail.com" class="btn btn--primary">テーマを送る（メール）</a>
+      <a href="index.html#articles" class="backlink">← 探究の記録へもどる</a>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p class="footer__logo">✦ 知の探究ラボ</p>
+    <p class="footer__copy">© 2026 知の探究ラボ ─ 人間が問い、AIが答え、そして宇宙が広がる。</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    (function () {
+      var bar = document.getElementById("progress");
+      if (!bar) return;
+      window.addEventListener("scroll", function () {
+        var h = document.documentElement;
+        var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+        bar.style.transform = "scaleX(" + Math.min(Math.max(scrolled, 0), 1) + ")";
+      }, { passive: true });
+    })();
+  </script>
+</body>
+</html>

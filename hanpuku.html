@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<!--
+  ===========================================================
+  知の探究ラボ ─ 記事ページ（第三回：反復 × 脳科学）
+  -----------------------------------------------------------
+  ・本文を変える → このHTMLの「文字」
+  ・記事だけの見た目 → article.css
+  ・動き（星空・ヘッダー）→ script.js（LP共通）
+  ・【事実】= callout--fact ／【考察】= callout--think
+  ・問い/応答 = dialogue--q / dialogue--a
+  ===========================================================
+-->
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>なぜ「繰り返し」だけが人を変えるのか｜知の探究ラボ</title>
+  <meta name="description" content="瞑想・祈り・唱える実践は、脳に何をしているのか。繰り返しが深い層へ“道”を通すしくみを、神経の可塑性から探る。第三回の探究。">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="なぜ「繰り返し」だけが人を変えるのか ─ 瞑想・祈り・反復の脳科学">
+  <meta property="og:description" content="繰り返しは、意識の手紙を無意識の奥へ届ける。瞑想・祈り・唱える実践の脳科学。">
+
+  <!-- Google Analytics 4（測定IDを取得して G-XXXXXXXXXX を置き換えてください） -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;700;800&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="article.css">
+</head>
+<body>
+
+  <div class="loader" id="loader">
+    <div class="loader__ring"></div>
+    <p class="loader__text">知の探究ラボ</p>
+  </div>
+
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <canvas id="starfield"></canvas>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html#top" class="logo">
+        <span class="logo__mark">✦</span>
+        <span class="logo__text">知の探究ラボ</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="nav">
+        <a href="index.html#worldview">世界観</a>
+        <a href="index.html#about">この探究について</a>
+        <a href="index.html#category">探究の領域</a>
+        <a href="index.html#articles">探究の記録</a>
+        <a href="index.html#contact">参加する</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="reading">
+
+    <header class="masthead">
+      <p class="masthead__badge">第三回の探究 ─ 仏法 × 脳科学</p>
+      <h1 class="masthead__title">なぜ「繰り返し」だけが人を変えるのか</h1>
+      <p class="masthead__subtitle">瞑想・祈り・反復が、深い層へ道を通す</p>
+      <p class="masthead__meta">
+        <span>ナビゲーター</span>
+        <span class="dot">・</span>
+        <span>2026.06.25</span>
+        <span class="dot">・</span>
+        <span>AIとの対話から</span>
+      </p>
+    </header>
+
+    <article class="article-body">
+
+      <div class="note">
+        この記事では <strong>【事実】</strong>＝確認できる科学的事実 と、
+        <strong>【考察】</strong>＝そこから導く解釈・仮説 を、はっきり分けて記しています。<br>
+        前々回（<a href="article.html" style="color:var(--gold-soft)">RASと一念</a>）、前回（<a href="kyushiki.html" style="color:var(--gold-soft)">九識論と無意識</a>）からの、三つめの探究です。
+      </div>
+
+      <p class="lead">
+        前回、私たちは一つの壁にぶつかった。心の深い層は、意識の決意だけでは変わらない――。
+        ではどうすれば届くのか。古来の答えは、驚くほど素朴だ。<strong>繰り返すこと</strong>。
+        瞑想、祈り、唱える実践。なぜ「繰り返し」だけが人を変えるのか。今回は、そのしくみへおりていく。
+      </p>
+
+      <!-- 1. 出発点 -->
+      <h2>一度の決意は、なぜ続かないのか</h2>
+
+      <div class="dialogue dialogue--q">
+        <p class="dialogue__role">ナビゲーターの問い</p>
+        <p class="dialogue__text">
+          「変わろう」と一度決意しても、たいてい元に戻る。なのに、繰り返すと身につく。
+          一度の決意と、繰り返しとでは、脳の中で何が違っているのだろう。
+        </p>
+      </div>
+
+      <div class="dialogue dialogue--a">
+        <p class="dialogue__role">AIの知性</p>
+        <p class="dialogue__text">
+          鍵は「<strong>道をつくる</strong>」だ。脳は、使った回路を物理的に強くする。
+          一度の決意は、地図に線を引くようなもの。繰り返しは、その線を実際に歩いて、
+          踏み固められた道に変える。瞑想も祈りも、深い層へ一本の道を通す作業だと言える。
+        </p>
+      </div>
+
+      <!-- 2. 繰り返しが道をつくる -->
+      <h2>繰り返しが、神経の“道”をつくる</h2>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          神経どうしのつながりは、繰り返し一緒に活動すると強くなる（長期増強。
+          「ともに発火する神経は、ともに結びつく」とも言われる）。
+          これが、学習や習慣が脳に根づくときの、物理的な土台だ。
+        </p>
+      </div>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          身についた習慣は、意識を担う前頭前野ではなく、大脳基底核など「自動化」を担う回路に
+          刻まれていく。だから一度しみついた習慣は、考えなくても勝手に動く。
+          逆に、意識でいくら念じても、この層には直接書き込めない。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          前回の<a href="kyushiki.html" style="color:var(--gold-soft)">阿頼耶識「思いが積もる」</a>を、脳の言葉に置けばこれだ。
+          繰り返した思いや行いが、文字どおり神経の“道”として積もっていく。
+          一度きりでは、積もらない。深い層は、<strong>反復でしか書き換えられない</strong>。
+        </p>
+      </div>
+
+      <!-- 3. 瞑想する脳 -->
+      <h2>瞑想する脳 ── さまよう心を、一点に戻す</h2>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          定期的な瞑想は、注意のネットワークの働きや、心がさまようときに活発になる
+          デフォルトモードネットワーク（DMN）の活動と関わることが、脳画像の研究で示されてきた。
+          不安や情動に関わる扁桃体の反応が、穏やかになるという報告もある。
+        </p>
+      </div>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実（注意したいこと）</span>
+        <p>
+          ただし、瞑想の研究は小規模なものが多く、効果の大きさや再現性には議論がある。
+          「脳が劇的に変わる」と誇張するのは禁物だ。確からしいのは、
+          「続けるうちに、注意や感情の扱いが少しずつ変わりうる」という、穏当な範囲にとどまる。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          それでも、方向は一致している。瞑想とは、さまよう心（DMN・自分の物語）をいったん静め、
+          注意を一点に戻す訓練だ。<a href="article.html" style="color:var(--gold-soft)">第一回のRAS＝フォーカス</a>の話と、ここで再びつながる。
+          散らばった注意を束ね直す。その反復が、心の土台を耕していく。
+        </p>
+      </div>
+
+      <!-- 4. 声に出す・リズム -->
+      <h2>声に出して、繰り返す ── 祈り・読経・唱える実践</h2>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          ゆっくりした呼吸やリズミカルな発声は、自律神経のうち心身を落ち着かせる側
+          （副交感神経）を働かせ、心拍のゆらぎを整えることが知られている。
+          声・呼吸・リズムが重なるとき、体は静まる方向へ傾く。
+        </p>
+      </div>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          一定の言葉をリズムよく繰り返す実践――マントラ、読経、唱題――は、
+          洋の東西を問わず、多くの宗教に共通して現れる。
+          声・呼吸・リズムが重なる点で、瞑想に近い作用を持つと考えられている
+          （※詳しい脳のしくみは、まだ研究の途上だ）。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          古今東西の人々が、そろって「声に出して繰り返す」形にたどり着いたのは、
+          偶然ではないのかもしれない。リズムある反復は、理屈の前に体と心を整え、
+          深い層へ届きやすい“通路”になる。経験が、科学より先にそれを見つけていた。
+        </p>
+      </div>
+
+      <!-- 5. 質が効く -->
+      <h2>なぜ「回数」より「真剣さ」なのか</h2>
+
+      <div class="dialogue dialogue--q">
+        <p class="dialogue__role">ナビゲーターの問い</p>
+        <p class="dialogue__text">
+          昔から「量より質、上の空の千回より本気の一回」とよく言われる。
+          回数より真剣さ――というのは、脳の側から見ても筋が通る話なのだろうか。
+        </p>
+      </div>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          神経の変化（可塑性）は、ただ繰り返すだけでなく、「注意を向けているか」で強さが変わる
+          ことが知られている。ぼんやりした反復より、集中を伴う反復のほうが、神経の結びつきを促しやすい。
+          注意は、学びの“扉”を開く役割をもつ。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          だから「量より質」には、脳の裏づけがある。上の空の百回より、本気の一回が深く刻まれることがある。
+          <strong>フォーカス（RAS）× 反復</strong>――注意を一点に束ねた繰り返しこそ、深い層へ最短の道を通す。
+          理想は「質の高い反復を、続ける」こと。質か量かではなく、質をもった反復の積み重ねだ。
+        </p>
+      </div>
+
+      <!-- 結び -->
+      <h2>繰り返しは、深い層への手紙</h2>
+      <p>
+        繰り返しとは、意識からの手紙を、無意識の奥へ届ける方法だ。一度の決意では、届かない。
+        だが、真剣な反復は、確かに深い層を少しずつ書き換えていく。
+        2000年前・1500年前の人々が、瞑想や唱える実践にたどり着いたのは、
+        この“深層への道”を、経験から知っていたからかもしれない。
+      </p>
+      <p>
+        では、その深い層には、何が眠っているのか。私たちの心は、たった一つの色でできてはいない。
+        次回は、人の心に同時に具わるという<strong>「十界」――地獄から仏まで、十の世界</strong>へおりていきたい。
+        これを知ると、自分の感情の見え方が、おそらく一変する。
+      </p>
+
+      <p class="sources">
+        ［ことわり］長期増強・大脳基底核・デフォルトモードネットワーク・扁桃体・自律神経と心拍のゆらぎ・
+        注意と可塑性の関係は、一般に知られた脳科学の知見です。瞑想の効果に関する研究は、
+        小規模・再現性に議論がある点を本文で明記しました。各宗教の「唱える実践」の詳しい脳機序は研究途上です。
+        これらと仏法の重ね合わせは、筆者とAIによる<strong>考察</strong>です。
+      </p>
+
+    </article>
+
+    <!-- 前後の記事への導線 -->
+    <nav class="article-nav">
+      <a href="kyushiki.html" class="article-nav__item">
+        <span class="article-nav__dir">← 前の探究</span>
+        <span class="article-nav__title">なぜ「私」は同じ私であり続けるのか</span>
+      </a>
+      <a href="juukai.html" class="article-nav__item article-nav__item--next">
+        <span class="article-nav__dir">次の探究 →</span>
+        <span class="article-nav__title">あなたの心には、十の世界が同居している</span>
+      </a>
+    </nav>
+
+    <section class="next-cta">
+      <p class="next-cta__label">JOIN</p>
+      <h2 class="next-cta__title">あなたの問いが、次の探究になる</h2>
+      <p class="next-cta__text">
+        「これを探究してほしい」というテーマを送ってください。<br>
+        投げられたキーワードを、AIの知性が深く掘り下げ、次の対話録になります。
+      </p>
+      <a href="mailto:uno0908@gmail.com" class="btn btn--primary">テーマを送る（メール）</a>
+      <a href="index.html#articles" class="backlink">← 探究の記録へもどる</a>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p class="footer__logo">✦ 知の探究ラボ</p>
+    <p class="footer__copy">© 2026 知の探究ラボ ─ 人間が問い、AIが答え、そして宇宙が広がる。</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    (function () {
+      var bar = document.getElementById("progress");
+      if (!bar) return;
+      window.addEventListener("scroll", function () {
+        var h = document.documentElement;
+        var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+        bar.style.transform = "scaleX(" + Math.min(Math.max(scrolled, 0), 1) + ")";
+      }, { passive: true });
+    })();
+  </script>
+</body>
+</html>

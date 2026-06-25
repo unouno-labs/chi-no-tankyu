@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<!--
+  ===========================================================
+  知の探究ラボ ─ 記事ページ（第六回：色心不二 × 心身相関）
+  ・【事実】= callout--fact ／【考察】= callout--think
+  ・問い/応答 = dialogue--q / dialogue--a
+  ・プラセボ等は誇張せず、限界も必ず明記すること
+  ===========================================================
+-->
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>「気の持ちよう」は、どこまで体に届くのか｜知の探究ラボ</title>
+  <meta name="description" content="色（体）と心は二つでない――色心不二。心身相関・脳腸相関・プラセボから、心と物質の境界を、誇張せず誠実に読み解く第六回。">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="「気の持ちよう」は、どこまで体に届くのか ─ 色心不二と心身相関">
+  <meta property="og:description" content="色（体）と心は二つでない。心身相関・脳腸相関・プラセボから、心と物質の境界を誠実に読み解く。">
+
+  <!-- Google Analytics 4（測定IDを取得して G-XXXXXXXXXX を置き換えてください） -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;700;800&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="article.css">
+</head>
+<body>
+
+  <div class="loader" id="loader">
+    <div class="loader__ring"></div>
+    <p class="loader__text">知の探究ラボ</p>
+  </div>
+
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <canvas id="starfield"></canvas>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html#top" class="logo">
+        <span class="logo__mark">✦</span>
+        <span class="logo__text">知の探究ラボ</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="nav">
+        <a href="index.html#worldview">世界観</a>
+        <a href="index.html#about">この探究について</a>
+        <a href="index.html#category">探究の領域</a>
+        <a href="index.html#articles">探究の記録</a>
+        <a href="index.html#contact">参加する</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="reading">
+
+    <header class="masthead">
+      <p class="masthead__badge">第六回の探究 ─ 仏法 × 脳科学</p>
+      <h1 class="masthead__title">「気の持ちよう」は、どこまで体に届くのか</h1>
+      <p class="masthead__subtitle">色心不二 ── 心と体は、二つでない</p>
+      <p class="masthead__meta">
+        <span>ナビゲーター</span>
+        <span class="dot">・</span>
+        <span>2026.06.25</span>
+        <span class="dot">・</span>
+        <span>AIとの対話から</span>
+      </p>
+    </header>
+
+    <article class="article-body">
+
+      <div class="note">
+        この記事では <strong>【事実】</strong>＝確認できる科学的事実 と、
+        <strong>【考察】</strong>＝そこから導く解釈・仮説 を、はっきり分けて記しています。<br>
+        前回（<a href="gogu.html" style="color:var(--gold-soft)">十界互具</a>）まで心の話を続けてきました。今回は、心と体の境界へ。
+      </div>
+
+      <p class="lead">
+        ここまで「心」をめぐってきた。だが、その心は、体とは別の場所にある何かなのだろうか。
+        「気の持ちよう」は、ただの慰めなのか、それとも本当に体に届くのか。
+        仏教は早くから、こう見ていた。色（体・物質）と心は、二つに分けられない――<strong>色心不二</strong>。
+      </p>
+
+      <!-- 1. 出発点 -->
+      <h2>心と体は、どこで分かれているのか</h2>
+
+      <div class="dialogue dialogue--q">
+        <p class="dialogue__role">ナビゲーターの問い</p>
+        <p class="dialogue__text">
+          私たちはつい、心は心、体は体、と分けて考える。
+          でも本当に、その二つはきれいに分かれているのだろうか。境目は、どこにあるのか。
+        </p>
+      </div>
+
+      <div class="dialogue dialogue--a">
+        <p class="dialogue__role">AIの知性</p>
+        <p class="dialogue__text">
+          結論から言えば、その境目はどんどん曖昧になっている。心が体を動かし、体が心を動かす。
+          しかも双方向に、絶え間なく。仏教はこれを「色心不二」――色と心は二であって二でない、と言い表した。
+          まず、両方向の事実を見ていこう。
+        </p>
+      </div>
+
+      <!-- 2. 心が体を動かす -->
+      <h2>心は、確かに体を動かす</h2>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          強いストレスは、自律神経やホルモンを通じて、血圧・消化・免疫のはたらきに影響することが分かっている。
+          緊張で胃が痛くなり、不安で眠れなくなる。心の状態は、確かに体の状態を変える。
+        </p>
+      </div>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          「効くと信じた」だけで、実際に症状がやわらぐことがある（プラセボ効果）。
+          これは気のせいではなく、脳内で痛みをやわらげる物質が出るなど、測定できる変化を伴う。
+          信じることには、体に届く実体がある。
+        </p>
+      </div>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実（誇張しないために）</span>
+        <p>
+          ただし、ここは慎重に。プラセボが届くのは主に痛みや不快感など、脳が関わる範囲が中心で、
+          効果には限界があり、重い病気そのものを確実に治すものではない。
+          「思いだけで病が消える」と一般化するのは危険だ。必要な治療の代わりにはならない。
+        </p>
+      </div>
+
+      <!-- 3. 体が心を動かす -->
+      <h2>体もまた、心を動かす</h2>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          矢印は逆にも向く。腸の状態が脳や気分に影響することが分かってきている（脳腸相関）。
+          体を動かすと気分が上向き、姿勢や表情を変えるだけでも感じ方が変わる、という報告もある。
+          体のコンディションは、そのまま心のコンディションになる。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          心が体へ、体が心へ。これほど双方向に影響し合うなら、両者を「別々の二つ」と考えること自体に無理がある。
+          色心不二が言うのは、まさにこれだ。心と体は、一つの生命を別の角度から見たもので、
+          初めから切れていない。
+        </p>
+      </div>
+
+      <!-- 4. 思いは物質か -->
+      <h2>「思い」は、物質と別物ではない</h2>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          私たちの「思い」も、脳の中では神経細胞の電気と化学の出来事として起きている。
+          思いは脳という物質の上で生まれ、同時に、その思いがホルモンや行動を通じて体を変えていく。
+          思い（心）と脳（物質）は、原因と結果が一方通行ではなく、絡み合っている。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          だから「心か、物質か」という二択そのものが、問いの立て方として古いのかもしれない。
+          <a href="kyushiki.html" style="color:var(--gold-soft)">第二回</a>で見た「脳は過去の蓄積から現実を“描く”」という話も、
+          心と物質が一枚であることを別の角度から示している。色心不二は、その一枚を言い当てた古い言葉だ。
+        </p>
+      </div>
+
+      <!-- 結び -->
+      <h2>一つの生命を、二つの名で呼んでいる</h2>
+      <p>
+        色心不二は、心と体のどちらかが上で、どちらかが下、という話ではない。
+        一つの生命を、「心」と「体」という二つの名前で呼んでいるだけ――そう捉え直す見方だ。
+        だからこそ、心を整えることは体に届き、体を整えることは心に届く。気の持ちようは、慰めではない。
+      </p>
+      <p>
+        ここまで、私たちは大きな絵を描いてきた。フォーカス、心の深層、反復、十界、互具、そして色心不二。
+        最後に残るのは、これらすべてを一点に束ねる、仏法でもっとも有名な言葉だ。
+        次回、ついに<strong>「一念三千（いちねんさんぜん）」</strong>へ。この旅の、到達点へ向かう。
+      </p>
+
+      <p class="sources">
+        ［ことわり］ストレスと身体反応、プラセボ効果、脳腸相関、運動や姿勢と気分の関係は、
+        一般に知られた医学・脳科学の知見にもとづきます。プラセボの効果には範囲と限界があり、
+        標準的な治療の代わりにはなりません（本文に明記）。色心不二は天台・日蓮仏法の教義であり、
+        科学との重ね合わせは筆者とAIによる<strong>考察</strong>です。健康上の判断は専門家にご相談ください。
+      </p>
+
+    </article>
+
+    <nav class="article-nav">
+      <a href="gogu.html" class="article-nav__item">
+        <span class="article-nav__dir">← 前の探究</span>
+        <span class="article-nav__title">地獄のどん底にも、仏はいる</span>
+      </a>
+      <a href="ichinen.html" class="article-nav__item article-nav__item--next">
+        <span class="article-nav__dir">次の探究 →</span>
+        <span class="article-nav__title">この一瞬に、全宇宙が具わっている</span>
+      </a>
+    </nav>
+
+    <section class="next-cta">
+      <p class="next-cta__label">JOIN</p>
+      <h2 class="next-cta__title">あなたの問いが、次の探究になる</h2>
+      <p class="next-cta__text">
+        「これを探究してほしい」というテーマを送ってください。<br>
+        投げられたキーワードを、AIの知性が深く掘り下げ、次の対話録になります。
+      </p>
+      <a href="mailto:uno0908@gmail.com" class="btn btn--primary">テーマを送る（メール）</a>
+      <a href="index.html#articles" class="backlink">← 探究の記録へもどる</a>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p class="footer__logo">✦ 知の探究ラボ</p>
+    <p class="footer__copy">© 2026 知の探究ラボ ─ 人間が問い、AIが答え、そして宇宙が広がる。</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    (function () {
+      var bar = document.getElementById("progress");
+      if (!bar) return;
+      window.addEventListener("scroll", function () {
+        var h = document.documentElement;
+        var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+        bar.style.transform = "scaleX(" + Math.min(Math.max(scrolled, 0), 1) + ")";
+      }, { passive: true });
+    })();
+  </script>
+</body>
+</html>
