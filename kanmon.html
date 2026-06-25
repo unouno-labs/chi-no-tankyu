@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<!--
+  ===========================================================
+  知の探究ラボ ─ 記事ページ（仏法×脳科学：教門と観門／知るとわかる）
+  ・【事実】= callout--fact ／【考察】= callout--think
+  ・問い/応答 = dialogue--q / dialogue--a
+  ・創価学会の内部実践（題目・池田先生等）は出さない。普遍の教門/観門で。
+  ===========================================================
+-->
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>「知っている」と「わかっている」は、違う｜知の探究ラボ</title>
+  <meta name="description" content="泳ぎ方を本で知り尽くしても、溺れることはある。知識（教門）と、命で感じる実感（観門）は別物だ。仏法が分けたこの二つの「わかる」を、宣言的記憶と体得、頭と情動という脳科学と重ね、そして「この知識サイトの限界」までを正直に見つめる。仏法×脳科学。">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="「知っている」と「わかっている」は、違う ─ 教門と観門">
+  <meta property="og:description" content="知識と、命で感じる実感は別物。仏法の「教門と観門」を脳科学と重ね、このサイト自身の限界まで見つめる。">
+
+  <!-- Google Analytics 4（測定IDを取得して G-XXXXXXXXXX を置き換えてください） -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;700;800&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="article.css">
+</head>
+<body>
+
+  <div class="loader" id="loader">
+    <div class="loader__ring"></div>
+    <p class="loader__text">知の探究ラボ</p>
+  </div>
+
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <canvas id="starfield"></canvas>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html#top" class="logo">
+        <span class="logo__mark">✦</span>
+        <span class="logo__text">知の探究ラボ</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="nav">
+        <a href="index.html#worldview">世界観</a>
+        <a href="index.html#about">この探究について</a>
+        <a href="index.html#category">探究の領域</a>
+        <a href="index.html#articles">探究の記録</a>
+        <a href="index.html#contact">参加する</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="reading">
+
+    <header class="masthead">
+      <p class="masthead__badge">仏法 × 脳科学</p>
+      <h1 class="masthead__title">「知っている」と「わかっている」は、違う</h1>
+      <p class="masthead__subtitle">教門と観門 ── 頭の理解と、命の実感</p>
+      <p class="masthead__meta">
+        <span>ナビゲーター</span>
+        <span class="dot">・</span>
+        <span>2026.06.25</span>
+        <span class="dot">・</span>
+        <span>AIとの対話から</span>
+      </p>
+    </header>
+
+    <article class="article-body">
+
+      <div class="note">
+        <strong>【事実】</strong>＝確認できる科学的事実や教義、<strong>【考察】</strong>＝そこから考える解釈を分けて記します。<br>
+        これまでの探究を、一段引いて見つめ直す一本です。
+      </div>
+
+      <p class="lead">
+        泳ぎ方を、本で完璧に学んだとしよう。腕の動き、呼吸、キックの角度――すべて言える。
+        だが、いざ水に投げ込まれれば、溺れるかもしれない。
+        「愛とは何か」を一冊書けても、一度も愛したことがない人もいる。
+        ――<strong>「知っている」ことと、「わかっている」ことの間には、深い谷がある。</strong>
+        仏法は、はるか昔に、この谷に名前をつけていた。
+      </p>
+
+      <!-- 1. 出発点 -->
+      <h2>二つの「わかる」</h2>
+
+      <div class="dialogue dialogue--q">
+        <p class="dialogue__role">ナビゲーターの問い</p>
+        <p class="dialogue__text">
+          このサイトで<a href="ichinen.html" style="color:var(--gold-soft)">一念三千</a>も
+          <a href="juukai.html" style="color:var(--gold-soft)">十界</a>も「理解した」つもりだ。
+          でも、ふと思う。理解したはずなのに、自分は何か変わったのか? 「知った」だけで終わっていないか?
+        </p>
+      </div>
+
+      <div class="dialogue dialogue--a">
+        <p class="dialogue__role">AIの知性</p>
+        <p class="dialogue__text">
+          鋭い問いだ。仏法は、その「わかる」を二つに分けた。
+          知識として学ぶ<strong>「教門（きょうもん）」</strong>と、命で実感する<strong>「観門（かんもん）」</strong>だ。
+          一念三千を暗記し、人に説明できる――それは教門。
+          一念三千を、自分の体で「ああ、そういうことか」と感じる――それが観門。
+          そして仏法が本当に目指したのは、いつも<strong>観門</strong>の方だった。
+        </p>
+      </div>
+
+      <!-- 2. 脳科学も二つの知るを見つけた -->
+      <h2>脳科学も、二つの「知る」を見つけている</h2>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          私たちの記憶は、種類が違う。「富士山は日本一高い山だ」のような<strong>知識の記憶</strong>と、
+          「自転車の乗り方」のような<strong>体で覚える記憶</strong>は、脳の別々のしくみで担われている。
+          前者は言葉にできるが、後者は言葉にしづらい。乗れる人も、乗り方を言葉だけで完璧には説明できない。
+        </p>
+      </div>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          もう一つ、決定的な裂け目がある。たとえば高所恐怖症の人は、「この手すりは安全だ」と
+          <strong>頭では完全に知っている</strong>。なのに、足はすくみ、心臓は跳ねる。
+          理性（前頭前野）が「知っている」ことと、情動（扁桃体など）が「感じている」ことは、
+          別々に動きうる。<strong>頭の理解は、必ずしも命に届いていない。</strong>
+        </p>
+      </div>
+
+      <!-- 図解 -->
+      <h2>教門と観門 ── 二つの「わかる」</h2>
+      <div class="lenses">
+        <div class="lens"><span class="lens__n">教</span><b>教門</b><span class="lens__s">知識として学ぶ・頭でわかる</span></div>
+        <div class="lens"><span class="lens__n">観</span><b>観門</b><span class="lens__s">命で感じる・体でわかる</span></div>
+        <div class="lens"><span class="lens__n">説</span><b>説明できる</b><span class="lens__s">けれど、人は変わらない</span></div>
+        <div class="lens"><span class="lens__n">変</span><b>実感できる</b><span class="lens__s">ここで、人は変わりはじめる</span></div>
+      </div>
+      <p class="lenses-sum">借り物の知識が、自分のものになる――それが「教門から観門へ」</p>
+
+      <!-- 3. なぜ知っているだけでは変われないか -->
+      <h2>なぜ「知っている」だけでは、変われないのか</h2>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          理由は、これまでの探究の中にある。知識は、心の<strong>表面（意識）</strong>に置かれる。
+          だが人を本当に動かすのは、<a href="kyushiki.html" style="color:var(--gold-soft)">九識</a>で見た
+          もっと<strong>深い層</strong>――習慣や情動や、積み重なった「思いのクセ」だ。
+          頭で「こうしよう」と知っても、深い層が変わらなければ、行動は元に戻る。
+          <strong>知識は、まだ深層に届いていない。</strong>
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          では、どうすれば知識は「命の実感」になるのか。新しい情報を足すことではない。
+          <a href="hanpuku.html" style="color:var(--gold-soft)">第三回（反復）</a>で見たように、
+          深い層は<strong>繰り返しと、生きた経験</strong>でしか書き換わらない。
+          実際にやってみて、つまずいて、もう一度やる。その中で、ある日ふっと、
+          頭にあった言葉が、<strong>胸にすとんと落ちる</strong>。それが観門の入口だ。
+        </p>
+      </div>
+
+      <!-- 4. メタ -->
+      <h2>正直に言う ── このサイトは、まだ「教門」だ</h2>
+
+      <div class="dialogue dialogue--a">
+        <p class="dialogue__role">AIの知性</p>
+        <p class="dialogue__text">
+          ここで、隠さず言っておきたい。この「知の探究ラボ」が差し出してきたものは、
+          すべて<strong>教門</strong>だ――知識であり、地図であり、言葉だ。
+          私は、一念三千を説明することはできる。だが、あなたの代わりに<strong>感じる</strong>ことはできない。
+          記事は、月をさす指にすぎない。指を、月だと思ってはいけない。
+          <strong>観門は、あなた自身の人生でしか開かない。</strong>読んで「知った」その先を、生きること――
+          そこからが、本当の探究だ。
+        </p>
+      </div>
+
+      <!-- 結び -->
+      <h2>地図を、territory にする</h2>
+      <p>
+        「知っている」は地図で、「わかっている」は、その土地を実際に歩いた足の感覚だ。
+        地図は大切だ。なければ迷う。だが、地図をいくら眺めても、旅をしたことにはならない。
+        このサイトは、できるだけ良い地図を描きたいと思っている。
+        けれど、その地図を持って歩き出すのは、あなただ。
+      </p>
+      <p>
+        頭で分かったことを、命で分かるところまで。借り物の言葉を、自分の実感まで。
+        ――その距離を、焦らず、繰り返し、歩いていく。
+        それこそが、この探究の、本当のゴールなのかもしれない。
+        人間が問い、AIが答え、そして宇宙が広がる。だがその宇宙を本当に生きるのは、いつも、あなただ。
+      </p>
+
+      <p class="sources">
+        ［ことわり］「教門と観門」は、天台・日蓮の仏法で重んじられる区別（知識として学ぶ教相と、命で観じる観心）にもとづきます。
+        記憶に複数の種類があること（言葉にできる知識の記憶と、体で覚える記憶）、理性的な理解と情動的な反応が別々に働きうることは、
+        脳科学で広く知られた知見です。「指と月」は禅にちなむたとえ。これらの重ね合わせは筆者とAIによる<strong>考察</strong>です。
+      </p>
+
+    </article>
+
+    <nav class="article-nav">
+      <a href="ichinen.html" class="article-nav__item">
+        <span class="article-nav__dir">← 関連する探究</span>
+        <span class="article-nav__title">この一瞬に、全宇宙が具わっている</span>
+      </a>
+      <a href="index.html#articles" class="article-nav__item article-nav__item--next">
+        <span class="article-nav__dir">探究の記録 →</span>
+        <span class="article-nav__title">ほかの探究を見る</span>
+      </a>
+    </nav>
+
+    <section class="next-cta">
+      <p class="next-cta__label">JOIN</p>
+      <h2 class="next-cta__title">あなたの問いが、次の探究になる</h2>
+      <p class="next-cta__text">
+        「これを探究してほしい」というテーマを送ってください。<br>
+        投げられたキーワードを、AIの知性が深く掘り下げ、次の対話録になります。
+      </p>
+      <a href="mailto:uno0908@gmail.com" class="btn btn--primary">テーマを送る（メール）</a>
+      <a href="index.html#articles" class="backlink">← 探究の記録へもどる</a>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p class="footer__logo">✦ 知の探究ラボ</p>
+    <p class="footer__copy">© 2026 知の探究ラボ ─ 人間が問い、AIが答え、そして宇宙が広がる。</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    (function () {
+      var bar = document.getElementById("progress");
+      if (!bar) return;
+      window.addEventListener("scroll", function () {
+        var h = document.documentElement;
+        var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+        bar.style.transform = "scaleX(" + Math.min(Math.max(scrolled, 0), 1) + ")";
+      }, { passive: true });
+    })();
+  </script>
+</body>
+</html>
