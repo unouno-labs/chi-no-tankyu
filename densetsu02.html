@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<!--
+  ===========================================================
+  知の探究ラボ ─ 記事ページ（都市伝説と検証 FILE 02：宇宙人は4種類か）
+  ・【事実】= callout--fact ／【証言】= callout--testimony ／【考察】= callout--think
+  ・画像：NASA/ESA パブリックドメイン写真 ＋ オリジナルSVGイラスト（著作物は使わない）
+  ・宇宙人「4種類」は未確認の証言として扱い、断定しない。
+  ===========================================================
+-->
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>宇宙人は、4種類いるのか｜知の探究ラボ</title>
+  <meta name="description" content="米政府はUAPを公式に調査し始めた。一方で「宇宙人は4種類」という証言も流れる。事実・証言・考察を分け、スピルバーグが映画で果たした“地ならし”まで含めて、開示の時代を冷静に読む。都市伝説と検証 FILE 02。">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="宇宙人は、4種類いるのか ─ 開示の時代と、スピルバーグの地ならし">
+  <meta property="og:description" content="UAP開示は本物。だが「4種類」は未確認の証言。事実と証言と考察を分けて、冷静に読む。">
+
+  <!-- Google Analytics 4（測定IDを取得して G-XXXXXXXXXX を置き換えてください） -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;700;800&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="article.css">
+</head>
+<body>
+
+  <div class="loader" id="loader">
+    <div class="loader__ring"></div>
+    <p class="loader__text">知の探究ラボ</p>
+  </div>
+
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <canvas id="starfield"></canvas>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html#top" class="logo">
+        <span class="logo__mark">✦</span>
+        <span class="logo__text">知の探究ラボ</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="nav">
+        <a href="index.html#worldview">世界観</a>
+        <a href="index.html#about">この探究について</a>
+        <a href="index.html#category">探究の領域</a>
+        <a href="index.html#articles">探究の記録</a>
+        <a href="index.html#contact">参加する</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="reading">
+
+    <header class="masthead">
+      <p class="masthead__badge">都市伝説と検証 ─ FILE 02</p>
+      <h1 class="masthead__title">宇宙人は、4種類いるのか</h1>
+      <p class="masthead__subtitle">情報開示の時代と、スピルバーグの“地ならし”</p>
+      <p class="masthead__meta">
+        <span>ナビゲーター</span>
+        <span class="dot">・</span>
+        <span>2026.06.25</span>
+        <span class="dot">・</span>
+        <span>AIとの対話から</span>
+      </p>
+    </header>
+
+    <!-- ヒーロー写真（NASA/ESA パブリックドメイン） -->
+    <figure class="hero-figure">
+      <img src="images/hubble-deep-field.jpg" alt="ハッブル宇宙望遠鏡が撮影した、無数の銀河が写る深宇宙">
+      <figcaption class="hero-figure__cap">Hubble Ultra Deep Field ／ NASA・ESA（パブリックドメイン）</figcaption>
+    </figure>
+
+    <article class="article-body">
+
+      <div class="note">
+        この記事は3色で情報を分けます。<br>
+        <strong>【事実】</strong>＝公的記録で確認できること／
+        <strong>【証言】</strong>＝語られた内容（真偽は未確認）／
+        <strong>【考察】</strong>＝そこから考える解釈。
+      </div>
+
+      <p class="lead">
+        上の一枚は、ハッブル宇宙望遠鏡が、夜空のごく狭い一角を覗いた写真だ。
+        そこに写る光のほぼすべてが、星ではなく<strong>銀河</strong>――それぞれに数千億の星を抱える島宇宙だ。
+        これほどの広がりの中で、私たちは本当に独りなのか。そして最近、この問いが、
+        オカルトの隅から<strong>各国の議会</strong>へと移動し始めている。
+      </p>
+
+      <!-- 1. 出発点 -->
+      <h2>「宇宙人は4種類」という見出しを、どう読むか</h2>
+
+      <div class="dialogue dialogue--q">
+        <p class="dialogue__role">ナビゲーターの問い</p>
+        <p class="dialogue__text">
+          「宇宙人には4つの種類がいることが分かった」という報道を見た。胸が躍る話だけど、
+          こういうとき、どう受け止めれば、信じすぎず・笑いすぎずにいられるんだろう。
+        </p>
+      </div>
+
+      <div class="dialogue dialogue--a">
+        <p class="dialogue__role">AIの知性</p>
+        <p class="dialogue__text">
+          いつもの通り、<strong>分ける</strong>ことだ。じつはこの話には、温度の違う三つの層が混ざっている。
+          ①政府が公式に動き出したという<strong>事実</strong>、②「4種類いる」という<strong>証言</strong>、
+          そして③なぜ今ごろ少しずつ出てくるのかという<strong>考察</strong>。
+          混ぜると「全部本当」か「全部デタラメ」になる。ほどいて並べよう。
+        </p>
+      </div>
+
+      <!-- 2. 事実：開示 -->
+      <h2>確かなこと ── 「調査」は、もう公式になった</h2>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          かつて笑い話だったUFOは、いまや<strong>UAP（未確認異常現象）</strong>と呼ばれ、各国政府が公式に扱う対象になった。
+          近年の主な動きを、時系列で見てみよう。
+        </p>
+      </div>
+
+      <div class="timeline">
+        <div class="tl">
+          <div class="tl__year">2021</div>
+          <div class="tl__body">米国家情報長官室（ODNI）が、UAPに関する公式の評価報告書を公表。多くの事例が「説明不能」とされた。</div>
+        </div>
+        <div class="tl">
+          <div class="tl__year">2023（7月）</div>
+          <div class="tl__body">元情報当局者デイヴィッド・グルーシュが議会で証言。「数十年に及ぶ墜落機の回収・逆解析プログラムがある」「非人間的な生体物質が回収された」と主張した。</div>
+        </div>
+        <div class="tl">
+          <div class="tl__year">2023</div>
+          <div class="tl__body">一方、国防総省のUAP調査部門（AARO）の責任者は「グルーシュは我々の聴取に応じていない」と反論。主張は確認されていない。</div>
+        </div>
+        <div class="tl">
+          <div class="tl__year">2023〜</div>
+          <div class="tl__body">議会で「UAP開示法案」が提案され、回収された“未知起源の技術”の記録開放などが議論されている。</div>
+        </div>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          ここで言えるのは、<strong>「政府が真剣に調べ始めた」のは事実</strong>だが、
+          <strong>「宇宙人がいると政府が認めた」わけではない</strong>、ということ。
+          証言は強烈でも、まだ裏づけのある公式の確認には至っていない。ここを混同しないことが、第一歩だ。
+        </p>
+      </div>
+
+      <!-- 3. 証言：4種類 -->
+      <h2>「4種類」の出どころ</h2>
+
+      <div class="callout callout--testimony">
+        <span class="callout__label">証言</span>
+        <p>
+          「回収に関わった人たちは、少なくとも4つの種類がいると言っている」――
+          CIA関連の研究にも携わった物理学者ハル・プットフ博士が、ポッドキャストでそう語った。
+          挙げられたのは、次の4タイプ（描いたのはこちらのイメージ図）。
+        </p>
+      </div>
+
+      <!-- オリジナルSVGシルエット（著作権フリー） -->
+      <div class="aliens">
+        <div class="alien">
+          <svg viewBox="0 0 100 130" aria-hidden="true">
+            <g fill="none" stroke="#c9a86a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="50" cy="30" r="20"/>
+              <path d="M31 27 C31 11 69 11 69 27"/>
+              <path d="M43 50 L43 58 M57 50 L57 58"/>
+              <path d="M30 72 C30 63 70 63 70 72 L70 98 C70 117 62 124 50 124 C38 124 30 117 30 98 Z"/>
+              <path d="M33 73 L21 110 M67 73 L79 110"/>
+              <path d="M43 30 q3 -3 6 0 M51 30 q3 -3 6 0"/>
+            </g>
+          </svg>
+          <span class="alien__name">ノルディック</span>
+          <span class="alien__en">NORDIC</span>
+        </div>
+        <div class="alien">
+          <svg viewBox="0 0 100 130" aria-hidden="true">
+            <g fill="none" stroke="#c9a86a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M50 8 C70 8 80 26 78 44 C76 60 64 70 50 70 C36 70 24 60 22 44 C20 26 30 8 50 8 Z"/>
+              <path d="M44 70 L44 80 M56 70 L56 80"/>
+              <path d="M50 80 C62 82 66 96 64 112 C63 120 58 124 50 124 C42 124 37 120 36 112 C34 96 38 82 50 80 Z"/>
+              <path d="M41 88 L24 104 M59 88 L76 104"/>
+            </g>
+            <ellipse cx="40" cy="42" rx="9" ry="5" fill="#0b0f1f" stroke="#c9a86a" stroke-width="1" transform="rotate(28 40 42)"/>
+            <ellipse cx="60" cy="42" rx="9" ry="5" fill="#0b0f1f" stroke="#c9a86a" stroke-width="1" transform="rotate(-28 60 42)"/>
+          </svg>
+          <span class="alien__name">グレイ</span>
+          <span class="alien__en">GRAY</span>
+        </div>
+        <div class="alien">
+          <svg viewBox="0 0 100 130" aria-hidden="true">
+            <g fill="none" stroke="#c9a86a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M30 40 C30 18 50 10 50 10 C50 10 70 18 70 40 C70 56 62 66 50 66 C38 66 30 56 30 40 Z"/>
+              <path d="M50 10 L50 2 M44 12 L40 4 M56 12 L60 4"/>
+              <path d="M50 66 C64 68 70 84 68 104 C67 118 60 124 50 124 C40 124 33 118 32 104 C30 84 36 68 50 66 Z"/>
+              <path d="M66 110 C82 116 90 108 92 96"/>
+              <path d="M38 80 L22 96 M62 80 L78 96"/>
+            </g>
+            <path d="M40 39 L40 48 M60 39 L60 48" stroke="#8fdca6" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+          <span class="alien__name">レプティリアン</span>
+          <span class="alien__en">REPTILIAN</span>
+        </div>
+        <div class="alien">
+          <svg viewBox="0 0 100 130" aria-hidden="true">
+            <g fill="none" stroke="#c9a86a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M50 12 L39 5 M50 12 L61 5"/>
+              <path d="M50 14 C66 14 72 26 66 42 C60 54 50 56 50 56 C50 56 40 54 34 42 C28 26 34 14 50 14 Z"/>
+              <path d="M50 56 C58 60 60 76 58 98 C57 117 54 124 50 124 C46 124 43 117 42 98 C40 76 42 60 50 56 Z"/>
+              <path d="M44 66 L25 72 L30 86 M56 66 L75 72 L70 86"/>
+            </g>
+            <ellipse cx="42" cy="32" rx="7" ry="9" fill="#0b0f1f" stroke="#c9a86a" stroke-width="1"/>
+            <ellipse cx="58" cy="32" rx="7" ry="9" fill="#0b0f1f" stroke="#c9a86a" stroke-width="1"/>
+          </svg>
+          <span class="alien__name">インセクトイド</span>
+          <span class="alien__en">INSECTOID</span>
+        </div>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          ただし、ここが肝心だ。プットフ博士は同時に、こう言い添えている――
+          <strong>「私自身は直接見ていない。回収に関わった人たちがそう言っているのを信じている」</strong>。
+          つまりこれは、本人の直接確認ではなく<strong>“又聞きの証言”</strong>だ。
+          ニュースの見出しは「4種類いると判明」と書くが、中身は「いると語った人がいる」。この差は、とても大きい。
+        </p>
+      </div>
+
+      <!-- 4. スピルバーグ -->
+      <h2>なぜ今ごろ、少しずつ出てくるのか ── 物語という“地ならし”</h2>
+
+      <div class="dialogue dialogue--q">
+        <p class="dialogue__role">ナビゲーターの問い</p>
+        <p class="dialogue__text">
+          仮に何かを隠してきたとして、なぜ一気に発表せず、小出しにするんだろう。
+          昔はそもそも、真実を伝えられない空気もあったはずだ。
+        </p>
+      </div>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          ひとつ確かなのは、<strong>物語が人々の心を準備する</strong>ということだ。
+          スティーヴン・スピルバーグは『未知との遭遇』（1977年）『E.T.』（1982年）で、
+          宇宙人を「侵略してくる怪物」ではなく、<strong>畏れと親しみの対象</strong>として描いた。
+          それまでの「恐怖の異星人」像を、静かに塗り替えたのだ。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          ここから、ひとつの見方が生まれる。衝撃の事実は、いきなり突きつけると社会が混乱する。
+          だからまず<strong>フィクションとして“慣らして”おく</strong>――いわゆる「ソフト・ディスクロージャー（緩やかな開示）」だ。
+          これが意図的だったかは分からない（そこは証拠のない仮説）。
+          だが結果として、半世紀のエンタメが、私たちの「宇宙人アレルギー」を確かにやわらげた。
+          <a href="article.html" style="color:var(--gold-soft)">第一回のRAS</a>で見たように、
+          一度なじんだ情報は、脳が受け取りやすくなる。物語は、その下地を作っていた。
+        </p>
+      </div>
+
+      <!-- 5. 線を引く -->
+      <h2>信じる前に、笑う前に</h2>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          ここまでをほどくと、誠実な地図はこうなる。
+          <strong>UAPが実在し、各国が真剣に調べているのは事実。</strong>
+          <strong>「格納庫に4種類の宇宙人の遺体がある」は、未確認の証言。</strong>
+          この二つを同じ熱量で語ると、本物の謎まで“トンデモ”に見えてしまう。
+          逆に、証言を理由に全部を笑い飛ばせば、公式の調査という事実まで見失う。
+          ――線を引けることが、いちばんの教養だ。
+        </p>
+      </div>
+
+      <!-- 結び -->
+      <h2>問いは、ばかげていない</h2>
+      <figure class="figure">
+        <img src="images/pillars-of-creation.jpg" alt="わし星雲の「創造の柱」。星が生まれる巨大なガスと塵の柱">
+        <figcaption class="figure__cap">わし星雲「創造の柱」――星が生まれる現場。<b>NASA・ESA／ハッブル宇宙望遠鏡（パブリックドメイン）</b></figcaption>
+      </figure>
+      <p>
+        もう一度、最初の深宇宙の写真を思い出してほしい。あの無数の銀河、その一つひとつにある無数の星、
+        そのまわりを巡る、さらに無数の惑星。「自分たち以外に誰もいない」と言い切るほうが、
+        むしろ大胆な賭けに思えてくる。<strong>「宇宙に隣人はいるのか」という問いは、けっしてばかげていない。</strong>
+      </p>
+      <p>
+        だからこそ、扇情にも嘲笑にも流されず、事実と証言を分けて見つめ続けたい。
+        ――ところで、この広大な宇宙を「一つのエネルギーが貫いている」と想像した物語がある。
+        スター・ウォーズの「フォース」だ。じつはそれは、私たちが
+        <a href="article.html" style="color:var(--gold-soft)">仏法シリーズ</a>で見た「一念」や「気」と、驚くほど近い。次回、そこへ。
+      </p>
+
+      <p class="sources">
+        ［ことわり］UAPに関する米政府の公式報告（2021年）、グルーシュ氏の2023年議会証言とAARO側の反論、UAP開示法案の提案は、
+        報道・公的記録で確認できる事実です。「宇宙人4種類（ノルディック／グレイ／レプティリアン／インセクトイド）」は
+        ハル・プットフ博士らの<strong>未確認の証言</strong>であり、確定した事実ではありません。本記事はこれを断定も否定もしません。
+        宇宙人の図はすべて当サイトのオリジナル・イメージ（実在の描写ではありません）。
+        写真はNASA・ESA／ハッブル宇宙望遠鏡によるパブリックドメイン画像です。
+      </p>
+
+    </article>
+
+    <nav class="article-nav">
+      <a href="densetsu01.html" class="article-nav__item">
+        <span class="article-nav__dir">← 前のファイル</span>
+        <span class="article-nav__title">動かないはずの腕が、動いた</span>
+      </a>
+      <a href="index.html#articles" class="article-nav__item article-nav__item--next">
+        <span class="article-nav__dir">探究の記録 →</span>
+        <span class="article-nav__title">ほかの探究を見る</span>
+      </a>
+    </nav>
+
+    <section class="next-cta">
+      <p class="next-cta__label">JOIN</p>
+      <h2 class="next-cta__title">あなたの「不思議な話」を聞かせてください</h2>
+      <p class="next-cta__text">
+        体験した不思議なこと、気になる噂や謎。<br>
+        送っていただければ、笑わず・鵜呑みにせず、事実と証言と考察に分けて、一緒に探究します。
+      </p>
+      <a href="mailto:uno0908@gmail.com" class="btn btn--primary">話を送る（メール）</a>
+      <a href="index.html#articles" class="backlink">← 探究の記録へもどる</a>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p class="footer__logo">✦ 知の探究ラボ</p>
+    <p class="footer__copy">© 2026 知の探究ラボ ─ 人間が問い、AIが答え、そして宇宙が広がる。</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    (function () {
+      var bar = document.getElementById("progress");
+      if (!bar) return;
+      window.addEventListener("scroll", function () {
+        var h = document.documentElement;
+        var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+        bar.style.transform = "scaleX(" + Math.min(Math.max(scrolled, 0), 1) + ")";
+      }, { passive: true });
+    })();
+  </script>
+</body>
+</html>

@@ -331,6 +331,91 @@
 }
 
 /* ============================================================
+   画像（ヒーロー写真・本文中の写真）
+   ============================================================ */
+.hero-figure {
+  position: relative;
+  margin: 0 0 10px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+.hero-figure img {
+  width: 100%;
+  display: block;
+  filter: brightness(0.72) saturate(1.05);
+}
+.hero-figure__cap {
+  position: absolute;
+  right: 12px; bottom: 9px;
+  font-size: 0.68rem;
+  color: rgba(255,255,255,0.72);
+  letter-spacing: 0.03em;
+  text-shadow: 0 1px 5px rgba(0,0,0,0.9);
+}
+.figure { margin: 30px 0; }
+.figure img {
+  width: 100%;
+  display: block;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+}
+.figure__cap {
+  margin-top: 9px;
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  text-align: center;
+  line-height: 1.6;
+}
+.figure__cap b { color: var(--gold); font-weight: 500; }
+
+/* ============================================================
+   宇宙人4種（オリジナルSVGシルエット）
+   ============================================================ */
+.aliens {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin: 32px 0;
+}
+.alien {
+  text-align: center;
+  padding: 18px 8px 14px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--panel);
+  backdrop-filter: blur(8px);
+  transition: transform 0.35s, border-color 0.35s;
+}
+.alien:hover { transform: translateY(-5px); border-color: var(--gold); }
+.alien svg { width: 100%; height: 116px; }
+.alien__name { display: block; margin-top: 8px; color: var(--gold-soft); font-weight: 700; font-size: 0.95rem; }
+.alien__en { display: block; color: var(--text-dim); font-size: 0.68rem; letter-spacing: 0.1em; font-family: "Cinzel", serif; }
+@media (max-width: 768px) { .aliens { grid-template-columns: repeat(2, 1fr); } }
+
+/* ============================================================
+   年表（情報開示のタイムライン）
+   ============================================================ */
+.timeline { margin: 30px 0 30px 6px; }
+.tl {
+  position: relative;
+  padding: 0 0 22px 28px;
+  border-left: 2px solid var(--line);
+}
+.tl:last-child { padding-bottom: 0; border-left-color: transparent; }
+.tl::before {
+  content: "";
+  position: absolute;
+  left: -7px; top: 3px;
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 10px rgba(201,168,106,0.6);
+}
+.tl__year { font-family: "Cinzel", serif; color: var(--gold-soft); font-size: 0.95rem; letter-spacing: 0.03em; }
+.tl__body { color: var(--text-dim); font-size: 0.92rem; margin-top: 4px; line-height: 1.7; }
+
+/* ============================================================
    出典・ことわり
    ============================================================ */
 .sources {
