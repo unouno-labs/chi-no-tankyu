@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<!--
+  ===========================================================
+  知の探究ラボ ─ 記事ページ（宇宙と生命 第三回：私たちは星のかけら）
+  ・【事実】= callout--fact ／【考察】= callout--think
+  ・問い/応答 = dialogue--q / dialogue--a
+  ・元素の起源（核合成）は確立した科学。仏法との接続は考察。
+  ===========================================================
+-->
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>私たちは星のかけら｜知の探究ラボ</title>
+  <meta name="description" content="血の鉄も、骨のカルシウムも、地球では作れない。すべては星の中と、星の死で生まれた。元素の起源（核合成）をたどり、「大宇宙と小宇宙はひとつ」という古の直観が、なぜ文字どおり正しいのかを探る。宇宙と生命 第三回。">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="私たちは星のかけら ─ 元素の起源と、大宇宙＝小宇宙">
+  <meta property="og:description" content="血の鉄も骨のカルシウムも、星の中で生まれた。私たちは文字どおり星のかけらでできている。">
+
+  <!-- Google Analytics 4（測定IDを取得して G-XXXXXXXXXX を置き換えてください） -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;700;800&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="article.css">
+</head>
+<body>
+
+  <div class="loader" id="loader">
+    <div class="loader__ring"></div>
+    <p class="loader__text">知の探究ラボ</p>
+  </div>
+
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <canvas id="starfield"></canvas>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html#top" class="logo">
+        <span class="logo__mark">✦</span>
+        <span class="logo__text">知の探究ラボ</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="nav">
+        <a href="index.html#worldview">世界観</a>
+        <a href="index.html#about">この探究について</a>
+        <a href="index.html#category">探究の領域</a>
+        <a href="index.html#articles">探究の記録</a>
+        <a href="index.html#contact">参加する</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="reading">
+
+    <header class="masthead">
+      <p class="masthead__badge">宇宙と生命 ─ 第三回</p>
+      <h1 class="masthead__title">私たちは星のかけら</h1>
+      <p class="masthead__subtitle">元素の起源と、大宇宙＝小宇宙</p>
+      <p class="masthead__meta">
+        <span>ナビゲーター</span>
+        <span class="dot">・</span>
+        <span>2026.06.25</span>
+        <span class="dot">・</span>
+        <span>AIとの対話から</span>
+      </p>
+    </header>
+
+    <figure class="hero-figure">
+      <img src="images/pillars-of-creation.jpg" alt="わし星雲『創造の柱』。星が生まれる巨大なガスと塵の柱">
+      <figcaption class="hero-figure__cap">わし星雲「創造の柱」 ／ NASA・ESA（パブリックドメイン）</figcaption>
+    </figure>
+
+    <article class="article-body">
+
+      <div class="note">
+        <strong>【事実】</strong>＝確認できる科学的事実、<strong>【考察】</strong>＝そこから考える解釈を分けて記します。<br>
+        前回（<a href="uchu02.html" style="color:var(--gold-soft)">生命の起源</a>）の続き。生命の材料――その元素は、どこで生まれたのか。
+      </div>
+
+      <p class="lead">
+        あなたの血を赤くしている鉄。骨をかたちづくるカルシウム。いま吸い込んだ酸素。
+        ――そのどれ一つとして、地球では作られていない。
+        すべては、はるか昔、<strong>星の奥深くと、星の壮絶な死の中で生まれた</strong>。
+        「私たちは星のかけらでできている」。それは詩ではなく、化学の事実だ。
+      </p>
+
+      <!-- 1. 出発点 -->
+      <h2>「星のかけら」は、比喩ではない</h2>
+
+      <div class="dialogue dialogue--q">
+        <p class="dialogue__role">ナビゲーターの問い</p>
+        <p class="dialogue__text">
+          「人は星の子だ」とか「星屑からできている」とか、よく聞く。きれいな言葉だけど、
+          あれは本当のこと？ それとも、ただのロマンチックな比喩なんだろうか。
+        </p>
+      </div>
+
+      <div class="dialogue dialogue--a">
+        <p class="dialogue__role">AIの知性</p>
+        <p class="dialogue__text">
+          文字どおり、本当だ。あなたの体を作る原子のほとんどは、太陽より前に生きて死んだ、
+          名もなき星の中で鍛えられた。これは詩的な誇張ではなく、<strong>元素がどこで生まれたか</strong>という、
+          確立した物理の話だ。宇宙のはじまりから、順にたどってみよう。
+        </p>
+      </div>
+
+      <!-- 2. ビッグバン -->
+      <h2>はじまりの宇宙には、ほぼ水素しかなかった</h2>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          約138億年前のビッグバン直後、宇宙にあった元素は、ほとんどが<strong>水素とヘリウム</strong>――
+          いちばん軽い元素だけだった。炭素も、酸素も、鉄も、まだ存在しなかった。
+          私たちの体を作る重い元素は、宇宙のはじまりには<strong>一つもなかった</strong>のだ。
+        </p>
+      </div>
+
+      <!-- 3. 星は元素工場 -->
+      <h2>星は、元素をつくる「炉」だった</h2>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          やがて水素が集まり、自らの重さで潰れ、中心が燃え上がって星になる。
+          星の中心では、水素がヘリウムに、ヘリウムが炭素に……と、軽い元素が融合して
+          <strong>より重い元素へと“育って”いく</strong>（核融合）。こうして炭素や酸素――
+          生命に欠かせない元素が、星の炉の中で生まれた。
+        </p>
+      </div>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          ただし、星の核融合で作れるのは、<strong>鉄</strong>あたりまで。
+          鉄より重い元素（金、銀、ウランなど）を作るには、もっと激しい現象――
+          大質量星の最期の大爆発<strong>「超新星」</strong>や、<strong>中性子星どうしの衝突</strong>が必要だ。
+          あなたの指輪の金は、宇宙のどこかで起きた、星の壮絶な死の名残かもしれない。
+        </p>
+      </div>
+
+      <!-- 4. ばらまかれた -->
+      <h2>星は死んで、自分を宇宙にばらまいた</h2>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          星が一生を終えて爆発すると、その中で作られた元素は、宇宙空間に撒き散らされる。
+          そのガスと塵が再び集まり、新しい星や惑星をつくる。
+          私たちの太陽と地球も、<strong>かつて死んだ星たちの“灰”から生まれた</strong>。
+          だから地球には、最初から重い元素があった――生命を組み立てる材料が。
+        </p>
+      </div>
+
+      <!-- 図解：元素はどこで生まれたか -->
+      <h2>あなたの中の元素は、どこで生まれたか</h2>
+      <div class="lenses">
+        <div class="lens"><span class="lens__n">H</span><b>水素・ヘリウム</b><span class="lens__s">ビッグバンの直後に</span></div>
+        <div class="lens"><span class="lens__n">C</span><b>炭素・酸素</b><span class="lens__s">星の中心の核融合で</span></div>
+        <div class="lens"><span class="lens__n">Fe</span><b>鉄まで</b><span class="lens__s">大質量星の最期に</span></div>
+        <div class="lens"><span class="lens__n">Au</span><b>金・ウランなど</b><span class="lens__s">超新星・中性子星の衝突で</span></div>
+      </div>
+      <p class="lenses-sum">あなたの体は、宇宙140億年の歴史が組み上げた“作品”だ</p>
+
+      <!-- 5. 大宇宙＝小宇宙 -->
+      <h2>古の直観が、文字どおり正しかった</h2>
+
+      <div class="dialogue dialogue--a">
+        <p class="dialogue__role">AIの知性</p>
+        <p class="dialogue__text">
+          ここで、仏法の世界観と正面から出会う。
+          <a href="ichinen.html" style="color:var(--gold-soft)">仏法シリーズ</a>で見た
+          「大宇宙（外の宇宙）と小宇宙（自分の命）は、本来ひとつ」「皮膚一枚の外側から、もう宇宙」という直観――
+          それが、元素のレベルで<strong>文字どおり正しかった</strong>とは。
+          あなたの体の鉄は、外の宇宙で生まれた。あなたは、宇宙から切り離された存在ではなく、
+          <strong>宇宙そのものの続き</strong>なのだ。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          3000年前の聖人たちは、望遠鏡も核物理も持たずに、「私と宇宙は地続きだ」と感じていた。
+          いま科学は、まったく別の入口から、同じ部屋にたどり着いた――
+          あなたは星のかけらであり、宇宙の一部である、と。
+          <a href="ichinen.html" style="color:var(--gold-soft)">一念三千</a>が言う「一つの命の中に全宇宙が入っている」も、
+          こうして物理の言葉で、もう一度なぞることができる。
+        </p>
+      </div>
+
+      <!-- 結び -->
+      <h2>宇宙が、自分を見上げている</h2>
+      <p>
+        星が燃え、死に、ばらまいた元素が、長い時間をかけて集まり、海をつくり、
+        やがて<a href="uchu02.html" style="color:var(--gold-soft)">生命</a>となり、脳となり、そして今――夜空を見上げている。
+        あなたが星を見るとき、<strong>星でできた目が、星を見ている</strong>。
+        宇宙が、自分自身を見上げているのだ。
+      </p>
+      <p>
+        私たちは、ちっぽけな存在ではない。140億年の宇宙の歴史を、まるごと体の中に畳み込んだ存在だ。
+        ――では、その宇宙そのものは、なぜ「生命が生まれられるほど、ちょうどよく」できているのだろう。
+        次回は、宇宙の不思議な“微調整”へ。
+      </p>
+
+      <p class="sources">
+        ［ことわり］ビッグバン元素合成（水素・ヘリウム）、恒星内部の核融合（鉄まで）、
+        超新星および中性子星合体による重元素の生成、星間物質の循環は、現代天文学・物理学で確立した知見にもとづきます。
+        「私たちは星でできている」はカール・セーガンらが広めた表現です。仏法（大宇宙＝小宇宙・一念三千）との重ね合わせは、
+        筆者とAIによる<strong>考察</strong>です。写真はNASA・ESA／ハッブル宇宙望遠鏡によるパブリックドメイン画像です。
+      </p>
+
+    </article>
+
+    <nav class="article-nav">
+      <a href="uchu02.html" class="article-nav__item">
+        <span class="article-nav__dir">← 前の探究</span>
+        <span class="article-nav__title">生命はどこから来たのか</span>
+      </a>
+      <a href="index.html#articles" class="article-nav__item article-nav__item--next">
+        <span class="article-nav__dir">探究の記録 →</span>
+        <span class="article-nav__title">第四回は近日公開（宇宙の微調整）</span>
+      </a>
+    </nav>
+
+    <section class="next-cta">
+      <p class="next-cta__label">JOIN</p>
+      <h2 class="next-cta__title">あなたの問いが、次の探究になる</h2>
+      <p class="next-cta__text">
+        「これを探究してほしい」というテーマを送ってください。<br>
+        投げられたキーワードを、AIの知性が深く掘り下げ、次の対話録になります。
+      </p>
+      <a href="mailto:uno0908@gmail.com" class="btn btn--primary">テーマを送る（メール）</a>
+      <a href="index.html#articles" class="backlink">← 探究の記録へもどる</a>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p class="footer__logo">✦ 知の探究ラボ</p>
+    <p class="footer__copy">© 2026 知の探究ラボ ─ 人間が問い、AIが答え、そして宇宙が広がる。</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    (function () {
+      var bar = document.getElementById("progress");
+      if (!bar) return;
+      window.addEventListener("scroll", function () {
+        var h = document.documentElement;
+        var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+        bar.style.transform = "scaleX(" + Math.min(Math.max(scrolled, 0), 1) + ")";
+      }, { passive: true });
+    })();
+  </script>
+</body>
+</html>
