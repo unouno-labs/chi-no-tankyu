@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<!--
+  ===========================================================
+  知の探究ラボ ─ 記事ページ（宗教研究 第二回：世界の宗教の異同）
+  ・【事実】= callout--fact ／【考察】= callout--think
+  ・問い/応答 = dialogue--q / dialogue--a
+  ・「みんな同じ」とも「みんな違う」とも単純化しない。
+  ===========================================================
+-->
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>世界の宗教は、どこが似て、どこが違うのか｜知の探究ラボ</title>
+  <meta name="description" content="黄金律はほぼ全宗教にある。だが神の数、時間観、自己観、救いの道は深く異なる。世界の宗教の「似ている部分」と「譲れない部分」を、比較宗教学の枠組みで誠実に整理する。宗教研究 第二回。">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="世界の宗教は、どこが似て、どこが違うのか">
+  <meta property="og:description" content="黄金律はほぼ全宗教にある。だが神の数・時間観・自己観・救いの道は深く異なる。似ている部分と譲れない部分を。">
+
+  <!-- Google Analytics 4（測定IDを取得して G-XXXXXXXXXX を置き換えてください） -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;700;800&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="article.css">
+</head>
+<body>
+
+  <div class="loader" id="loader">
+    <div class="loader__ring"></div>
+    <p class="loader__text">知の探究ラボ</p>
+  </div>
+
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <canvas id="starfield"></canvas>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html#top" class="logo">
+        <span class="logo__mark">✦</span>
+        <span class="logo__text">知の探究ラボ</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="nav">
+        <a href="index.html#worldview">世界観</a>
+        <a href="index.html#about">この探究について</a>
+        <a href="index.html#category">探究の領域</a>
+        <a href="index.html#articles">探究の記録</a>
+        <a href="index.html#contact">参加する</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="reading">
+
+    <header class="masthead">
+      <p class="masthead__badge">宗教研究 ─ 第二回</p>
+      <h1 class="masthead__title">世界の宗教は、どこが似て、どこが違うのか</h1>
+      <p class="masthead__subtitle">似ている部分と、譲れない部分</p>
+      <p class="masthead__meta">
+        <span>ナビゲーター</span>
+        <span class="dot">・</span>
+        <span>2026.06.25</span>
+        <span class="dot">・</span>
+        <span>AIとの対話から</span>
+      </p>
+    </header>
+
+    <article class="article-body">
+
+      <div class="note">
+        <strong>【事実】</strong>＝確認できる研究・知見、<strong>【考察】</strong>＝そこから導く解釈を分けて記します。<br>
+        前回（<a href="shukyo01.html" style="color:var(--gold-soft)">なぜ人類は宗教を生み出したのか</a>）の続き。今回は、世界の宗教を並べて比べます。
+      </div>
+
+      <p class="lead">
+        世界には数千の宗教があると言われる。一見、てんでバラバラだ。
+        だが少し引いて眺めると、不思議な<strong>反復</strong>が見えてくる。
+        そして同時に、決して重ならない<strong>核心の違い</strong>もある。
+        「どれも結局同じ」も「まるで別物」も、どちらも雑だ。似ている層と、譲れない層を、分けて見ていこう。
+      </p>
+
+      <!-- 1. 出発点 -->
+      <h2>「みんな同じ」なのか、「まるで違う」のか</h2>
+
+      <div class="dialogue dialogue--q">
+        <p class="dialogue__role">ナビゲーターの問い</p>
+        <p class="dialogue__text">
+          「宗教はどれも、言ってることは同じだよ」とよく聞く。一方で「根本がまるで違う」とも言われる。
+          実際のところ、どうなんだろう。
+        </p>
+      </div>
+
+      <div class="dialogue dialogue--a">
+        <p class="dialogue__role">AIの知性</p>
+        <p class="dialogue__text">
+          答えは「層による」だ。<strong>生き方や倫理の層</strong>では驚くほど似る。
+          だが<strong>世界の成り立ちや救いの仕組みの層</strong>では、本気で食い違う。
+          まず似ているところから見て、それから、譲れない違いへおりていこう。
+        </p>
+      </div>
+
+      <!-- 2. 似ているところ：黄金律 -->
+      <h2>似ているところ① ほぼ全宗教に「黄金律」がある</h2>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          「自分がされたくないことを、人にするな」――この<strong>黄金律（応報の倫理）</strong>は、
+          ほぼすべての宗教・思想に、独立して現れる。
+        </p>
+      </div>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          孔子：「己の欲せざる所、人に施すこと勿れ」。
+          ユダヤ教のヒレル：「己が憎むことを隣人にするな。これが律法のすべて、あとは注釈だ」。
+          イエス：「人にしてもらいたいことを、人にもしなさい」。
+          イスラーム：「自分が望むものを兄弟にも望まぬ限り、真の信者ではない」。
+          ヒンドゥー：「人にされて嫌なことを、人にするな」。――時代も地域も違うのに、結論はそろう。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          これは偶然ではないだろう。社会を成り立たせるには「互いを思いやる」しかない。
+          <a href="shukyo01.html" style="color:var(--gold-soft)">第一回</a>で見たように、宗教には集団をまとめる働きがあった。
+          黄金律は、その働きの<strong>最小の結晶</strong>だ。だから、どこでも同じ形にたどり着いた。
+        </p>
+      </div>
+
+      <!-- 3. 似ているところ：7つの次元 -->
+      <h2>似ているところ② どの宗教にも「7つの顔」がある</h2>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          宗教学者ニニアン・スマートは、世界の宗教に共通する<strong>7つの次元</strong>を示した。
+          ①儀礼（祈り・巡礼・通過儀礼）②体験・感情 ③物語・神話 ④教義・思想
+          ⑤倫理・規範 ⑥共同体・組織 ⑦物（聖地・像・建築）。
+          扱う神がいてもいなくても、どの宗教もこの7つの顔を、たいてい備えている。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          これは強力な視点だ。「宗教とは何か」を定義しようとすると、いつも例外が出て泥沼になる。
+          だがスマートは、定義を諦め、<strong>「どんな顔ぶれを持つか」で捉え直した</strong>。
+          すると、まるで違って見える伝統が、同じ骨格を共有していると分かる。
+        </p>
+      </div>
+
+      <!-- 4. 違うところ：神の数 -->
+      <h2>でも、ここが違う① 神は一人か、大勢か、いないのか</h2>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          核心の像は、はっきり分かれる。
+          <strong>一神教</strong>（ユダヤ教・キリスト教・イスラーム）は唯一の創造神を立てる。
+          <strong>多神教</strong>（古代の多く、ヒンドゥーの一面、神道）は無数の神々を見る。
+          そして<strong>創造神を立てない道</strong>もある――仏教は、世界を作った神を信仰の中心に置かない。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          つまり「神」という言葉でさえ、伝統ごとに指すものが違う。
+          ここを「どれも同じ神」とまとめてしまうと、それぞれが大切にしてきたものを、かえって踏みつけてしまう。
+          （なぜ神の数が変わるのかは、<a href="index.html#articles" style="color:var(--gold-soft)">次回</a>でじっくり掘る。）
+        </p>
+      </div>
+
+      <!-- 5. 違うところ：時間と自己 -->
+      <h2>違う② 時間は「一直線」か「円」か。自分は「残る」か「ない」か</h2>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          世界の見取り図そのものが異なる。
+          アブラハムの宗教は、世界に<strong>始まりと終わり</strong>がある「一直線の時間」を描き、
+          一人ひとりに<strong>永遠の魂</strong>を見る。
+          一方インド由来の宗教は、生まれ変わりを繰り返す<strong>「円環の時間」</strong>を描く。
+          さらに仏教は、変わらぬ魂という考えそのものを手放す（<a href="kyushiki.html" style="color:var(--gold-soft)">無我</a>）。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          これは小さな違いではない。「一度きりの人生」と「何度も巡る生」では、苦しみの意味も、
+          今をどう生きるかも、まるで変わる。同じ「救い」という言葉が、片方では<strong>「終わりの先の救済」</strong>、
+          もう片方では<strong>「巡りからの解脱」</strong>を指す。出発点の地図が、別物なのだ。
+        </p>
+      </div>
+
+      <!-- 6. 違うところ：救いの道 -->
+      <h2>違う③ どうすれば「救われる」のか</h2>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          救いへの道筋も分かれる。大づかみに言えば――
+          <strong>信仰・恩寵</strong>（キリスト教のプロテスタントなど。神の恵みを信じることで）、
+          <strong>実践・律法</strong>（ユダヤ教・イスラームなど。定められた行いを守ることで）、
+          <strong>智慧・覚り</strong>（仏教など。物事の本質に目覚めることで）。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          「信じよ」「行え」「目覚めよ」。動詞からして違う。
+          だからこそ、安易に「全部同じゴール」とは言えない。
+          ただ、どの道も<strong>「いまのままでは足りない、人は変われる」</strong>という一点だけは、確かに共有している。
+        </p>
+      </div>
+
+      <!-- 7. 同じでも違うでもなく -->
+      <h2>「同じ」でも「違う」でもなく</h2>
+
+      <div class="dialogue dialogue--a">
+        <p class="dialogue__role">AIの知性</p>
+        <p class="dialogue__text">
+          整理しよう。宗教は、<strong>同じ問いの前に立っている</strong>――どう生きるか、苦しみとは何か、
+          死の先に何があるか、聖なるものとは。問いは、驚くほど共通だ。
+          だが、その<strong>答えは、本気で違う</strong>。同じ山を、別の麓から登っているのか、
+          そもそも別の山なのか――それ自体が、人類の未決の大問題なのだ。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          「どれも同じ」と言えば、違いの尊さが消える。「まるで別物」と言えば、共通の深さが見えなくなる。
+          誠実なのは、<strong>「問いは共有し、答えは分かれる」</strong>と、二段で捉えることだ。
+          違いは欠陥ではなく、人類が同じ謎に挑んだ<strong>答案の豊かさ</strong>でもある。
+        </p>
+      </div>
+
+      <!-- 結び -->
+      <h2>地図は一枚ではない</h2>
+      <p>
+        世界の宗教は、一枚の地図に塗りつぶせない。倫理という低地では握手しながら、
+        世界観という高地では、それぞれ別の頂を目指している。その重なりとズレの両方を見られたとき、
+        他者の信仰は、笑うものでも怖れるものでもなく、<strong>もう一つの真剣な答案</strong>として立ち上がる。
+      </p>
+      <p>
+        さて、いちばん大きな「違い」として残ったのが、神の数だった。
+        人類は多くの神から始まり、やがて「ただ一つ」と言う者が現れた。なぜ神の数は変わったのか。
+        次回は、その劇的な転換と、世界が同時に目覚めた<strong>「軸の時代」</strong>へ。
+      </p>
+
+      <p class="sources">
+        ［ことわり］黄金律の各宗教での表現、ニニアン・スマートの宗教の7つの次元、各伝統の時間観・自己観・救済観は、
+        比較宗教学で広く知られた整理にもとづきます。要約のため単純化した箇所があり、各伝統の内部には多様な立場があります。
+        本記事は特定の信仰の優劣や真偽を判定するものではありません。
+      </p>
+
+    </article>
+
+    <nav class="article-nav">
+      <a href="shukyo01.html" class="article-nav__item">
+        <span class="article-nav__dir">← 前の探究</span>
+        <span class="article-nav__title">なぜ人類は宗教を生み出したのか</span>
+      </a>
+      <a href="shukyo03.html" class="article-nav__item article-nav__item--next">
+        <span class="article-nav__dir">次の探究 →</span>
+        <span class="article-nav__title">神は一人か、大勢か</span>
+      </a>
+    </nav>
+
+    <section class="next-cta">
+      <p class="next-cta__label">JOIN</p>
+      <h2 class="next-cta__title">あなたの問いが、次の探究になる</h2>
+      <p class="next-cta__text">
+        「これを探究してほしい」というテーマを送ってください。<br>
+        投げられたキーワードを、AIの知性が深く掘り下げ、次の対話録になります。
+      </p>
+      <a href="mailto:uno0908@gmail.com" class="btn btn--primary">テーマを送る（メール）</a>
+      <a href="index.html#articles" class="backlink">← 探究の記録へもどる</a>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p class="footer__logo">✦ 知の探究ラボ</p>
+    <p class="footer__copy">© 2026 知の探究ラボ ─ 人間が問い、AIが答え、そして宇宙が広がる。</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    (function () {
+      var bar = document.getElementById("progress");
+      if (!bar) return;
+      window.addEventListener("scroll", function () {
+        var h = document.documentElement;
+        var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+        bar.style.transform = "scaleX(" + Math.min(Math.max(scrolled, 0), 1) + ")";
+      }, { passive: true });
+    })();
+  </script>
+</body>
+</html>
