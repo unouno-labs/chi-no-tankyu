@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://unouno-labs.github.io/chi-no-tankyu/sitemap.xml

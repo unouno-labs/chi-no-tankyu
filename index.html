@@ -267,7 +267,6 @@
 
       <!-- カテゴリ絞り込み（タップで分類表示） -->
       <div class="filter-bar" id="filterBar">
-        <button class="filter-btn is-active" data-f="all">すべて</button>
         <button class="filter-btn" data-f="butsu">仏法・法華経</button>
         <button class="filter-btn" data-f="shukyo">宗教研究</button>
         <button class="filter-btn" data-f="uchu">宇宙と生命</button>
@@ -501,9 +500,11 @@
         // GA4：どの分類が選ばれたかを記録（測定ID設定後に有効）
         if (typeof gtag === 'function') gtag('event', 'filter_category', { category: f });
       }
-      // 絞り込みボタン
+      // 絞り込みボタン（選択中をもう一度押すと全表示に戻る）
       document.querySelectorAll('.filter-btn').forEach(function (b) {
-        b.addEventListener('click', function () { apply(b.getAttribute('data-f')); });
+        b.addEventListener('click', function () {
+          apply(b.classList.contains('is-active') ? 'all' : b.getAttribute('data-f'));
+        });
       });
       // 「探究の領域」カードをタップ → 一覧へスクロール＋その分類で絞り込み
       document.querySelectorAll('[data-go]').forEach(function (c) {
