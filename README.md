@@ -4,7 +4,7 @@
 
 - 静的サイト（HTML / CSS / JavaScript、外部ライブラリ不使用）
 - 公開：GitHub Pages
-- 公開URL（予定）: https://uno-labs.github.io/chi-no-tankyu/
+- 公開URL（予定）: https://unouno-labs.github.io/chi-no-tankyu/
 
 ## 構成
 - `index.html` … トップページ
