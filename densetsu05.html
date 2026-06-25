@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<!--
+  ===========================================================
+  知の探究ラボ ─ 記事ページ（都市伝説と検証 FILE 05：デジャヴ）
+  ・【事実】= callout--fact ／【証言】= callout--testimony ／【考察】= callout--think
+  ・神秘的解釈を否定も肯定もしない。脳の説明を中心に、誠実に。
+  ===========================================================
+-->
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>なぜ「これ、前にも見た」と感じるのか｜知の探究ラボ</title>
+  <meta name="description" content="初めての場所なのに「ここに来たことがある」と感じる――デジャヴ。前世の記憶か、予知か。それとも脳のしくみか。記憶のズレ、親しみと想起の分離、側頭葉。デジャヴの正体を、脳科学と九識から探る。都市伝説と検証 FILE 05。">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="なぜ「これ、前にも見た」と感じるのか ─ デジャヴの正体">
+  <meta property="og:description" content="前世か、予知か、脳のしくみか。誰もが経験するデジャヴを、脳科学と九識から誠実に探る。">
+
+  <!-- Google Analytics 4（測定IDを取得して G-XXXXXXXXXX を置き換えてください） -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;700;800&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="article.css">
+</head>
+<body>
+
+  <div class="loader" id="loader">
+    <div class="loader__ring"></div>
+    <p class="loader__text">知の探究ラボ</p>
+  </div>
+
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <canvas id="starfield"></canvas>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html#top" class="logo">
+        <span class="logo__mark">✦</span>
+        <span class="logo__text">知の探究ラボ</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="nav">
+        <a href="index.html#worldview">世界観</a>
+        <a href="index.html#about">この探究について</a>
+        <a href="index.html#category">探究の領域</a>
+        <a href="index.html#articles">探究の記録</a>
+        <a href="index.html#contact">参加する</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="reading">
+
+    <header class="masthead">
+      <p class="masthead__badge">都市伝説と検証 ─ FILE 05</p>
+      <h1 class="masthead__title">なぜ「これ、前にも見た」と感じるのか</h1>
+      <p class="masthead__subtitle">デジャヴの正体をめぐって</p>
+      <p class="masthead__meta">
+        <span>ナビゲーター</span>
+        <span class="dot">・</span>
+        <span>2026.06.25</span>
+        <span class="dot">・</span>
+        <span>AIとの対話から</span>
+      </p>
+    </header>
+
+    <article class="article-body">
+
+      <div class="note">
+        この記事は3色で情報を分けます。<br>
+        <strong>【事実】</strong>＝確認できること／<strong>【証言】</strong>＝語られた話（真偽は未確認）／
+        <strong>【考察】</strong>＝そこから考える解釈。
+      </div>
+
+      <p class="lead">
+        初めて来た場所なのに、「ここに、前にも来たことがある」。
+        初めての会話なのに、「この瞬間を、知っている」。
+        ――ぞくっとする、あの感覚。<strong>デジャヴ（既視感）</strong>。
+        前世の記憶だろうか。未来を予知したのか。それとも、あなたの脳が何かをしているのか。
+      </p>
+
+      <!-- 1. 出発点 -->
+      <h2>あの感覚は、超常現象なのか</h2>
+
+      <div class="dialogue dialogue--q">
+        <p class="dialogue__role">ナビゲーターの問い</p>
+        <p class="dialogue__text">
+          デジャヴは、本当に不思議だ。「前世」や「予知」と言われると、つい信じたくなる。
+          これは、何かスピリチュアルな出来事なのか。それとも、説明がつくものなのか。
+        </p>
+      </div>
+
+      <div class="dialogue dialogue--a">
+        <p class="dialogue__role">AIの知性</p>
+        <p class="dialogue__text">
+          まず事実から。デジャヴは、ごく<strong>ありふれた経験</strong>だ。多くの人が一度は感じ、若い人ほど多く、
+          疲れているときや旅先で起きやすい。これだけ普遍的なものは、たいてい<strong>脳のしくみ</strong>に根がある。
+          脳の説明をいくつか並べて、それから神秘的な解釈とも、ていねいに向き合おう。
+        </p>
+      </div>
+
+      <!-- 図解：脳の説明 -->
+      <h2>脳は、こう説明する</h2>
+      <div class="lenses">
+        <div class="lens"><span class="lens__n">①</span><b>処理のズレ</b><span class="lens__s">一瞬の遅れで「今」が「記憶」に見える</span></div>
+        <div class="lens"><span class="lens__n">②</span><b>親しみだけ先に</b><span class="lens__s">「知ってる感」が、想起なしに点く</span></div>
+        <div class="lens"><span class="lens__n">③</span><b>似た場面</b><span class="lens__s">忘れた過去の風景に、よく似ている</span></div>
+        <div class="lens"><span class="lens__n">④</span><b>側頭葉の活動</b><span class="lens__s">記憶を司る領域の、ささいな揺らぎ</span></div>
+      </div>
+      <p class="lenses-sum">どれも「記憶のしくみの、ちょっとした“ほつれ”」を指している</p>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          私たちの「思い出す」働きは、ふたつに分かれている。
+          <strong>「なんだか知っている」という親しみ</strong>と、<strong>「いつ・どこでの記憶か」という想起</strong>だ。
+          ふだんは一緒に働くが、何かの拍子に<strong>親しみだけが先に点灯</strong>すると――
+          「知っているのに、思い出せない」。これが、デジャヴの正体の有力な一つだ。
+        </p>
+      </div>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          デジャヴは、記憶に関わる<strong>側頭葉</strong>の活動と結びついていることも分かっている。
+          この領域にてんかんの発作が起きる人では、発作の前ぶれとして強いデジャヴが現れることがある。
+          つまりデジャヴは、<strong>脳の中で起きている出来事</strong>だという、確かな手がかりがある。
+        </p>
+      </div>
+
+      <!-- 神秘的解釈 -->
+      <h2>「前世」や「予知」は、どうなのか</h2>
+
+      <div class="callout callout--testimony">
+        <span class="callout__label">証言</span>
+        <p>
+          「あれは前世で訪れた場所だ」「未来を予知していた」「パラレルワールドとの“ズレ”だ」――
+          デジャヴには、こうした神秘的な解釈が、昔から数多く語られてきた。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          否定はしない。が、ひとつ静かに指摘したい。デジャヴは「予知」のように感じるのに、
+          <strong>「次に何が起きるか」は、けっして言い当てられない</strong>。
+          “知っている”気がするだけで、その先は分からない。本当の予知なら、続きが分かるはずだ。
+          ――この一点が、「未来を見た」という解釈には、うまく噛み合わない。
+        </p>
+      </div>
+
+      <!-- 九識とのつながり -->
+      <h2>「知っている感じ」は、命の奥から来る</h2>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          ここで、仏法の<a href="kyushiki.html" style="color:var(--gold-soft)">九識論</a>と触れ合う。
+          九識論は、表面の意識の奥に、記憶や経験が降り積もる<strong>「阿頼耶識（命の貯金箱）」</strong>を見た。
+          デジャヴの「理由は分からないが、確かに知っている」という感覚は、まさに
+          <strong>意識に上がってこない深い層からの“親しみ”</strong>がにじみ出た瞬間、とも読める。
+          脳科学と九識は、別の言葉で「記憶には、自覚できない深さがある」と言っている。
+        </p>
+      </div>
+
+      <!-- 結び -->
+      <h2>脳が、自分の縫い目を見せる瞬間</h2>
+      <p>
+        デジャヴは、前世の証拠でも、未来の予知でもない――そう考えるのが、いまのところいちばん筋が通る。
+        だが、つまらない話だと切り捨てる必要もない。それは、<strong>ふだんは滑らかに動く記憶のしくみが、
+        ほんの一瞬、自分の“縫い目”を見せてくれる出来事</strong>だ。
+        「知る」とは何か、「思い出す」とは何かを、ぞくっとする手触りで教えてくれる。
+      </p>
+      <p>
+        ところで――「世界がほんの一瞬ズレた」というデジャヴの感覚は、
+        ある有名な映画の「マトリックスのバグ」を思わせる。
+        私たちが見ている現実は、どこまで“本物”なのか。
+        次回は、映画『マトリックス』と仏法の<a href="kyushiki.html" style="color:var(--gold-soft)">唯識</a>を重ねてみたい。
+      </p>
+
+      <p class="sources">
+        ［ことわり］デジャヴが広く経験されること、若年層に多いこと、側頭葉の活動やてんかんとの関連、
+        「親しみ」と「想起」の分離、処理のタイミングのズレや類似場面による説明は、心理学・脳科学で論じられている知見にもとづきます。
+        単一の確定したメカニズムがあるわけではありませんが、いずれも脳・記憶のはたらきを指しています。
+        前世・予知などの解釈を断定・否定するものではなく、九識との接続は<strong>考察</strong>です。
+      </p>
+
+    </article>
+
+    <nav class="article-nav">
+      <a href="densetsu04.html" class="article-nav__item">
+        <span class="article-nav__dir">← 前のファイル</span>
+        <span class="article-nav__title">ピラミッドは、誰が造ったのか</span>
+      </a>
+      <a href="index.html#articles" class="article-nav__item article-nav__item--next">
+        <span class="article-nav__dir">探究の記録 →</span>
+        <span class="article-nav__title">ほかの探究を見る</span>
+      </a>
+    </nav>
+
+    <section class="next-cta">
+      <p class="next-cta__label">JOIN</p>
+      <h2 class="next-cta__title">あなたの「不思議な話」を聞かせてください</h2>
+      <p class="next-cta__text">
+        体験した不思議なこと、気になる噂や謎。<br>
+        送っていただければ、笑わず・鵜呑みにせず、事実と証言と考察に分けて、一緒に探究します。
+      </p>
+      <a href="mailto:uno0908@gmail.com" class="btn btn--primary">話を送る（メール）</a>
+      <a href="index.html#articles" class="backlink">← 探究の記録へもどる</a>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p class="footer__logo">✦ 知の探究ラボ</p>
+    <p class="footer__copy">© 2026 知の探究ラボ ─ 人間が問い、AIが答え、そして宇宙が広がる。</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    (function () {
+      var bar = document.getElementById("progress");
+      if (!bar) return;
+      window.addEventListener("scroll", function () {
+        var h = document.documentElement;
+        var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+        bar.style.transform = "scaleX(" + Math.min(Math.max(scrolled, 0), 1) + ")";
+      }, { passive: true });
+    })();
+  </script>
+</body>
+</html>
