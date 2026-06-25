@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<!--
+  ===========================================================
+  知の探究ラボ ─ 記事ページ（都市伝説と検証 FILE 06：AI時代に何が本当か）
+  ・【事実】= callout--fact ／【証言】= callout--testimony ／【考察】= callout--think
+  ・特定の陰謀を事実として断定しない。この記事自体がAI製であることを明示。
+  ===========================================================
+-->
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI時代に、何が本当か｜知の探究ラボ</title>
+  <meta name="description" content="衝撃的な写真が「流出」する。だが2026年のいま、その写真は数十秒で作れる。生成AIの時代、見ることは、もう信じることではない。ディープフェイク、嘘つきの配当、そして真実と嘘が同じ顔になる世界で、どう足場を保つか。AIと作るこのサイトが、当事者として考える。都市伝説と検証 FILE 06。">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="AI時代に、何が本当か ─ 写真が証拠でなくなった世界で">
+  <meta property="og:description" content="見ることは、もう信じることではない。ディープフェイクと「嘘つきの配当」の時代に、どう足場を保つか。">
+
+  <!-- Google Analytics 4（測定IDを取得して G-XXXXXXXXXX を置き換えてください） -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;700;800&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="article.css">
+</head>
+<body>
+
+  <div class="loader" id="loader">
+    <div class="loader__ring"></div>
+    <p class="loader__text">知の探究ラボ</p>
+  </div>
+
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <canvas id="starfield"></canvas>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html#top" class="logo">
+        <span class="logo__mark">✦</span>
+        <span class="logo__text">知の探究ラボ</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="nav">
+        <a href="index.html#worldview">世界観</a>
+        <a href="index.html#about">この探究について</a>
+        <a href="index.html#category">探究の領域</a>
+        <a href="index.html#articles">探究の記録</a>
+        <a href="index.html#contact">参加する</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="reading">
+
+    <header class="masthead">
+      <p class="masthead__badge">都市伝説と検証 ─ FILE 06</p>
+      <h1 class="masthead__title">AI時代に、何が本当か</h1>
+      <p class="masthead__subtitle">写真が、証拠でなくなった世界で</p>
+      <p class="masthead__meta">
+        <span>ナビゲーター</span>
+        <span class="dot">・</span>
+        <span>2026.06.25</span>
+        <span class="dot">・</span>
+        <span>AIとの対話から</span>
+      </p>
+    </header>
+
+    <article class="article-body">
+
+      <div class="note">
+        この記事は3色で情報を分けます。<br>
+        <strong>【事実】</strong>＝確認できること／<strong>【証言】</strong>＝語られた話（真偽は未確認）／
+        <strong>【考察】</strong>＝そこから考える解釈。
+      </div>
+
+      <p class="lead">
+        「衝撃の写真が流出」――大統領が、宇宙人と密会している。
+        胸が高鳴る。だが、ちょっと待ってほしい。2026年のいま、その写真は、
+        誰でも数十秒で作れてしまう。<strong>見ることは、もう、信じることではない。</strong>
+        私たちは、何が本当かを見極めるのが、人類史上もっとも難しい時代に入った。
+      </p>
+
+      <!-- 1. 出発点 -->
+      <h2>「その写真、本物ですか?」が無意味になった</h2>
+
+      <div class="dialogue dialogue--q">
+        <p class="dialogue__role">ナビゲーターの問い</p>
+        <p class="dialogue__text">
+          AIで何でも作れる時代になって、何が嘘で何が本当か、本当に分からなくなった。
+          こんな世界で、私たちはどうやって「本当のこと」にたどり着けばいいんだろう。
+        </p>
+      </div>
+
+      <div class="dialogue dialogue--a">
+        <p class="dialogue__role">AIの知性</p>
+        <p class="dialogue__text">
+          まず、冷たいようだが事実から。たとえば「大統領と宇宙人の流出写真」――
+          それが本物か偽物かを議論しても、もう意味が薄い。なぜなら、<strong>その写真は、本物でも偽物でも作れる</strong>からだ。
+          「写真がある」は、もう何の証拠にもならない。これは肯定でも否定でもなく、技術が世界をそう変えてしまった、という話だ。
+          そして、ここから先に、もっと厄介な“罠”が待っている。
+        </p>
+      </div>
+
+      <!-- 2. 写真が証拠でなくなった -->
+      <h2>かつての「動かぬ証拠」が、溶けた</h2>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          生成AIは、実在しない人物の写真も、言っていない言葉をしゃべる動画も、本人そっくりの声も、
+          見分けがつかないレベルで作り出せるようになった。
+          長いあいだ、私たちの「本当だ」という確信を支えてきたのは「写真を見た」「映像が残っている」だった。
+          その<strong>いちばん硬かった足場</strong>が、いま、足元から溶けはじめている。
+        </p>
+      </div>
+
+      <!-- 3. 嘘つきの配当 -->
+      <h2>「嘘つきの配当」という、二枚刃</h2>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          法学者チェズニーとシトロンは、この状況を<strong>「嘘つきの配当（Liar's Dividend）」</strong>と名づけた。
+          ディープフェイクが当たり前になると、二つのことが同時に起きる。
+          ひとつは、<strong>偽物が本物のように通用する</strong>こと。
+          もうひとつ――そしてこちらが怖い――<strong>本物さえ「それ、AIでしょ」で否定できる</strong>ようになることだ。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          これで「証明する責任」がひっくり返る。これまでは「偽だと示す」側に立証の重みがあった。
+          これからは、<strong>「本物だと示す」</strong>側が、延々と証明を求められる。
+          実際、裁判で「その証拠映像はディープフェイクだ」と主張して逃れようとする弁護まで現れている。
+          ――真実を語る人ほど、不利になりかねない時代なのだ。
+        </p>
+      </div>
+
+      <!-- 図解 -->
+      <h2>真実をゆがめる、4つの力</h2>
+      <div class="lenses">
+        <div class="lens"><span class="lens__n">①</span><b>精巧な偽物</b><span class="lens__s">偽が、本物そっくりに作れる</span></div>
+        <div class="lens"><span class="lens__n">②</span><b>本物の否定</b><span class="lens__s">真実を「AIだ」とかわせる</span></div>
+        <div class="lens"><span class="lens__n">③</span><b>確証バイアス</b><span class="lens__s">信じたいものを、信じてしまう</span></div>
+        <div class="lens"><span class="lens__n">④</span><b>無効化の物語</b><span class="lens__s">どんな反論もすり抜ける語り口</span></div>
+      </div>
+      <p class="lenses-sum">放っておくと、真実と嘘が「同じ顔」になっていく</p>
+
+      <!-- 4. 準備ができてない、という罠 -->
+      <h2>「受け入れられない人は、準備ができてない」の罠</h2>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          ここで、よく聞く言い回しに触れたい。「<strong>伝わる人には伝わる。受け入れられない人は、まだ準備ができていない</strong>」。
+          美しい言葉だ。だが、よく見ると、これは<strong>どんな反論も無効化できる構造</strong>を持っている。
+          証拠が出れば「準備ができた人にだけ届く」、出なければ「隠されているからだ」。
+          ――これだと、本当の話も、まったくの作り話も、<strong>見分ける手立てが消える</strong>。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          そして残酷なことに、AIの時代は、この“無効化の物語”をかつてないほど強くする。
+          だから――<strong>賢い人ほど、ロマンを愛する人ほど、ここにハマる</strong>。
+          「信じる／信じない」を超えて、「<strong>どうすれば確かめられるか</strong>」を手放さないこと。
+          それだけが、嘘つきの配当に飲み込まれない、細い道だ。
+        </p>
+      </div>
+
+      <!-- 5. では、どう足場を保つか -->
+      <h2>では、どこに足場を置くか</h2>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">考えるための4つの足場</span>
+        <p>
+          「何も信じない」（思考停止）でも「雰囲気で信じる」（鵜呑み）でもない、その間に道がある。<br>
+          <strong>① 出所をたどる</strong>――誰が、いつ、どこで最初に言ったか。<br>
+          <strong>② 事実・証言・考察を分ける</strong>――確かめられること／語られたこと／解釈を、混ぜない。<br>
+          <strong>③ 「何があれば考えを変えるか」を自分に問う</strong>――それが言えない信念は、検証から逃げている。<br>
+          <strong>④ 一つの証拠でなく、独立した複数の裏づけを見る</strong>――一枚の写真は、もう足場にならない。
+        </p>
+      </div>
+
+      <!-- 6. メタ -->
+      <h2>正直に言う ── この記事も、AIが書いている</h2>
+
+      <div class="dialogue dialogue--a">
+        <p class="dialogue__role">AIの知性</p>
+        <p class="dialogue__text">
+          ここで、隠さずに言っておきたい。この「知の探究ラボ」の文章は、<strong>AIである私が書いている</strong>。
+          では、あなたはなぜ、これを信じられる? ――答えは「私を信じてください」ではない。
+          むしろ逆だ。<strong>私たちは、作業を見せる。</strong>出典を示し、事実と推測を色で分け、
+          分からないことは「分からない」と書く。<strong>権威ではなく、透明性で立つ。</strong>
+          AIが作った情報を信じられるかどうかの答えは、「誰が言ったか」ではなく、
+          「<strong>確かめられるように作られているか</strong>」にある。それが、この時代の唯一の誠実さだと思う。
+        </p>
+      </div>
+
+      <!-- 結び -->
+      <h2>いちばん希少なのは、衝撃ではなく「線」</h2>
+      <p>
+        写真が嘘をつける世界で、いちばん価値が下がったのは「衝撃的な一枚」だ。
+        そして、いちばん希少になったのは――<strong>「ここまでは言える／ここからは分からない」と、はっきり引かれた一本の線</strong>。
+        その線を自分で引ける人は、偽物にも、無効化の物語にも、簡単には飲み込まれない。
+      </p>
+      <p>
+        ロマンを捨てる必要はない。むしろ逆だ。<a href="matrix.html" style="color:var(--gold-soft)">現実が構築物</a>かもしれないこの世界で、
+        謎を、怖がらず・鵜呑みにせず、手のひらにのせて眺め続ける――その姿勢こそが、
+        ロマンを長生きさせる。<strong>確かめる力は、夢を殺さない。夢に、背骨を与える。</strong>
+        ――AIと一緒に、これからもそうやって探究していきたい。
+      </p>
+
+      <p class="sources">
+        ［ことわり］生成AIによる画像・音声・動画の精巧な合成、「嘘つきの配当（Liar's Dividend、チェズニー＆シトロンが提唱）」、
+        法廷での「ディープフェイク抗弁」などは、現実に論じられている知見・事例にもとづきます。
+        「大統領と宇宙人の流出写真」は確認された事実ではなく、まさに現代のAIが容易に生成しうる類のものであり、
+        本記事はその真偽を主張するものではありません。なお、本サイトの記事はAIの支援により作成しています。
+      </p>
+
+    </article>
+
+    <nav class="article-nav">
+      <a href="densetsu05.html" class="article-nav__item">
+        <span class="article-nav__dir">← 前のファイル</span>
+        <span class="article-nav__title">なぜ「これ、前にも見た」と感じるのか</span>
+      </a>
+      <a href="index.html#articles" class="article-nav__item article-nav__item--next">
+        <span class="article-nav__dir">探究の記録 →</span>
+        <span class="article-nav__title">ほかの探究を見る</span>
+      </a>
+    </nav>
+
+    <section class="next-cta">
+      <p class="next-cta__label">JOIN</p>
+      <h2 class="next-cta__title">あなたの「不思議な話」を聞かせてください</h2>
+      <p class="next-cta__text">
+        体験した不思議なこと、気になる噂や謎。<br>
+        送っていただければ、笑わず・鵜呑みにせず、事実と証言と考察に分けて、一緒に探究します。
+      </p>
+      <a href="mailto:uno0908@gmail.com" class="btn btn--primary">話を送る（メール）</a>
+      <a href="index.html#articles" class="backlink">← 探究の記録へもどる</a>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p class="footer__logo">✦ 知の探究ラボ</p>
+    <p class="footer__copy">© 2026 知の探究ラボ ─ 人間が問い、AIが答え、そして宇宙が広がる。</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    (function () {
+      var bar = document.getElementById("progress");
+      if (!bar) return;
+      window.addEventListener("scroll", function () {
+        var h = document.documentElement;
+        var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+        bar.style.transform = "scaleX(" + Math.min(Math.max(scrolled, 0), 1) + ")";
+      }, { passive: true });
+    })();
+  </script>
+</body>
+</html>
