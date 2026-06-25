@@ -213,39 +213,44 @@
       <p class="section__lead">5つのテーマを行き来しながら、人類の問いに迫ります。</p>
 
       <div class="cards">
-        <article class="card">
+        <article class="card" data-go="shukyo">
           <span class="card__glow" aria-hidden="true"></span>
           <span class="card__icon">I</span>
           <h3 class="card__title">宗教研究</h3>
           <p class="card__text">仏教・キリスト教・イスラム教・神道など、世界の信仰の成り立ちと教えを比較します。</p>
+          <span class="card__go">この領域の探究を見る →</span>
         </article>
 
-        <article class="card">
+        <article class="card" data-go="butsu">
           <span class="card__glow" aria-hidden="true"></span>
           <span class="card__icon">II</span>
           <h3 class="card__title">仏法・法華経研究</h3>
           <p class="card__text">仏教思想の核心と、法華経が説く世界観をていねいに読み解きます。</p>
+          <span class="card__go">この領域の探究を見る →</span>
         </article>
 
-        <article class="card">
+        <article class="card" data-go="uchu">
           <span class="card__glow" aria-hidden="true"></span>
           <span class="card__icon">III</span>
           <h3 class="card__title">宇宙と生命</h3>
           <p class="card__text">宇宙の始まり、生命の起源、地球外生命の可能性を科学の視点で探ります。</p>
+          <span class="card__go">この領域の探究を見る →</span>
         </article>
 
-        <article class="card">
+        <article class="card" data-go="nou">
           <span class="card__glow" aria-hidden="true"></span>
           <span class="card__icon">IV</span>
           <h3 class="card__title">脳と意識</h3>
           <p class="card__text">脳科学と心のしくみから、「信じる」「気づく」とは何かを探ります。</p>
+          <span class="card__go">この領域の探究を見る →</span>
         </article>
 
-        <article class="card">
+        <article class="card" data-go="densetsu">
           <span class="card__glow" aria-hidden="true"></span>
           <span class="card__icon">V</span>
           <h3 class="card__title">歴史と都市伝説</h3>
           <p class="card__text">古代文明の謎や語り継がれるうわさを、事実と推測に分けて検証します。</p>
+          <span class="card__go">この領域の探究を見る →</span>
         </article>
       </div>
     </div>
@@ -259,6 +264,17 @@
       <p class="section__label">ARTICLES</p>
       <h2 class="section__title">探究の記録</h2>
       <p class="section__lead">AIとの対話から生まれた探究を、ひとつずつ公開していきます。</p>
+
+      <!-- カテゴリ絞り込み（タップで分類表示） -->
+      <div class="filter-bar" id="filterBar">
+        <button class="filter-btn is-active" data-f="all">すべて</button>
+        <button class="filter-btn" data-f="butsu">仏法・法華経</button>
+        <button class="filter-btn" data-f="shukyo">宗教研究</button>
+        <button class="filter-btn" data-f="uchu">宇宙と生命</button>
+        <button class="filter-btn" data-f="nou">脳と意識</button>
+        <button class="filter-btn" data-f="densetsu">歴史と都市伝説</button>
+      </div>
+      <p class="filter-empty" id="filterEmpty">この領域の探究は近日公開です。お楽しみに。</p>
 
       <!-- 看板記事：第一回コンテンツ（RAS × 法華経） -->
       <a href="article.html" class="feature">
@@ -451,5 +467,53 @@
   </footer>
 
   <script src="script.js"></script>
+  <!-- 探究の記録：カテゴリ絞り込み（タグ文字から自動分類） -->
+  <script>
+    (function () {
+      // タグの文字から、どの分類に属するかを判定
+      var keyOf = function (text) {
+        var c = [];
+        if (text.indexOf('宗教') > -1) c.push('shukyo');
+        if (text.indexOf('都市伝説') > -1 || text.indexOf('歴史') > -1) c.push('densetsu');
+        if (text.indexOf('宇宙') > -1) c.push('uchu');
+        if (text.indexOf('仏法') > -1) c.push('butsu');
+        if (text.indexOf('脳') > -1) c.push('nou');
+        return c;
+      };
+      var cards = [];
+      document.querySelectorAll('#articles .feature, #articles .article').forEach(function (el) {
+        var tag = el.querySelector('.article__tag, .feature__badge');
+        el._cats = tag ? keyOf(tag.textContent) : [];
+        cards.push(el);
+      });
+      var empty = document.getElementById('filterEmpty');
+      function apply(f) {
+        var shown = 0;
+        cards.forEach(function (el) {
+          var ok = (f === 'all') || el._cats.indexOf(f) > -1;
+          el.classList.toggle('is-hidden', !ok);
+          if (ok) shown++;
+        });
+        document.querySelectorAll('.filter-btn').forEach(function (b) {
+          b.classList.toggle('is-active', b.getAttribute('data-f') === f);
+        });
+        if (empty) empty.classList.toggle('is-shown', shown === 0);
+        // GA4：どの分類が選ばれたかを記録（測定ID設定後に有効）
+        if (typeof gtag === 'function') gtag('event', 'filter_category', { category: f });
+      }
+      // 絞り込みボタン
+      document.querySelectorAll('.filter-btn').forEach(function (b) {
+        b.addEventListener('click', function () { apply(b.getAttribute('data-f')); });
+      });
+      // 「探究の領域」カードをタップ → 一覧へスクロール＋その分類で絞り込み
+      document.querySelectorAll('[data-go]').forEach(function (c) {
+        c.addEventListener('click', function () {
+          apply(c.getAttribute('data-go'));
+          var a = document.getElementById('articles');
+          if (a) a.scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
