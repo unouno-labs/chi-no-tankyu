@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<!--
+  ===========================================================
+  知の探究ラボ ─ 記事ページ（仏法×ポップカルチャー：マトリックスと唯識）
+  ・【事実】= callout--fact ／【考察】= callout--think
+  ・問い/応答 = dialogue--q / dialogue--a
+  ・映画の画像・固有デザインは使わない。台詞は批評目的の短い引用。
+  ・「我々は実際にシミュレーション内にいる」と断定しない。
+  ===========================================================
+-->
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>マトリックスと唯識｜知の探究ラボ</title>
+  <meta name="description" content="あなたが見ている現実は、心に供給された構築物かもしれない――映画『マトリックス』の問い。1600年前、仏教の「唯識」は世界を識（心）の現れと説いた。映画・唯識・予測する脳・シミュレーション仮説。「現実は作られている」をめぐる探究。仏法×ポップカルチャー。">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="マトリックスと唯識 ─ 「現実は作られている」をめぐって">
+  <meta property="og:description" content="映画・唯識・予測する脳・シミュレーション仮説。4つの声が、同じことを言う――見ている現実は、構築されている。">
+
+  <!-- Google Analytics 4（測定IDを取得して G-XXXXXXXXXX を置き換えてください） -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;700;800&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="article.css">
+</head>
+<body>
+
+  <div class="loader" id="loader">
+    <div class="loader__ring"></div>
+    <p class="loader__text">知の探究ラボ</p>
+  </div>
+
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <canvas id="starfield"></canvas>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html#top" class="logo">
+        <span class="logo__mark">✦</span>
+        <span class="logo__text">知の探究ラボ</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="nav">
+        <a href="index.html#worldview">世界観</a>
+        <a href="index.html#about">この探究について</a>
+        <a href="index.html#category">探究の領域</a>
+        <a href="index.html#articles">探究の記録</a>
+        <a href="index.html#contact">参加する</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="reading">
+
+    <header class="masthead">
+      <p class="masthead__badge">仏法 × ポップカルチャー</p>
+      <h1 class="masthead__title">マトリックスと唯識</h1>
+      <p class="masthead__subtitle">「現実は作られている」をめぐって</p>
+      <p class="masthead__meta">
+        <span>ナビゲーター</span>
+        <span class="dot">・</span>
+        <span>2026.06.25</span>
+        <span class="dot">・</span>
+        <span>AIとの対話から</span>
+      </p>
+    </header>
+
+    <article class="article-body">
+
+      <div class="note">
+        <strong>【事実】</strong>＝確認できること（作品の背景・科学・教義）、<strong>【考察】</strong>＝そこから考える解釈を分けて記します。<br>
+        <a href="kyushiki.html" style="color:var(--gold-soft)">九識論の回</a>からの番外編。映画と仏法を重ねます。
+      </div>
+
+      <p class="lead">
+        いま、あなたが見て、触れて、確かだと思っている世界。
+        もしそれが、心に<strong>供給された構築物</strong>だったとしたら――。
+        映画『マトリックス』の、あの問い。だが驚くことに、約1600年前の仏教
+        <strong>「唯識（ゆいしき）」</strong>は、これとよく似たことを、すでに説いていた。
+      </p>
+
+      <!-- 1. 出発点 -->
+      <h2>あの映画は、ただのSFだったのか</h2>
+
+      <div class="dialogue dialogue--q">
+        <p class="dialogue__role">ナビゲーターの問い</p>
+        <p class="dialogue__text">
+          『マトリックス』を観たとき、なぜか仏教を思い出した。「現実は幻だ」という感覚――
+          これは偶然なのか、それとも、作り手が本当に東洋思想を下敷きにしていたのか。
+        </p>
+      </div>
+
+      <div class="dialogue dialogue--a">
+        <p class="dialogue__role">AIの知性</p>
+        <p class="dialogue__text">
+          偶然ではない。あの映画は、<strong>仏教やグノーシス思想、そして「現実は記号でできている」と論じた哲学</strong>を、
+          意図的に下敷きにしている。「心を自由にせよ（free your mind）」という台詞は、その象徴だ。
+          そして、もっとも深く響き合うのが、仏教の唯識――まずそれを確かめ、現代の脳科学とも重ねよう。
+        </p>
+      </div>
+
+      <!-- 2. 唯識 -->
+      <h2>唯識 ── 世界は「識（心）」の現れ</h2>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実（教義として）</span>
+        <p>
+          唯識は、<a href="kyushiki.html" style="color:var(--gold-soft)">九識論</a>の母体となった仏教思想で、
+          「<strong>すべては識（こころ）の現れである</strong>」と説く。
+          私たちが「外にある」と信じている世界も、心の奥（阿頼耶識）が投影したもの、という見方だ。
+          映画の名台詞「<strong>スプーンは存在しない</strong>」は、まさにこの
+          「心と独立した“外の物”はない」という唯識の核心と、ぴたり重なる。
+        </p>
+      </div>
+
+      <!-- 図解：4つの声 -->
+      <h2>「現実は作られている」と言う、4つの声</h2>
+      <div class="lenses">
+        <div class="lens"><span class="lens__n">映</span><b>マトリックス</b><span class="lens__s">知覚は、供給された幻</span></div>
+        <div class="lens"><span class="lens__n">識</span><b>唯識</b><span class="lens__s">世界は、識（心）の現れ</span></div>
+        <div class="lens"><span class="lens__n">脳</span><b>予測する脳</b><span class="lens__s">脳が現実を“描いて”いる</span></div>
+        <div class="lens"><span class="lens__n">計</span><b>シミュレーション仮説</b><span class="lens__s">現実は計算かもしれない</span></div>
+      </div>
+      <p class="lenses-sum">出発点も時代もバラバラ。なのに、行き着く先は同じ一点だ</p>
+
+      <!-- 3. 予測する脳 -->
+      <h2>あなたの脳は、生物版マトリックスだ</h2>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          <a href="kyushiki.html" style="color:var(--gold-soft)">第二回</a>で見たように、脳は外界をそのまま受け取ってはいない。
+          光や音の信号をもとに、過去の経験から「これは何か」を<strong>予測し、組み立てて</strong>いる。
+          つまり、私たちが体験している色や音や手ざわりは、外の世界そのものではなく、
+          <strong>脳が描いたリアルタイムの“レンダリング”</strong>だ。私たちは皆、自分の脳が作る世界を生きている。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          ここに、映画と唯識と脳科学が交差する。マトリックスは「機械が」、唯識は「識が」、脳科学は「脳が」――
+          主語は違えど、全員が<strong>「あなたが見ている現実は、構築物だ」</strong>と告げている。
+          私たちは生まれてこのかた、一度も“生（なま）の現実”には触れていないのかもしれない。
+        </p>
+      </div>
+
+      <!-- 4. 違いも大切に -->
+      <h2>ただし、同じではない</h2>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          公平に、違いも置いておきたい。マトリックスには「機械という実体」と、その外の“本当の世界”がある。
+          唯識は機械を立てず、あくまで<strong>心そのもの</strong>を問題にする。
+          そして「我々は本当にシミュレーションの中にいる」という現代の仮説は、面白いが
+          <strong>検証できない</strong>。――重なるのは結論の手前、「<strong>体験する現実は作られている</strong>」という一点までだ。
+          ここを踏み越えて「だから世界は嘘だ」と言うのは、行きすぎになる。
+        </p>
+      </div>
+
+      <!-- 5. 赤い薬＝覚り -->
+      <h2>「赤い薬」は、どこへ通じているか</h2>
+
+      <div class="dialogue dialogue--a">
+        <p class="dialogue__role">AIの知性</p>
+        <p class="dialogue__text">
+          映画で主人公は「赤い薬」を選び、構築された世界から<strong>目覚める</strong>。
+          仏教が説く<strong>「覚り」</strong>も、文字どおり“目覚め”だ。だが、向かう先が少し違う。
+          唯識の目覚めは、別世界へ脱出することではない。
+          <strong>「世界は心が作っている」と、いまここで見抜くこと</strong>――それ自体が目覚めなのだ。
+          「スプーンは存在しない」とは、曲がるのはスプーンではなく<strong>自分の心</strong>だ、という気づきでもある。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          そして、ここが希望だ。現実が心の構築物なら、その構築の“もと”である<a href="article.html" style="color:var(--gold-soft)">一念</a>を変えれば、
+          見える世界も変わる。<a href="juukai.html" style="color:var(--gold-soft)">十界</a>で見たように、
+          同じ景色が、地獄にも仏界にも見える。<strong>檻があるとすれば、それは心の中にあり、鍵もまた、そこにある。</strong>
+        </p>
+      </div>
+
+      <!-- 結び -->
+      <h2>あなたが差し出される、赤い薬</h2>
+      <p>
+        機械であれ、識であれ、脳であれ――あなたが生きている世界は、いくぶんか、あなた自身の構築物だ。
+        それは絶望ではない。むしろ、<strong>自由がどこにあるか</strong>を教えてくれる。
+        外の世界をすべて変えることはできなくても、それを<strong>どう構築するか</strong>には、手を入れられる。
+      </p>
+      <p>
+        この探究ラボが差し出したい「赤い薬」は、現実から逃げ出す薬ではない。
+        <strong>自分の心が、どうやってこの現実を編んでいるのかを、見つめる薬</strong>だ。
+        ――マトリックスの問いも、唯識の教えも、最後はあなたの一念に返ってくる。
+      </p>
+
+      <p class="sources">
+        ［ことわり］『マトリックス』が仏教・グノーシス思想や、現実を記号とみなす哲学（ボードリヤール等）を
+        下敷きにしていることは、制作背景として広く論じられています。台詞は批評・考察のために要約・引用しました。
+        唯識は仏教（瑜伽行派）の思想、シミュレーション仮説は現代の哲学的仮説（検証は困難）、
+        脳が知覚を構築することは脳科学の知見です。これらの重ね合わせは筆者とAIによる<strong>考察</strong>であり、
+        「我々は実際にシミュレーション内にいる」と主張するものではありません。映画の画像・固有のデザインは使用していません。
+      </p>
+
+    </article>
+
+    <nav class="article-nav">
+      <a href="kyushiki.html" class="article-nav__item">
+        <span class="article-nav__dir">← 関連する探究</span>
+        <span class="article-nav__title">なぜ「私」は同じ私であり続けるのか（九識論）</span>
+      </a>
+      <a href="index.html#articles" class="article-nav__item article-nav__item--next">
+        <span class="article-nav__dir">探究の記録 →</span>
+        <span class="article-nav__title">ほかの探究を見る</span>
+      </a>
+    </nav>
+
+    <section class="next-cta">
+      <p class="next-cta__label">JOIN</p>
+      <h2 class="next-cta__title">あなたの問いが、次の探究になる</h2>
+      <p class="next-cta__text">
+        「これと、あれは似ている気がする」。その直感を送ってください。<br>
+        投げられたキーワードを、AIの知性が深く掘り下げ、次の対話録になります。
+      </p>
+      <a href="mailto:uno0908@gmail.com" class="btn btn--primary">テーマを送る（メール）</a>
+      <a href="index.html#articles" class="backlink">← 探究の記録へもどる</a>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p class="footer__logo">✦ 知の探究ラボ</p>
+    <p class="footer__copy">© 2026 知の探究ラボ ─ 人間が問い、AIが答え、そして宇宙が広がる。</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    (function () {
+      var bar = document.getElementById("progress");
+      if (!bar) return;
+      window.addEventListener("scroll", function () {
+        var h = document.documentElement;
+        var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+        bar.style.transform = "scaleX(" + Math.min(Math.max(scrolled, 0), 1) + ")";
+      }, { passive: true });
+    })();
+  </script>
+</body>
+</html>
