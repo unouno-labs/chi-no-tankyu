@@ -529,6 +529,14 @@ body::before {
   margin-bottom: 16px;
   letter-spacing: 0.06em;
 }
+/* タグの下に添える小さなサブ表記（仏法シリーズの「×脳科学」など世界観の核を残す） */
+.article__sub {
+  display: block;
+  margin: -8px 0 16px;
+  font-size: 0.74rem;
+  color: var(--text-dim);
+  letter-spacing: 0.06em;
+}
 .article__title { font-size: 1.24rem; margin-bottom: 12px; line-height: 1.6; }
 .article__excerpt { color: var(--text-dim); font-size: 0.92rem; margin-bottom: 18px; }
 .article__more { color: var(--gold-soft); font-size: 0.9rem; letter-spacing: 0.04em; }
