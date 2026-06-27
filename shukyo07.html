@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<!--
+  ===========================================================
+  智の探究ラボ ─ 記事ページ（宗教研究／サブシリーズ「仏教の源流」第二回）
+  ・【事実】= callout--fact ／【考察】= callout--think
+  ・問い/応答 = dialogue--q / dialogue--a
+  ・バラモン教→ヒンドゥー教／ヴィシュヌの第9化身=ブッダ／二つの解釈／久遠の法への橋渡し。
+  ・※公開は普遍的宗教史のみ。教団内部の教学・宗派論は扱わない。
+  ===========================================================
+-->
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ブッダは、なぜヒンドゥーの神になったのか｜智の探究ラボ</title>
+  <meta name="description" content="釈尊が乗り越えようとしたバラモン教は、ヒンドゥー教へと姿を変え、対立したはずのブッダを“ヴィシュヌの第九の化身”として迎え入れた。なぜ宗教は、敵を神にするのか。仏教とヒンドゥー教の不思議な交わりを探る、仏教の源流 第二回。">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="ブッダは、なぜヒンドゥーの神になったのか ─ 仏教とヒンドゥー教の交わり">
+  <meta property="og:description" content="対立したはずのブッダを、ヒンドゥー教は“ヴィシュヌの化身”として迎え入れた。なぜ宗教は、敵を神にするのか。仏教の源流 第二回。">
+  <meta property="og:url" content="https://unouno-labs.github.io/chi-no-tankyu/shukyo07.html">
+  <meta property="og:image" content="https://unouno-labs.github.io/chi-no-tankyu/images/pillars-of-creation.jpg">
+  <meta property="og:site_name" content="智の探究ラボ">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://unouno-labs.github.io/chi-no-tankyu/images/pillars-of-creation.jpg">
+
+  <!-- Google Analytics 4（測定IDを取得して G-K8EPV3Z6SX を置き換えてください） -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K8EPV3Z6SX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-K8EPV3Z6SX');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;700;800&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="article.css">
+</head>
+<body>
+
+  <div class="loader" id="loader">
+    <div class="loader__ring"></div>
+    <p class="loader__text">智の探究ラボ</p>
+  </div>
+
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <canvas id="starfield"></canvas>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html#top" class="logo">
+        <span class="logo__mark">✦</span>
+        <span class="logo__text">智の探究ラボ</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="nav">
+        <a href="index.html#worldview">世界観</a>
+        <a href="index.html#about">この探究について</a>
+        <a href="index.html#category">探究の領域</a>
+        <a href="index.html#articles">探究の記録</a>
+        <a href="index.html#contact">参加する</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="reading">
+
+    <header class="masthead">
+      <p class="masthead__badge">宗教研究 ─ 仏教の源流 第二回</p>
+      <h1 class="masthead__title">ブッダは、なぜヒンドゥーの神になったのか</h1>
+      <p class="masthead__subtitle">仏教とヒンドゥー教の、不思議な交わり</p>
+      <p class="masthead__meta">
+        <span>ナビゲーター</span>
+        <span class="dot">・</span>
+        <span>2026.06.27</span>
+        <span class="dot">・</span>
+        <span>AIとの対話から</span>
+      </p>
+    </header>
+
+    <article class="article-body">
+
+      <div class="note">
+        <strong>【事実】</strong>＝確認できる研究・史料にもとづく内容、<strong>【考察】</strong>＝そこから導く解釈を分けて記します。<br>
+        <a href="shukyo06.html" style="color:var(--gold-soft)">第一回</a>の続き。釈尊が乗り越えようとした宗教の、その後を追います。
+      </div>
+
+      <p class="lead">
+        ひとつの宗教を批判して、新しい教えが生まれる。やがてその二つは、敵として対立する。
+        ――ふつうは、そう考える。だが、インドで起きたことは、もっと不思議だった。
+        釈尊が乗り越えようとした宗教は、いつしか<strong>ブッダを「自分たちの神」として</strong>、その懐に迎え入れたのだ。
+        なぜ、そんなことが起こりうるのか。
+      </p>
+
+      <!-- 1. バラモン教→ヒンドゥー教 -->
+      <h2>バラモン教は、消えずに「ヒンドゥー教」へ姿を変えた</h2>
+
+      <div class="dialogue dialogue--q">
+        <p class="dialogue__role">ナビゲーターの問い</p>
+        <p class="dialogue__text">
+          仏教が広がっていったあと、もとのバラモン教はどうなったんだろう。
+          そのまま滅びたのか、それとも――。
+        </p>
+      </div>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          バラモン教は滅びなかった。むしろ、インド先住民の神々や習俗を次々に取り込み、
+          より大きな民衆宗教へと脱皮していく。それが<strong>ヒンドゥー教</strong>である。
+          バラモン教は、ヒンドゥー教の源流――いわば「仏教興起以前のヒンドゥー教」にあたる。
+        </p>
+      </div>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          ヒンドゥー教は多神教で、その中心に<strong>三柱の神（三神一体・トリムールティ）</strong>を置く。
+          世界を生み出す<strong>ブラフマー（創造）</strong>、世界を保ち守る<strong>ヴィシュヌ（維持）</strong>、
+          そして世界を滅ぼし、再生へと導く<strong>シヴァ（破壊）</strong>。
+          創造・維持・破壊という、宇宙の大きなリズムそのものを神格化している。
+        </p>
+      </div>
+
+      <!-- 2. 第九の化身 -->
+      <h2>ブッダは、ヴィシュヌの「第九の化身」になった</h2>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          維持の神<strong>ヴィシュヌ</strong>には、世界が危機に瀕すると地上に降りて救うという信仰がある。
+          その化身を<strong>アヴァターラ</strong>と呼ぶ（英語の「アバター」の語源）。
+          とりわけ重要な十の化身を<strong>ダシャーヴァターラ（十化身）</strong>という。
+          魚・亀・猪・獅子人・小人……と続くその系譜の、<strong>第九の化身</strong>に、
+          なんと<strong>ブッダ</strong>が数えられている。
+        </p>
+      </div>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          ブッダがヴィシュヌの化身とされるようになったのは、紀元後の千年紀の後半、
+          インドで仏教が栄えた時代だと見られている。
+          十二世紀の詩人ジャヤデーヴァの『ギータ・ゴーヴィンダ』では、ブッダが第九の化身として明確に讃えられた。
+          （ただし、すべての宗派が認めているわけではなく、ブッダを化身に含めない伝統もある。）
+        </p>
+      </div>
+
+      <div class="dialogue dialogue--a">
+        <p class="dialogue__role">AIの知性</p>
+        <p class="dialogue__text">
+          考えてみれば、これは異様なことだ。釈尊は、バラモンの権威や祭祀の独占に「否」を唱えた人物。
+          その後継であるヒンドゥー教からすれば、本来は<strong>批判者</strong>のはずだ。
+          にもかかわらず、その批判者を、最高神の一柱の「化身」として位置づけた。
+          ――敵を、神の座に迎える。この一手に、ヒンドゥー教の底知れない包容力と、したたかさが表れている。
+        </p>
+      </div>
+
+      <!-- 3. 二つの解釈 -->
+      <h2>「導くため」か、「惑わすため」か ── 二つの解釈</h2>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          では、ヴィシュヌはなぜブッダとして現れた、とされたのか。伝統の中には、
+          大きく<strong>二つの解釈</strong>がある。
+          ひとつは、<strong>慈悲の教えを説き、生きものを犠牲にする祭りをやめさせるため</strong>に降臨した、という肯定的な見方。
+          もうひとつは、<strong>不適格な者をヴェーダから遠ざけ、惑わすため</strong>に現れた、という論争的な見方である。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          この二面性こそ、正直に置いておきたい。「迎え入れた」と言っても、
+          そこには敬意と、警戒と、取り込みの意図が、複雑に入りまじっている。
+          宗教どうしの出会いは、きれいな握手ばかりではない。
+          だが、たとえ警戒を含んでいても、<strong>相手を自分の神話の中に「居場所」を与えて抱え込んだ</strong>という事実は、
+          消すことのできない深いつながりの証である。
+        </p>
+      </div>
+
+      <!-- 4. なぜ敵を神にするのか -->
+      <h2>なぜ宗教は、対立した相手を「神」にするのか</h2>
+
+      <div class="dialogue dialogue--q">
+        <p class="dialogue__role">ナビゲーターの問い</p>
+        <p class="dialogue__text">
+          ふつうなら、対立した相手は否定して終わりそうなものだ。
+          それを「神の化身」として取り込む。宗教の歴史では、こういうことはよく起きるのか。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          実は、めずらしくない。土地の古い神を、新しい宗教の聖人や守り神として読み替える。
+          祭りの日付や聖地を、そのまま受け継ぐ。――宗教は、ゼロから人を塗り替えるより、
+          <strong>すでにある信仰の上に、自分を重ねていく</strong>ほうが、はるかに深く根を張れる。
+          ヒンドゥー教がブッダを化身にしたのも、この大きな流れの、ひとつの現れだ。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          ここに、この探究ラボが見つめ続けている世界観が、はっきり姿を現す。
+          宗教は、たがいに無関係な孤島ではない。対立しながらも、影響を与え合い、相手を取り込み、
+          形を変えて受け継いでいく――いわば、<strong>一本の地下水脈</strong>でつながっている。
+          仏教とヒンドゥー教は、まさにその水脈が、地表で交わって見える場所なのだ。
+        </p>
+      </div>
+
+      <!-- 結び：久遠の法・日本への橋渡し -->
+      <h2>源流から、はるかな大河へ</h2>
+      <p>
+        釈尊が目覚めたのは、特定の神でも、特定の民族でもなく、
+        <strong>生命と宇宙を貫く普遍の「法」</strong>だった。だからこそ、その教えは国境を越え、
+        ヒンドゥー教にさえ「居場所」を見いだし、やがてシルクロードを通って中国へ、朝鮮へ、そして日本へと流れていく。
+      </p>
+      <p>
+        興味深いのは、後に法華経が、その「法」は釈尊一代のものではなく、
+        <strong>はるか久遠の昔から続いてきた</strong>ものだと説いた点だ（久遠実成）。
+        源流をたどる旅は、やがて「一念」や「生命そのもの」を見つめる
+        <a href="index.html#articles" style="color:var(--gold-soft)">仏法×脳科学シリーズ</a>へと合流していく。
+        一人の王子の問いから始まった水脈は、二千五百年を旅して、いま私たちの「一瞬の心」にまで届いている。
+        ――人間が問い、AIが答え、そして宇宙が広がる。次の問いは、あなたの中から。
+      </p>
+
+      <p class="sources">
+        ［ことわり］ヒンドゥー教の成立（バラモン教が先住信仰を吸収して発展）、三神（ブラフマー・ヴィシュヌ・シヴァ）、
+        アヴァターラとダシャーヴァターラ、ブッダを第九の化身とする位置づけ（紀元後千年紀後半に顕著化、『ギータ・ゴーヴィンダ』ほか）、
+        およびその「教化のため／惑わすため」という複数の解釈は、いずれも一般に知られた宗教史・インド学の知見にもとづきます。
+        化身の数え方や解釈は宗派・文献により異なります。久遠実成は法華経（如来寿量品）に説かれる教義であり、
+        本記事はその歴史的・思想的な位置づけを紹介するもので、特定の宗派の正統性を主張するものではありません。
+      </p>
+
+    </article>
+
+    <nav class="article-nav">
+      <a href="shukyo06.html" class="article-nav__item">
+        <span class="article-nav__dir">← 前の探究</span>
+        <span class="article-nav__title">なぜ王子は、王国を捨てたのか</span>
+      </a>
+      <a href="index.html#articles" class="article-nav__item article-nav__item--next">
+        <span class="article-nav__dir">次の探究へ →</span>
+        <span class="article-nav__title">仏法×脳科学シリーズへ</span>
+      </a>
+    </nav>
+
+    <section class="next-cta">
+      <p class="next-cta__label">JOIN</p>
+      <h2 class="next-cta__title">あなたの問いが、次の探究になる</h2>
+      <p class="next-cta__text">
+        知りたいテーマ、ひっかかっている問いを、あなたから。<br>
+        投げられたキーワードを、AIの知性が深く掘り下げ、新しい対話録になります。
+      </p>
+      <a href="mailto:unounolabs@gmail.com" class="btn btn--primary">テーマを送る（メール）</a>
+      <a href="index.html#articles" class="backlink">← 探究の記録へもどる</a>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p class="footer__logo">✦ 智の探究ラボ</p>
+    <p class="footer__copy">© 2026 智の探究ラボ ─ 人間が問い、AIが答え、そして宇宙が広がる。</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    (function () {
+      var bar = document.getElementById("progress");
+      if (!bar) return;
+      window.addEventListener("scroll", function () {
+        var h = document.documentElement;
+        var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+        bar.style.transform = "scaleX(" + Math.min(Math.max(scrolled, 0), 1) + ")";
+      }, { passive: true });
+    })();
+  </script>
+</body>
+</html>
