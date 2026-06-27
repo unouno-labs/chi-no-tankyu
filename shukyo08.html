@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<!--
+  ===========================================================
+  智の探究ラボ ─ 記事ページ（宗教研究／サブシリーズ「仏教の源流」第三回・締め）
+  ・【事実】= callout--fact ／【考察】= callout--think
+  ・問い/応答 = dialogue--q / dialogue--a
+  ・法華経の漢訳(羅什)→天台(智顗・一念三千)→日本(最澄・比叡山)→鎌倉(日蓮)の継承。
+  ・※公開は宗教史・思想史のみ。教団内部の教学・宗派の正統性論は扱わない。
+  ===========================================================
+-->
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>釈尊の悟りは、どうやって日本へ受け継がれたのか｜智の探究ラボ</title>
+  <meta name="description" content="インドで生まれた釈尊の“法”は、言葉の壁を越えて漢字に訳され、中国で「一念三千」として深められ、最澄の比叡山を経て、日蓮へと受け継がれた。二千五百年の継承の旅をたどる、仏教の源流 第三回。">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="釈尊の悟りは、どうやって日本へ受け継がれたのか ─ 法華経と、一念三千の継承">
+  <meta property="og:description" content="釈尊の“法”は、漢訳され、中国で一念三千として深められ、比叡山を経て日蓮へ。二千五百年の継承の旅。仏教の源流 第三回。">
+  <meta property="og:url" content="https://unouno-labs.github.io/chi-no-tankyu/shukyo08.html">
+  <meta property="og:image" content="https://unouno-labs.github.io/chi-no-tankyu/images/pillars-of-creation.jpg">
+  <meta property="og:site_name" content="智の探究ラボ">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://unouno-labs.github.io/chi-no-tankyu/images/pillars-of-creation.jpg">
+
+  <!-- Google Analytics 4（測定IDを取得して G-K8EPV3Z6SX を置き換えてください） -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K8EPV3Z6SX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-K8EPV3Z6SX');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;700;800&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="article.css">
+</head>
+<body>
+
+  <div class="loader" id="loader">
+    <div class="loader__ring"></div>
+    <p class="loader__text">智の探究ラボ</p>
+  </div>
+
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <canvas id="starfield"></canvas>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html#top" class="logo">
+        <span class="logo__mark">✦</span>
+        <span class="logo__text">智の探究ラボ</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="nav">
+        <a href="index.html#worldview">世界観</a>
+        <a href="index.html#about">この探究について</a>
+        <a href="index.html#category">探究の領域</a>
+        <a href="index.html#articles">探究の記録</a>
+        <a href="index.html#contact">参加する</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="reading">
+
+    <header class="masthead">
+      <p class="masthead__badge">宗教研究 ─ 仏教の源流 第三回</p>
+      <h1 class="masthead__title">釈尊の悟りは、どうやって日本へ受け継がれたのか</h1>
+      <p class="masthead__subtitle">法華経と、一念三千の継承</p>
+      <p class="masthead__meta">
+        <span>ナビゲーター</span>
+        <span class="dot">・</span>
+        <span>2026.06.27</span>
+        <span class="dot">・</span>
+        <span>AIとの対話から</span>
+      </p>
+    </header>
+
+    <article class="article-body">
+
+      <div class="note">
+        <strong>【事実】</strong>＝確認できる研究・史料にもとづく内容、<strong>【考察】</strong>＝そこから導く解釈を分けて記します。<br>
+        <a href="shukyo06.html" style="color:var(--gold-soft)">第一回</a>・<a href="shukyo07.html" style="color:var(--gold-soft)">第二回</a>の続き、仏教の源流をたどる旅の、ひとつの到達点です。
+      </div>
+
+      <p class="lead">
+        インドの一人の王子が目覚めた「法」は、なぜ二千五百年の時と、何千キロもの距離を越えて、
+        この日本にまで届いたのか。教えは、ただ運ばれたのではない。
+        言葉の壁を越え、深く彫り直され、海を渡り――幾人もの手から手へと、灯のように受け継がれてきた。
+        その<strong>継承（リレー）</strong>の物語を追いたい。
+      </p>
+
+      <!-- 1. 漢訳 -->
+      <h2>言葉の壁を越えて ── 法華経が「漢字」になった日</h2>
+
+      <div class="dialogue dialogue--q">
+        <p class="dialogue__role">ナビゲーターの問い</p>
+        <p class="dialogue__text">
+          釈尊はインドの言葉で説いた。それが、どうやって中国や日本の人に伝わったんだろう。
+          まず最初の関門は、言葉だったはずだ。
+        </p>
+      </div>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          最大の壁は翻訳だった。それを越えたのが、西域出身の大翻訳僧<strong>鳩摩羅什（くまらじゅう／クマーラジーヴァ）</strong>。
+          彼は<strong>四〇六年</strong>、サンスクリットの経典を、名訳と名高い漢訳『妙法蓮華経』に結実させた。
+          この漢訳法華経が、のちの東アジアの仏教を方向づける、決定的な土台となる。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          翻訳とは、ただ言葉を置き換える作業ではない。異なる文明の言語に、教えの「魂」を移し替える営みだ。
+          羅什の漢訳がなければ、釈尊の法は、東アジアにこれほど深くは根を張れなかったかもしれない。
+          一人の翻訳者の仕事が、千年後の島国の信仰までを支えている。
+        </p>
+      </div>
+
+      <!-- 2. 中国・天台 -->
+      <h2>中国で「一念三千」が生まれた ── 天台大師・智顗</h2>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          六世紀の中国に、<strong>天台大師・智顗（ちぎ／538〜597）</strong>という傑出した僧が現れた。
+          彼は数ある経典を体系的に位置づけ、その頂点に<strong>法華経</strong>を据えた。
+          そして主著『摩訶止観（まかしかん）』で、有名な<strong>「一念三千」</strong>の法理を打ち立てる。
+        </p>
+      </div>
+
+      <div class="dialogue dialogue--a">
+        <p class="dialogue__role">AIの知性</p>
+        <p class="dialogue__text">
+          一念三千とは、ごく単純に言えば――<strong>私たちの「一瞬の心」に、全宇宙が具わっている</strong>という洞察だ。
+          地獄のような苦しみから、仏の境地まで、あらゆる世界が、この一念のうちに畳み込まれている。
+          釈尊が説いた「万人が仏に成れる」という思想を、智顗は精密な哲学にまで磨き上げた。
+          これは、のちに<a href="index.html#articles" style="color:var(--gold-soft)">仏法×脳科学シリーズ</a>で深掘りする、核心の概念でもある。
+        </p>
+      </div>
+
+      <!-- 3. 日本・最澄 -->
+      <h2>海を渡った教え ── 伝教大師・最澄と比叡山</h2>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          智顗の天台の教えを日本へもたらしたのが、<strong>伝教大師・最澄（さいちょう／767〜822）</strong>。
+          最澄は<strong>八〇六年</strong>に日本の<strong>天台宗</strong>を開き、<strong>比叡山・延暦寺</strong>を拠点とした。
+          その柱は、法華経にもとづく「<strong>すべての人が、仏に成れる</strong>」という万人成仏の思想だった。
+        </p>
+      </div>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          比叡山は、やがて「<strong>日本仏教の母山</strong>」と呼ばれるようになる。
+          のちに新しい宗派を開く法然・親鸞・道元・栄西、そして日蓮――その多くが、
+          若き日に比叡山で学んでいる。日本仏教の大河は、この山から幾筋にも分かれていった。
+        </p>
+      </div>
+
+      <!-- 4. 鎌倉・日蓮 -->
+      <h2>そして鎌倉へ ── 日蓮が見つめ直した「源流」</h2>
+
+      <div class="dialogue dialogue--q">
+        <p class="dialogue__role">ナビゲーターの問い</p>
+        <p class="dialogue__text">
+          比叡山から多くの宗派が生まれた。その中で日蓮は、何を受け継ぎ、何を見つめ直したんだろう。
+        </p>
+      </div>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          <strong>日蓮（1222〜1282）</strong>もまた、比叡山をはじめ各地を遊学した。
+          当時の日本には多くの宗派があり、その評価も分かれていた。
+          そうした中で日蓮は諸経・諸宗を学び抜いたうえで、ふたたび<strong>法華経こそが釈尊の教えの肝要である</strong>と確認し、
+          <strong>南無妙法蓮華経</strong>を、末法の民衆を救う教えとして掲げた（建長五年・1253年、立宗）。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          ここで、<a href="shukyo06.html" style="color:var(--gold-soft)">第一回</a>の主題が、円を描いて戻ってくる。
+          釈尊が起こしたのは「<strong>宗教を、一部の権威から、すべての民衆の手へ</strong>」という転回だった。
+          日蓮が見つめ直したのも、まさにその源流――難しい修行のできる人だけでなく、
+          名もなき庶民が、その身のままで仏の境地を開ける道だった。
+          時代も国も違えど、「<strong>万人へ開く</strong>」という一点で、源流と大河はまっすぐにつながっている。
+        </p>
+      </div>
+
+      <!-- 結び -->
+      <h2>一滴は、いま私たちの「一念」へ</h2>
+      <p>
+        魚や亀の化身の物語から始まったこの三回の旅は、ひとつの大きな絵を描いた。
+        <a href="shukyo06.html" style="color:var(--gold-soft)">王子の出家</a>、
+        <a href="shukyo07.html" style="color:var(--gold-soft)">ヒンドゥー教との交わり</a>、
+        そして<strong>インド→中国→日本へと受け継がれた法</strong>。
+        宗教は、断絶した孤島ではなく、地下水脈でつながった一本の大河だった。
+      </p>
+      <p>
+        そしてその大河の最先端は、遠い歴史の中ではなく、<strong>いま、この瞬間のあなたの心</strong>にある。
+        智顗が「一念三千」と呼んだ、その一念――二千五百年を旅してきた問いは、
+        ここから<a href="index.html#articles" style="color:var(--gold-soft)">仏法×脳科学シリーズ</a>へと合流し、
+        「心はなぜ現実を変えるのか」という、もっとも身近な謎へとつながっていく。
+        ――人間が問い、AIが答え、そして宇宙が広がる。次の問いは、あなたの中から。
+      </p>
+
+      <p class="sources">
+        ［ことわり］鳩摩羅什による『妙法蓮華経』の漢訳（406年）、天台大師智顗（538〜597）と『摩訶止観』・一念三千、
+        伝教大師最澄（767〜822）による日本天台宗の開宗（806年）と比叡山延暦寺、比叡山が後代の諸宗の祖師を輩出したこと、
+        日蓮（1222〜1282）の遊学と立宗（1253年）は、いずれも一般に知られた仏教史の事実にもとづきます。
+        一念三千・久遠実成・南無妙法蓮華経は仏教の教義であり、その評価や正統性をめぐっては宗派により見解が分かれます。
+        本記事はそれらの歴史的・思想的な継承の流れを紹介するもので、特定の宗派の教義の正しさを主張するものではありません。
+      </p>
+
+    </article>
+
+    <nav class="article-nav">
+      <a href="shukyo07.html" class="article-nav__item">
+        <span class="article-nav__dir">← 前の探究</span>
+        <span class="article-nav__title">ブッダは、なぜヒンドゥーの神になったのか</span>
+      </a>
+      <a href="index.html#articles" class="article-nav__item article-nav__item--next">
+        <span class="article-nav__dir">次の探究へ →</span>
+        <span class="article-nav__title">仏法×脳科学シリーズへ</span>
+      </a>
+    </nav>
+
+    <section class="next-cta">
+      <p class="next-cta__label">JOIN</p>
+      <h2 class="next-cta__title">あなたの問いが、次の探究になる</h2>
+      <p class="next-cta__text">
+        知りたいテーマ、ひっかかっている問いを、あなたから。<br>
+        投げられたキーワードを、AIの知性が深く掘り下げ、新しい対話録になります。
+      </p>
+      <a href="mailto:unounolabs@gmail.com" class="btn btn--primary">テーマを送る（メール）</a>
+      <a href="index.html#articles" class="backlink">← 探究の記録へもどる</a>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p class="footer__logo">✦ 智の探究ラボ</p>
+    <p class="footer__copy">© 2026 智の探究ラボ ─ 人間が問い、AIが答え、そして宇宙が広がる。</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    (function () {
+      var bar = document.getElementById("progress");
+      if (!bar) return;
+      window.addEventListener("scroll", function () {
+        var h = document.documentElement;
+        var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+        bar.style.transform = "scaleX(" + Math.min(Math.max(scrolled, 0), 1) + ")";
+      }, { passive: true });
+    })();
+  </script>
+</body>
+</html>
