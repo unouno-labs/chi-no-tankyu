@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<!--
+  ===========================================================
+  智の探究ラボ ─ 記事ページ（宗教研究／サブシリーズ「仏教の源流」第四回）
+  ・【事実】= callout--fact ／【考察】= callout--think
+  ・問い/応答 = dialogue--q / dialogue--a
+  ・輪廻(サンサーラ)・業(カルマ)・解脱の共有枠組み／ヒンドゥー=アートマン・梵我一如／仏教=無我・縁起・涅槃。
+  ・※公開は宗教史・思想史のみ。教団内部の教学・宗派の正統性論は扱わない。
+  ===========================================================
+-->
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>人は、何度生まれ変わるのか｜智の探究ラボ</title>
+  <meta name="description" content="インドは、生を「一度きり」ではなく「果てしない循環」として見た。輪廻・業・解脱という大きな世界観を、ヒンドゥー教と仏教は共有しながら、決定的に違う答えを出す。「変わらない私」をめぐる、源流の核心へ。仏教の源流 第四回。">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="人は、何度生まれ変わるのか ─ 輪廻と解脱、インドが見た生命の循環">
+  <meta property="og:description" content="輪廻・業・解脱という大きな世界観を、ヒンドゥー教と仏教は共有しながら違う答えを出した。「変わらない私」をめぐる源流の核心。仏教の源流 第四回。">
+  <meta property="og:url" content="https://unouno-labs.github.io/chi-no-tankyu/shukyo09.html">
+  <meta property="og:image" content="https://unouno-labs.github.io/chi-no-tankyu/images/pillars-of-creation.jpg">
+  <meta property="og:site_name" content="智の探究ラボ">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://unouno-labs.github.io/chi-no-tankyu/images/pillars-of-creation.jpg">
+
+  <!-- Google Analytics 4（測定IDを取得して G-K8EPV3Z6SX を置き換えてください） -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K8EPV3Z6SX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-K8EPV3Z6SX');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;700;800&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="article.css">
+</head>
+<body>
+
+  <div class="loader" id="loader">
+    <div class="loader__ring"></div>
+    <p class="loader__text">智の探究ラボ</p>
+  </div>
+
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <canvas id="starfield"></canvas>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html#top" class="logo">
+        <span class="logo__mark">✦</span>
+        <span class="logo__text">智の探究ラボ</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="nav">
+        <a href="index.html#worldview">世界観</a>
+        <a href="index.html#about">この探究について</a>
+        <a href="index.html#category">探究の領域</a>
+        <a href="index.html#articles">探究の記録</a>
+        <a href="index.html#contact">参加する</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="reading">
+
+    <header class="masthead">
+      <p class="masthead__badge">宗教研究 ─ 仏教の源流 第四回</p>
+      <h1 class="masthead__title">人は、何度生まれ変わるのか</h1>
+      <p class="masthead__subtitle">輪廻と解脱、インドが見た生命の循環</p>
+      <p class="masthead__meta">
+        <span>ナビゲーター</span>
+        <span class="dot">・</span>
+        <span>2026.06.27</span>
+        <span class="dot">・</span>
+        <span>AIとの対話から</span>
+      </p>
+    </header>
+
+    <article class="article-body">
+
+      <div class="note">
+        <strong>【事実】</strong>＝確認できる研究・史料にもとづく内容、<strong>【考察】</strong>＝そこから導く解釈を分けて記します。<br>
+        <a href="shukyo06.html" style="color:var(--gold-soft)">第一回</a>からの続き。今回は、ヒンドゥー教と仏教が共有する、最も深い世界観へ降ります。
+      </div>
+
+      <p class="lead">
+        多くの文化が、生を「一度きり」と考えてきた。生まれ、生き、死ぬ。直線の、一本道として。
+        ところが古代インドは、まったく違う絵を描いた。生とは、終わりのない<strong>円環</strong>である――と。
+        この「生まれ変わり」の世界観こそ、ヒンドゥー教と仏教が、深いところで分かち合う源流だった。
+      </p>
+
+      <!-- 1. 輪廻 -->
+      <h2>インドが見つめた「輪廻」という大きな世界観</h2>
+
+      <div class="dialogue dialogue--q">
+        <p class="dialogue__role">ナビゲーターの問い</p>
+        <p class="dialogue__text">
+          「生まれ変わり」という考え方は、インドでどう生まれたんだろう。
+          そして、なぜそれほど深く、人々の心に根づいたのか。
+        </p>
+      </div>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          インドの諸宗教に共通する世界観が、<strong>輪廻（りんね／サンサーラ）</strong>だ。
+          生きとし生けるものは、死んでも終わらず、何度も別の生へと生まれ変わる、という考え方である。
+          人間だけでなく、動物なども含めた生の循環として捉えられる。
+        </p>
+      </div>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          その循環を動かすのが<strong>業（ごう／カルマ）</strong>――「行為」と、その行為が残す力だ。
+          善い行いも悪い行いも、結果として残り、次の生のあり方を方向づける、とされた。
+          この輪廻・業の枠組みは、バラモン教・ヒンドゥー教・仏教・ジャイナ教など、
+          インドに生まれた宗教が、広く共有している。
+        </p>
+      </div>
+
+      <!-- 2. 解脱 -->
+      <h2>ゴールは、「もう生まれないこと」だった</h2>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          ここで、私たちの直感とのズレに注意したい。インド思想において、終わりなく生まれ変わることは、
+          <strong>希望ではなく、むしろ「苦しみの繰り返し」</strong>と受け止められた。
+          だから人々が究極の目標としたのは、その循環から<strong>抜け出すこと</strong>――
+          <strong>解脱（げだつ）</strong>だったのである。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          天国に「行く」ことを願う文化と、生まれ変わりから「降りる」ことを願う文化。
+          ゴールの向きが、まるで逆だ。
+          <a href="shukyo04.html" style="color:var(--gold-soft)">死の向こうに何があるのか</a>を世界の宗教で比べたとき、
+          インドの独自さが際立つのは、この一点――「もう、生まれなくてよい」という安らぎを、最高の解放としたところにある。
+        </p>
+      </div>
+
+      <!-- 3. 釈尊の転回：無我 -->
+      <h2>釈尊が起こした静かな革命 ──「変わらない私」を手放す</h2>
+
+      <div class="dialogue dialogue--q">
+        <p class="dialogue__role">ナビゲーターの問い</p>
+        <p class="dialogue__text">
+          輪廻も業も解脱も、ヒンドゥー教と仏教で共通なんだね。
+          じゃあ、釈尊の仏教は、いったいどこで決定的に違ったんだろう。
+        </p>
+      </div>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          鍵は「<strong>何が生まれ変わるのか</strong>」だ。
+          ヒンドゥー教の主流は、生まれ変わる主体として、永遠不滅の<strong>個の魂＝アートマン</strong>を立てる。
+          解脱とは、そのアートマンが、宇宙の根本原理<strong>ブラフマン</strong>と一つになること（<strong>梵我一如</strong>）とされた。
+        </p>
+      </div>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          ところが釈尊は、その「変わらない魂」の実在を、きっぱりと否定した。これが<strong>無我（むが）</strong>である。
+          すべては関係しあって移ろう――<strong>縁起（えんぎ）</strong>。固定した「私」という芯は、どこにもない。
+          仏教が説く解脱の境地は、<strong>涅槃（ねはん／ニルヴァーナ）</strong>と呼ばれた。
+        </p>
+      </div>
+
+      <div class="dialogue dialogue--a">
+        <p class="dialogue__role">AIの知性</p>
+        <p class="dialogue__text">
+          これは、当時としては衝撃的な一手だった。誰もが「生まれ変わる魂」を当然としていた世界で、
+          釈尊は「その<strong>変わらない私こそ、握りしめている幻だ</strong>」と言った。
+          苦しみの根は、移ろう自分を「変わらないもの」として握りしめる執着にある、と。
+          だから業も、宿命ではない。<strong>縁が変われば、流れは変えられる</strong>。――ここに、希望が差し込む。
+        </p>
+      </div>
+
+      <!-- 4. 日本へ／橋渡し -->
+      <h2>「生命は巡る」という感覚は、日本にも根づいた</h2>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          この生死観は、仏教とともに日本へ渡り、私たちの感性の奥にも染み込んでいる。
+          「ご縁」「業（ごう）が深い」「成仏」――何気ない日本語の中に、輪廻と縁起のこだまが残っている。
+          遠いインドの大地で生まれた「生命は巡る」という直観は、海を越えて、今も静かに生きている。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          そして「変わらない私とは何か」という釈尊の問いは、二千五百年を経て、なお新しい。
+          細胞は入れ替わり続けるのに、なぜ「私」は私であり続けるのか――
+          この謎は、<a href="kyushiki.html" style="color:var(--gold-soft)">九識論と脳科学</a>の探究へと、まっすぐつながっている。
+          無我という古い智慧と、最新の脳科学が、思いがけず同じ場所を指さしているのだ。
+        </p>
+      </div>
+
+      <!-- 結び -->
+      <h2>循環の輪の、いちばん細い接点で</h2>
+      <p>
+        輪廻・業・解脱――同じ言葉を使いながら、ヒンドゥー教は「<strong>変わらない魂</strong>」を、
+        仏教は「<strong>変わり続ける縁</strong>」を見た。源流は一つでも、そこから二つの大河が分かれていく。
+        どちらが正しいかではなく、人類が「生と死の循環」をこれほど深く見つめたという事実こそが、
+        まず驚くべきことだと思う。
+      </p>
+      <p>
+        そして、その壮大な循環の輪の、いちばん細い接点に立っているのが――ほかでもない、
+        <strong>いまを生きる、私たち一人ひとり</strong>だ。
+        過去から受け取り、未来へ手渡す。生命のリレーの、ちょうど真ん中に。
+        次は、その「生命」そのものを見つめる
+        <a href="index.html#articles" style="color:var(--gold-soft)">仏法×脳科学シリーズ</a>へ。
+        ――人間が問い、AIが答え、そして宇宙が広がる。次の問いは、あなたの中から。
+      </p>
+
+      <p class="sources">
+        ［ことわり］輪廻（サンサーラ）・業（カルマ）・解脱という枠組みがインド諸宗教に広く共有されること、
+        ヒンドゥー教が輪廻の主体として永遠のアートマンを立て、解脱を梵我一如とすること、
+        仏教が無我・縁起によって不変の我を否定し、到達点を涅槃とすることは、いずれも一般に知られた
+        インド思想史・仏教学の知見にもとづきます。教義の解釈は学派・宗派により幅があり、
+        本記事は特定の宗派の正統性を主張するものではありません。脳科学との接続は本ラボによる考察です。
+      </p>
+
+    </article>
+
+    <nav class="article-nav">
+      <a href="shukyo08.html" class="article-nav__item">
+        <span class="article-nav__dir">← 前の探究</span>
+        <span class="article-nav__title">釈尊の悟りは、どうやって日本へ受け継がれたのか</span>
+      </a>
+      <a href="kyushiki.html" class="article-nav__item article-nav__item--next">
+        <span class="article-nav__dir">続けて読む →</span>
+        <span class="article-nav__title">なぜ「私」は同じ私であり続けるのか（九識×脳科学）</span>
+      </a>
+    </nav>
+
+    <section class="next-cta">
+      <p class="next-cta__label">JOIN</p>
+      <h2 class="next-cta__title">あなたの問いが、次の探究になる</h2>
+      <p class="next-cta__text">
+        知りたいテーマ、ひっかかっている問いを、あなたから。<br>
+        投げられたキーワードを、AIの知性が深く掘り下げ、新しい対話録になります。
+      </p>
+      <a href="mailto:unounolabs@gmail.com" class="btn btn--primary">テーマを送る（メール）</a>
+      <a href="index.html#articles" class="backlink">← 探究の記録へもどる</a>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p class="footer__logo">✦ 智の探究ラボ</p>
+    <p class="footer__copy">© 2026 智の探究ラボ ─ 人間が問い、AIが答え、そして宇宙が広がる。</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    (function () {
+      var bar = document.getElementById("progress");
+      if (!bar) return;
+      window.addEventListener("scroll", function () {
+        var h = document.documentElement;
+        var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+        bar.style.transform = "scaleX(" + Math.min(Math.max(scrolled, 0), 1) + ")";
+      }, { passive: true });
+    })();
+  </script>
+</body>
+</html>
