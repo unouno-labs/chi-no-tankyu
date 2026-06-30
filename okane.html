@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<!--
+  ===========================================================
+  智の探究ラボ ─ 記事ページ（番外編：お金の願い × 脳科学 × 仏教）
+  -----------------------------------------------------------
+  ・本文を変える → このHTMLの「文字」
+  ・記事だけの見た目 → article.css
+  ・動き（星空・ヘッダー）→ script.js（LP共通）
+  ・【事実】= callout--fact ／【考察】= callout--think
+  ・問い/応答 = dialogue--q / dialogue--a
+  ===========================================================
+-->
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>なぜ「お金持ちになりたい」という願いは、叶いにくいのか｜智の探究ラボ</title>
+  <meta name="description" content="強く願うほど遠ざかる「お金持ちになりたい」。脳の検索エンジン（RAS）とドーパミン、そして仏教が見抜いた“渇き”（餓鬼界・渇愛）から、願いが叶いにくい理由を読み解く番外編の探究。">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="なぜ「お金持ちになりたい」という願いは、叶いにくいのか ─ 脳の検索エンジンと、仏教が見抜いた“渇き”">
+  <meta property="og:description" content="強く願うほど遠ざかる「お金持ちになりたい」。脳科学（RAS・ドーパミン）と仏教（餓鬼界・渇愛・心の財）から、その理由を読み解く。">
+  <meta property="og:url" content="https://unouno-labs.github.io/chi-no-tankyu/okane.html">
+  <meta property="og:image" content="https://unouno-labs.github.io/chi-no-tankyu/images/pillars-of-creation.jpg">
+  <meta property="og:site_name" content="智の探究ラボ">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://unouno-labs.github.io/chi-no-tankyu/images/pillars-of-creation.jpg">
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K8EPV3Z6SX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-K8EPV3Z6SX');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;700;800&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="article.css">
+</head>
+<body>
+
+  <div class="loader" id="loader">
+    <div class="loader__ring"></div>
+    <p class="loader__text">智の探究ラボ</p>
+  </div>
+
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <canvas id="starfield"></canvas>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html#top" class="logo">
+        <span class="logo__mark">✦</span>
+        <span class="logo__text">智の探究ラボ</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="nav">
+        <a href="index.html#worldview">世界観</a>
+        <a href="index.html#about">この探究について</a>
+        <a href="index.html#category">探究の領域</a>
+        <a href="index.html#articles">探究の記録</a>
+        <a href="index.html#contact">参加する</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="reading">
+
+    <header class="masthead">
+      <p class="masthead__badge">番外編 ─ 仏法 × 脳科学</p>
+      <h1 class="masthead__title">なぜ「お金持ちになりたい」という願いは、叶いにくいのか</h1>
+      <p class="masthead__subtitle">脳の検索エンジンと、仏教が見抜いた“渇き”</p>
+      <p class="masthead__meta">
+        <span>ナビゲーター</span>
+        <span class="dot">・</span>
+        <span>2026.06.30</span>
+        <span class="dot">・</span>
+        <span>AIとの対話から</span>
+      </p>
+    </header>
+
+    <article class="article-body">
+
+      <div class="note">
+        この記事では <strong>【事実】</strong>＝確認できる科学的事実 と、
+        <strong>【考察】</strong>＝そこから導く解釈・仮説 を、はっきり分けて記しています。<br>
+        引き寄せ・周波数といった、科学的根拠の定まっていない話には踏み込みません。
+        これまでの探究（<a href="article.html" style="color:var(--gold-soft)">RASと一念</a>／<a href="juukai.html" style="color:var(--gold-soft)">十界</a>）と、地続きの番外編です。
+      </div>
+
+      <p class="lead">
+        「お金持ちになりたい」。多くの人がそう願う。なのに、なぜか叶わない。
+        それどころか、強く願うほど、遠ざかっていく気さえする。
+        これは意志が弱いからでも、努力が足りないからでもない。脳の仕組みと、願いの“形”に理由がある。
+        そして驚くことに、<strong>2500年前の仏教は、すでにこの落とし穴を見抜いていた</strong>。今回は、その正体へおりていく。
+      </p>
+
+      <!-- 1. 脳は検索エンジン -->
+      <h2>脳は「願い」を、検索ワードとして処理する</h2>
+
+      <div class="dialogue dialogue--q">
+        <p class="dialogue__role">ナビゲーターの問い</p>
+        <p class="dialogue__text">
+          強く願っているのに叶わない。むしろ「お金がない」と思うほど、お金のなさばかりが目につく。
+          脳の中では、何が起きているのだろう。
+        </p>
+      </div>
+
+      <div class="dialogue dialogue--a">
+        <p class="dialogue__role">AIの知性</p>
+        <p class="dialogue__text">
+          脳は、検索エンジンに似ている。意識に上った言葉を“検索ワード”にして、その対象を世界の中から拾い集める。
+          問題は、脳が「ない」「したくない」といった否定の枠より、言葉そのものに反応しやすいことだ。
+          「お金がない」と唱え続ければ、脳は<strong>「ない」</strong>を探し始める。
+        </p>
+      </div>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          脳には、無数の情報の中から「いま注意を向けているもの」を選び取る仕組みがある（網様体賦活系＝RAS）。
+          だから赤い車を意識した日は、街じゅうの赤い車が目に入る。注意を向けた対象が、見える世界を決める。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          これは、第一回「一念」で見たRASの応用だ。願いとは、脳に渡す検索ワードでもある。
+          「不足」を見つめる願いは、脳に不足を探させる。だから「貧しさを避けたい」より、
+          「どうなりたいか」を描くほうが、脳は働きやすい。
+        </p>
+      </div>
+
+      <!-- 2. 二つの欠陥 -->
+      <h2>「お金持ち」という願いには、二つの欠陥がある</h2>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          「お金持ちになりたい」が叶いにくいのは、願いとして二つの弱点を抱えているからだ。
+        </p>
+        <p>
+          一つ、<strong>漠然としすぎている</strong>。いくら？ 何のために？
+          脳は具体的な像を結べず、検索ワードとして機能しない。<br>
+          二つ、<strong>比較が紛れ込んでいる</strong>。「お金持ち」とは「他人より多い」という相対概念だ。
+          他人を基準にする限り、上には上がいて、永遠に満たされない。
+        </p>
+        <p>
+          願いが他人のものさしでできているとき、それは初めから、終わりのない競争に設定されている。
+        </p>
+      </div>
+
+      <!-- 3. 渇愛 -->
+      <h2>仏教は2500年前に、この“渇き”を見抜いていた</h2>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実（教義として）</span>
+        <p>
+          仏教は、満たされない欲にとらわれた心の状態を「餓鬼界」と呼んだ（第四回・十界で見た、あの世界だ）。
+          さらに、人生の苦しみの根本原因を「渇愛（かつあい）」――喉が渇くように、求めても求めても満ちない心――に見た。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          比較で動く「お金持ちになりたい」は、まさにこの渇愛の姿だ。手に入れた瞬間、基準は上へずれ、また次が欲しくなる。
+          仏教の鋭さは、ここにある。「対象（お金）をもっと増やせ」ではなく、
+          <strong>「渇くという心の構造そのものを見よ」</strong>と説いた。
+          外を足し算しても、渇きは消えない。問題は外の量ではなく、内の在り方だ、と。
+        </p>
+      </div>
+
+      <!-- 4. その先の感情 -->
+      <h2>本当に欲しいのは、お金ではなく「その先の感情」</h2>
+
+      <div class="callout callout--fact">
+        <span class="callout__label">事実</span>
+        <p>
+          脳は、報酬そのものより「報酬を予測したとき」に、やる気の物質ドーパミンを多く出す。
+          手に入れる前が最も高揚し、得た後は驚くほど早く薄れる。だから人は、また次の報酬を追い続ける。
+        </p>
+      </div>
+
+      <div class="callout callout--think">
+        <span class="callout__label">考察</span>
+        <p>
+          つまり私たちがお金に求めているのは、お金そのものではない。
+          その先にあるはずの「安心」「自由」「誇り」「幸福」――つまり感情であり、在り方だ。
+          お金は手段であって、ゴールではない。
+        </p>
+        <p>
+          このことを、誰よりも雄弁に語ったのが、富の頂点に立った人物だった。
+          スティーブ・ジョブズは、2005年のスタンフォード大学の講演で、富の話ではなく、死を見つめてこう語った。
+          「あなたの時間は限られている。だから、他人の人生を生きて無駄にするな」。
+          成功の絶頂にいた人が指し示したのは、富の量ではなく、限りある時間をどう在るか、だった。
+          仏教が<strong>「最も勝れた財は、蔵でも身でもなく、心の財だ」</strong>と説いたことと、静かに響き合う。
+        </p>
+      </div>
+
+      <!-- 5. 書き換える -->
+      <h2>願いを「不足」から「在り方」へ書き換える</h2>
+
+      <div class="dialogue dialogue--q">
+        <p class="dialogue__role">ナビゲーターの問い</p>
+        <p class="dialogue__text">
+          では、どう願えばいいのか。願ってはいけない、という話ではないはずだ。
+        </p>
+      </div>
+
+      <div class="dialogue dialogue--a">
+        <p class="dialogue__role">AIの知性</p>
+        <p class="dialogue__text">
+          願いの矢印を、外から内へ向け直す。「お金持ちになりたい」で止めず、
+          <strong>「では、その先で、自分はどんな状態でありたいのか？」</strong>ともう一段問う。
+          家族と穏やかに過ごしたい。誰かの役に立っている実感がほしい。挑戦にワクワクしていたい――
+          そう具体化した瞬間、脳の検索ワードが「不足」から「在りたい状態」へ切り替わる。
+          そして在り方が定まれば、それを叶える手段は、お金以外にもいくつも見つかり始める。
+          お金は、その一本の道にすぎなかったと気づく。
+        </p>
+      </div>
+
+      <!-- 結び -->
+      <h2>願いが叶いにくい、本当の理由</h2>
+      <p>
+        願いが叶いにくいのは、意志が弱いからではない。
+        脳に「不足」を検索させ、しかも他人のものさしで測る形で、願ってしまっているからだ。
+      </p>
+      <p>
+        3000年の時を超えて、仏教の「渇愛」も、最先端の脳科学（RASとドーパミン）も、同じ一点を指している。
+        満たすべきは、外の富の量ではなく、内なる在り方だ、と。
+        「いくら欲しいか」より、<strong>「どう在りたいか」</strong>。
+        願いの言葉を、そう変えるところから、現実は静かに動き出すのかもしれない。
+      </p>
+
+      <p class="sources">
+        ［ことわり］網様体賦活系（RAS）・ドーパミンと報酬予測のはたらきは、一般に知られた脳科学の知見です。
+        餓鬼界・渇愛・「心の財」は、仏教（とくに天台・日蓮の仏法を含む）の心の見方です。
+        スティーブ・ジョブズの言葉は、2005年スタンフォード大学卒業式講演にもとづきます。
+        引き寄せの法則・周波数など、科学的根拠の確立していない主張は本記事では扱っていません。
+        仏法と脳科学の重ね合わせは、筆者とAIによる<strong>考察</strong>です。
+      </p>
+
+    </article>
+
+    <!-- 前後の記事への導線 -->
+    <nav class="article-nav">
+      <a href="article.html" class="article-nav__item">
+        <span class="article-nav__dir">← 関連する探究</span>
+        <span class="article-nav__title">なぜ「一念」は現実を変えるのか</span>
+      </a>
+      <a href="juukai.html" class="article-nav__item article-nav__item--next">
+        <span class="article-nav__dir">関連する探究 →</span>
+        <span class="article-nav__title">あなたの心には、十の世界が同居している</span>
+      </a>
+    </nav>
+
+    <section class="next-cta">
+      <p class="next-cta__label">JOIN</p>
+      <h2 class="next-cta__title">あなたの問いが、次の探究になる</h2>
+      <p class="next-cta__text">
+        「これを探究してほしい」というテーマを送ってください。<br>
+        投げられたキーワードを、AIの知性が深く掘り下げ、次の対話録になります。
+      </p>
+      <a href="mailto:unounolabs@gmail.com" class="btn btn--primary">テーマを送る（メール）</a>
+      <a href="index.html#articles" class="backlink">← 探究の記録へもどる</a>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p class="footer__logo">✦ 智の探究ラボ</p>
+    <p class="footer__copy">© 2026 智の探究ラボ ─ 人間が問い、AIが答え、そして宇宙が広がる。</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    (function () {
+      var bar = document.getElementById("progress");
+      if (!bar) return;
+      window.addEventListener("scroll", function () {
+        var h = document.documentElement;
+        var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+        bar.style.transform = "scaleX(" + Math.min(Math.max(scrolled, 0), 1) + ")";
+      }, { passive: true });
+    })();
+  </script>
+</body>
+</html>
